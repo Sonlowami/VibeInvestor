@@ -195,5 +195,26 @@ VibeInvestor/
 
 ---
 
-This project is a work in progress and an exploration of how far careful system design can go before "intelligence" becomes the bottleneck.
+### Contributions
 
+**Oswaldo Camille Grimaud**
+- Conceptualized the VibeInvestor system architecture and core philosophy
+- Designed the multi-agent pipeline (Finder → Governor → Memory loop)
+- Implemented the Finder agent with web search integration
+- Built the Governor agent for opportunity arbitration and decision escalation
+- Developed the FAISS vector database memory layer
+- Created agent prompts and task definitions (FINDER_TASK, GOVERNOR_TASK)
+- Orchestrated the main pipeline and agent coordination
+- Integrated API connections (Google Gemini, SearchAPI.io)
+
+**Lowami**
+- Debugged and resolved critical LLM compatibility issues with browser-use
+- Investigated and resolved Python 3.14/3.12 environment conflicts
+- Troubleshot Chroma/pydantic dependency incompatibilities
+- Fixed API key configuration and environment loading
+- Implemented robust JSON parsing with fallback error handling in `extract_json()`
+- Enhanced prompt engineering to enforce proper JSON output formatting
+- Created comprehensive setup and troubleshooting documentation
+- Established development environment best practices
+
+---
