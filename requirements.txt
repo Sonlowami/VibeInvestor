@@ -118,3 +118,4 @@ wcwidth==0.5.3
 websockets==15.0.1
 yarl==1.22.0
 yfinance==1.1.0
+langchain-ollama==0.3.10

@@ -77,3 +77,123 @@ It curates plausibility.
 ---
 
 This project is a work in progress and an exploration of how far careful system design can go before “intelligence” becomes the bottleneck.
+## Getting Started
+
+### Prerequisites
+
+- Python 3.12+ (required for compatibility with vector database dependencies)
+- `pip` package manager
+- API keys for:
+  - **Google Gemini API** (for LLM access) — Get from [Google AI Studio](https://aistudio.google.com/apikey)
+  - **SearchAPI.io** (for web search) — Get from [SearchAPI.io](https://www.searchapi.io/)
+
+### Installation
+
+1. **Clone the repository** (if not already done):
+   ```bash
+   cd /Users/oswaldocamillegrimaud/Desktop/VibeInvestor
+   ```
+
+2. **Create a Python 3.12 virtual environment**:
+   ```bash
+   python3.12 -m venv .venv-py312
+   ```
+
+3. **Activate the virtual environment**:
+   ```bash
+   source .venv-py312/bin/activate
+   ```
+
+4. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Configuration
+
+1. **Create a `.env` file** in the project root (if not already present):
+   ```bash
+   cp .env.example .env  # or create it manually
+   ```
+
+2. **Add your API keys** to `.env`:
+   ```
+   GOOGLE_API_KEY=<your-google-api-key>
+   SEARCHAPI_KEY=<your-searchapi-key>
+   GROQ_API_KEY=<optional-groq-api-key>
+   ```
+
+   - **GOOGLE_API_KEY**: Get from [Google AI Studio](https://aistudio.google.com/apikey)
+   - **SEARCHAPI_KEY**: Get from [SearchAPI.io dashboard](https://www.searchapi.io/dashboard)
+
+### Running the Project
+
+**Basic execution** (with Python 3.12 environment activated):
+
+```bash
+python src/main.py
+```
+
+**Or, using the venv directly without activation**:
+
+```bash
+.venv-py312/bin/python src/main.py
+```
+
+### What Happens When You Run It
+
+1. **Finder Agent** searches the web for undervalued stocks and emerging opportunities
+2. **Results** are extracted and stored in a FAISS vector database for memory
+3. **Governor Agent** evaluates findings and surfaces the most promising opportunities
+4. **Output** is printed to the console
+
+### Project Structure
+
+```
+VibeInvestor/
+├── src/
+│   ├── finder.py          # Finder agent: web search & opportunity discovery
+│   ├── governor.py        # Governor agent: arbitrates & escalates decisions
+│   ├── retriever.py       # Memory retrieval for context
+│   ├── memory.py          # Vector database (FAISS) management
+│   ├── prompts.py         # Agent task definitions
+│   ├── utils.py           # Shared utilities (JSON parsing, PDF generation)
+│   ├── main.py            # Entry point: orchestrates the agent pipeline
+│   └── __init__.py
+├── .env                   # API keys (create this file)
+├── requirements.txt       # Python dependencies
+└── README.md              # This file
+```
+
+### Troubleshooting
+
+**Issue**: `GOOGLE_API_KEY not found`
+- **Solution**: Ensure `.env` file exists in the project root and contains `GOOGLE_API_KEY=<your-key>`
+
+**Issue**: Python version incompatibility
+- **Solution**: Use Python 3.12 explicitly: `python3.12 -m venv .venv-py312`
+
+**Issue**: Package import errors
+- **Solution**: Ensure virtual environment is activated and dependencies are installed:
+  ```bash
+  source .venv-py312/bin/activate
+  pip install -r requirements.txt
+  ```
+
+**Issue**: `IndexError: list index out of range` in memory.py
+- **Solution**: This occurs when the Finder returns empty results. Check that:
+  1. API keys are valid
+  2. Web search is returning results
+  3. LLM is formatting output as valid JSON
+
+### Development Notes
+
+- The system uses **Gemini 2.0 Flash** as the default LLM
+- Vector storage uses **FAISS** with **Google Generative AI Embeddings**
+- Web search is powered by **SearchAPI.io**
+- Memory is persisted locally in `faiss_investment_db/` directory
+
+---
+
+This project is a work in progress and an exploration of how far careful system design can go before "intelligence" becomes the bottleneck.
+

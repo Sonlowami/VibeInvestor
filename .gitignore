@@ -1,1 +1,6 @@
 .env
+venv/
+env/
+.venv/
+venv-py312/
+docker/
