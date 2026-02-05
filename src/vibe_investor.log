@@ -1,0 +1,75 @@
+2026-02-05 22:41:38,776 - INFO - Starting VibeInvestor analysis
+2026-02-05 22:41:38,776 - INFO - Running finder...
+2026-02-05 22:41:40,710 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:41:42,583 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:41:42,587 - INFO - Finder returned type: <class 'list'>
+2026-02-05 22:41:42,587 - INFO - Found 1 findings
+2026-02-05 22:41:42,587 - INFO - Populating memory with findings...
+2026-02-05 22:41:43,774 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-05 22:41:43,780 - INFO - Loading faiss.
+2026-02-05 22:41:43,866 - INFO - Successfully loaded faiss.
+2026-02-05 22:41:43,870 - INFO - Memory populated with 1 documents
+2026-02-05 22:41:43,870 - INFO - Running governor...
+2026-02-05 22:41:44,388 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-05 22:41:44,393 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:41:47,326 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:41:47,330 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:41:50,562 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:41:50,565 - INFO - Governor analysis complete
+2026-02-05 22:41:50,565 - INFO - Report compiled
+2026-02-05 22:41:50,566 - INFO - Generating PDF report via LLM...
+2026-02-05 22:41:50,593 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:41:53,605 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:41:53,608 - INFO - PDF report text generated
+2026-02-05 22:41:53,610 - INFO - PDF report saved: investment_report.pdf
+2026-02-05 22:41:53,610 - INFO - Analysis complete
+2026-02-05 22:49:45,410 - INFO - Starting VibeInvestor analysis
+2026-02-05 22:49:45,410 - INFO - Running finder...
+2026-02-05 22:49:47,639 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:49:51,717 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:49:51,720 - INFO - Finder returned type: <class 'list'>
+2026-02-05 22:49:51,721 - INFO - Found 4 findings
+2026-02-05 22:49:51,721 - INFO - Populating memory with findings...
+2026-02-05 22:49:52,947 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-05 22:49:52,954 - INFO - Loading faiss.
+2026-02-05 22:49:53,035 - INFO - Successfully loaded faiss.
+2026-02-05 22:49:53,039 - INFO - Memory populated with 4 documents
+2026-02-05 22:49:53,039 - INFO - Running governor...
+2026-02-05 22:49:53,456 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-05 22:49:53,460 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:49:55,914 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:49:55,919 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:50:00,625 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:50:00,628 - INFO - Governor analysis complete
+2026-02-05 22:50:00,628 - INFO - Report compiled
+2026-02-05 22:50:00,628 - INFO - Generating PDF report via LLM...
+2026-02-05 22:50:00,656 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:50:03,697 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:50:03,700 - INFO - PDF report text generated
+2026-02-05 22:50:03,702 - INFO - PDF report saved: investment_report.pdf
+2026-02-05 22:50:03,702 - INFO - Analysis complete
+2026-02-05 22:51:40,106 - INFO - Starting VibeInvestor analysis
+2026-02-05 22:51:40,106 - INFO - Running finder...
+2026-02-05 22:51:42,420 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:51:46,098 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:51:46,100 - INFO - Finder returned type: <class 'list'>
+2026-02-05 22:51:46,101 - INFO - Found 2 findings
+2026-02-05 22:51:46,101 - INFO - Populating memory with findings...
+2026-02-05 22:51:47,297 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-05 22:51:47,302 - INFO - Loading faiss.
+2026-02-05 22:51:47,387 - INFO - Successfully loaded faiss.
+2026-02-05 22:51:47,391 - INFO - Memory populated with 2 documents
+2026-02-05 22:51:47,391 - INFO - Running governor...
+2026-02-05 22:51:47,756 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-05 22:51:47,770 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:51:50,501 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:51:50,505 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:51:53,573 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:51:53,576 - INFO - Governor analysis complete
+2026-02-05 22:51:53,576 - INFO - Report compiled
+2026-02-05 22:51:53,576 - INFO - Generating PDF report via LLM...
+2026-02-05 22:51:53,605 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-05 22:51:57,157 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-05 22:51:57,160 - INFO - PDF report text generated
+2026-02-05 22:51:57,162 - INFO - PDF report saved: investment_report.pdf
+2026-02-05 22:51:57,162 - INFO - Analysis complete
