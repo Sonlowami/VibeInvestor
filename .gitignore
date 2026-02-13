@@ -4,4 +4,4 @@ env/
 .venv/
 venv-py312/
 docker/
-
+**/__pycache__/**

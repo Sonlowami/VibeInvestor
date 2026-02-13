@@ -1,6 +1,6 @@
 import asyncio
 import json
-import logging
+from logger import logger
 from unittest import result
 from finder import run_finder
 from memory import populate_memory
@@ -8,16 +8,6 @@ from governor import run_governor
 from utils import generate_pdf_report
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('vibe_investor.log'),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
 
 USER_QUERY = (
     "Which discovered investment opportunity best matches the system goal "
@@ -32,6 +22,7 @@ async def main():
         "Publicly traded companies under market value with recent earnings reports"
     )
     logger.info(f"Finder returned type: {type(findings)}")
+    logger.info(f"Finder raw output: {findings}")
 
     if isinstance(findings, dict):
         if "error" in findings:
