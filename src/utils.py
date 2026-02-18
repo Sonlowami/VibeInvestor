@@ -1,6 +1,8 @@
 import json
 import re
 from fpdf import FPDF
+from langchain.tools import tool
+from pydantic import BaseModel, Field
 
 def extract_json(raw_text):
     """Extract and parse JSON from LLM response with robust error handling"""
@@ -34,8 +36,19 @@ def extract_json(raw_text):
     print(f"Raw response: {raw_text[:500]}...")
     return {"error": "Failed to parse JSON", "raw_response": raw_text}
 
+class GeneratePdfReportInput(BaseModel):
+    text: str = Field(..., description="Text content for the PDF")
+    filename: str = Field(..., description="Filename of the output pdf")
 
+
+@tool('generate-report', args_schema=GeneratePdfReportInput)
 def generate_pdf_report(text, filename="report.pdf"):
+    """
+    Writes the given text to a PDF file with the specified filename.
+    
+    :param text: Description
+    :param filename: Description
+    """
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=12)

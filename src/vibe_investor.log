@@ -247,3 +247,479 @@
 2026-02-13 09:10:43,067 - INFO - PDF report text generated
 2026-02-13 09:10:43,071 - INFO - PDF report saved: investment_report.pdf
 2026-02-13 09:10:43,072 - INFO - Analysis complete
+2026-02-17 00:09:07,286 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:09:07,286 - INFO - Running finder...
+2026-02-17 00:09:33,324 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:09:33,325 - INFO - Running finder...
+2026-02-17 00:10:31,381 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:10:31,382 - INFO - Running finder...
+2026-02-17 00:12:17,934 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:12:17,935 - INFO - Running finder...
+2026-02-17 00:12:23,607 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:12:23,620 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:12:23,621 - INFO - Finder raw output: ```json
+[
+  {
+    "company_name": "AT&T Inc.",
+    "ticker": "T",
+    "summary": "AT&T appears undervalued due to its low P/E ratio relative to the sector and positive free cash flow. The company's market cap also suggests potential undervaluation.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Citigroup Inc.",
+    "ticker": "C",
+    "summary": "Citigroup seems undervalued based on its low P/E ratio and the fact that its market cap is significantly below its book value. A healthy balance sheet further supports this assessment.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Energy Transfer LP",
+    "ticker": "ET",
+    "summary": "Energy Transfer LP shows potential undervaluation with its low P/E ratio, strong free cash flow, and positive operating income. These factors suggest the company is trading below its intrinsic value.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "summary": "Occidental Petroleum may be undervalued due to its low P/E ratio compared to the sector and a healthy balance sheet. Positive operating income further strengthens this case.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Pfizer Inc.",
+    "ticker": "PFE",
+    "summary": "Pfizer's undervaluation is suggested by its low P/E ratio and strong free cash flow. The company also maintains a healthy balance sheet.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  }
+]
+```
+2026-02-17 00:12:23,625 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 00:15:10,386 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:15:10,387 - INFO - Running finder...
+2026-02-17 00:15:11,797 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:15:11,802 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:15:11,802 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 00:15:11,803 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 00:15:31,365 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:15:31,365 - INFO - Running finder...
+2026-02-17 00:15:32,891 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:15:32,896 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:15:32,897 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 00:15:32,897 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 00:16:08,516 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:16:08,517 - INFO - Running finder...
+2026-02-17 00:16:12,932 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:16:12,946 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:16:12,948 - INFO - Finder raw output: ```json
+[
+  {
+    "company_name": "AT&T Inc.",
+    "ticker": "T",
+    "summary": "AT&T appears undervalued due to its low P/E ratio relative to the sector and positive free cash flow. The company's market cap may be below its intrinsic value, suggesting potential undervaluation.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Citigroup Inc.",
+    "ticker": "C",
+    "summary": "Citigroup shows potential undervaluation with a low P/E ratio compared to its sector. A healthy balance sheet and positive operating income further support this assessment.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Energy Transfer LP",
+    "ticker": "ET",
+    "summary": "Energy Transfer might be undervalued based on its strong free cash flow and potentially low debt-to-equity ratio. Positive and stable operating income adds to the undervaluation case.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  }
+]
+```
+2026-02-17 00:16:12,952 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:01:14,490 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:01:14,491 - INFO - Running finder...
+2026-02-17 07:01:16,249 - WARNING - Failed to multipart ingest runs: langsmith.utils.LangSmithError: Failed to POST https://api.smith.langchain.com/runs/multipart in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/runs/multipart', '{"error":"API key has expired"}\n')
+2026-02-17 07:01:18,456 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:01:18,511 - INFO - Finder returned type: <class 'str'>
+2026-02-17 07:01:18,512 - INFO - Finder raw output: ```json
+[
+  {
+    "company_name": "AT&T Inc.",
+    "ticker": "T",
+    "summary": "AT&T appears undervalued due to its low P/E ratio and significant market capitalization. The company's consistent revenue indicates stability, potentially making it an attractive investment.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Citigroup Inc.",
+    "ticker": "C",
+    "summary": "Citigroup is potentially undervalued, suggested by its low P/E ratio. The company's substantial market capitalization reflects its significant presence in the financial sector.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Pfizer Inc.",
+    "ticker": "PFE",
+    "summary": "Pfizer may be undervalued given its low P/E ratio. Its substantial market capitalization and consistent revenue highlight its established position in the pharmaceutical industry.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Intel Corporation",
+    "ticker": "INTC",
+    "summary": "Intel shows signs of undervaluation with a low P/E ratio. Its significant market capitalization and consistent revenue demonstrate its importance in the technology sector.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Verizon Communications Inc.",
+    "ticker": "VZ",
+    "summary": "Verizon might be undervalued due to its low P/E ratio. The company's large market capitalization and stable revenue reflect its strong position in the telecommunications industry.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  }
+]
+```
+2026-02-17 07:01:18,514 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:01:18,919 - WARNING - Failed to send compressed multipart ingest: langsmith.utils.LangSmithError: Failed to POST https://api.smith.langchain.com/runs/multipart in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/runs/multipart', '{"error":"API key has expired"}\n')
+2026-02-17 07:14:01,283 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:14:01,284 - INFO - Running finder...
+2026-02-17 07:14:02,973 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:14:02,979 - INFO - Finder returned type: <class 'str'>
+2026-02-17 07:14:02,979 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 07:14:02,979 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:16:35,042 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:16:35,043 - INFO - Running finder...
+2026-02-17 07:17:06,069 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:17:06,069 - INFO - Running finder...
+2026-02-17 07:17:07,702 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:17:07,706 - INFO - Finder returned type: <class 'str'>
+2026-02-17 07:17:07,707 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 07:17:07,707 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:20:43,721 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:20:43,722 - INFO - Running finder...
+2026-02-17 07:20:44,678 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:20:44,685 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:20:44,688 - INFO - Finder raw output: []
+2026-02-17 07:20:44,690 - INFO - Found 0 findings
+2026-02-17 07:20:44,691 - WARNING - No findings returned
+2026-02-17 07:33:56,636 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:33:56,637 - INFO - Running finder...
+2026-02-17 07:33:57,570 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:33:57,575 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:33:57,575 - INFO - Finder raw output: []
+2026-02-17 07:33:57,576 - INFO - Found 0 findings
+2026-02-17 07:33:57,576 - WARNING - No findings returned
+2026-02-17 07:36:37,869 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:36:37,870 - INFO - Running finder...
+2026-02-17 07:36:46,683 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-17 07:36:53,594 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:36:53,598 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:36:53,599 - INFO - Finder raw output: [{'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T Inc. is a telecommunications, media, and technology company, providing services and products in the United States and internationally. It operates through Communications, Latin America, and WarnerMedia segments.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '8.19', 'market_cap': '130.492B', 'revenue': '120.713B'}, 'financials': {'balance_sheet': {'totalAssets': '393.658B', 'totalLiab': '273.802B', 'totalStockholderEquity': '119.856B'}, 'cash_flow': {'freeCashFlow': '14.325B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Citigroup Inc.', 'ticker': 'C', 'summary': 'Citigroup Inc. is a global financial services company offering a range of financial products and services to consumers, corporations, governments, and institutions.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '12.01', 'market_cap': '119.323B', 'revenue': '77.268B'}, 'financials': {'balance_sheet': {'totalAssets': '2.419T', 'totalLiab': '2.191T', 'totalStockholderEquity': '217.719B'}, 'cash_flow': {'freeCashFlow': 'Not disclosed'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Energy Transfer LP', 'ticker': 'ET', 'summary': 'Energy Transfer LP provides energy transportation and storage services in the United States. It operates through intrastate and interstate pipelines and storage facilities.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '11.63', 'market_cap': '50.75B', 'revenue': '93.039B'}, 'financials': {'balance_sheet': {'totalAssets': '99.673B', 'totalLiab': '73.264B', 'totalStockholderEquity': '26.409B'}, 'cash_flow': {'freeCashFlow': '3.213B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Kraft Heinz Company', 'ticker': 'KHC', 'summary': 'The Kraft Heinz Company manufactures and markets food and beverage products in North America and internationally. Its products include condiments and sauces, cheese and dairy products, meals, meats, refreshment beverages, coffee, and other grocery products.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '27.15', 'market_cap': '41.193B', 'revenue': '26.647B'}, 'financials': {'balance_sheet': {'totalAssets': '80.82B', 'totalLiab': '49.455B', 'totalStockholderEquity': '31.365B'}, 'cash_flow': {'freeCashFlow': '2.585B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-17 07:36:53,600 - INFO - Found 4 findings
+2026-02-17 07:36:53,600 - INFO - Populating memory with findings...
+2026-02-17 07:36:54,823 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 07:36:55,065 - INFO - Loading faiss with AVX2 support.
+2026-02-17 07:36:55,517 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-17 07:36:55,588 - INFO - Memory populated with 4 documents
+2026-02-17 07:36:55,589 - INFO - Running governor...
+2026-02-17 07:36:56,153 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 07:47:21,298 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:47:21,299 - INFO - Running finder...
+2026-02-17 07:49:39,592 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:49:39,593 - INFO - Running finder...
+2026-02-17 07:49:50,150 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:49:50,153 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:49:50,155 - INFO - Finder raw output: [{'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through North American Flat-Rolled (Flat-Rolled), U. S. Steel Europe (USSE), Tubular, and Other segments.', 'source': 'https://finance.yahoo.com/quote/X/', 'metrics': {'pe_ratio': '2.34', 'market_cap': '6.769B', 'revenue': '20.67B'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': 145000000.0, 'totalLiabilities': 7921000000.0, 'commonStock': 12000000.0, 'retainedEarnings': 9387000000.0, 'totalAssets': 18340000000.0, 'cash': 531000000.0, 'totalStockholderEquity': 10419000000.0}, '2021-12-31': {'intangibleAssets': 156000000.0, 'totalLiabilities': 9119000000.0, 'commonStock': 12000000.0, 'retainedEarnings': 3259000000.0, 'totalAssets': 15992000000.0, 'cash': 2511000000.0, 'totalStockholderEquity': 6873000000.0}, '2020-12-31': {'intangibleAssets': 167000000.0, 'totalLiabilities': 11429000000.0, 'commonStock': 12000000.0, 'retainedEarnings': -136000000.0, 'totalAssets': 13699000000.0, 'cash': 2453000000.0, 'totalStockholderEquity': 2270000000.0}}, 'cash_flow': {'2022-12-31': {'netIncome': 1604000000.0, 'depreciation': 698000000.0, 'changeToAccountReceivables': -184000000.0, 'changeToInventory': 25000000.0, 'changeToLiabilities': -170000000.0, 'changeToOperatingActivities': -179000000.0, 'totalCashFromOperatingActivities': 2294000000.0, 'capitalExpenditures': -736000000.0, 'investments': 21000000.0, 'otherCashflowsFromInvestingActivities': -14000000.0, 'totalCashflowsFromInvestingActivities': -729000000.0, 'dividendsPaid': -23000000.0, 'salePurchaseOfStock': -2000000.0, 'netIssuancePaymentsOfDebt': -840000000.0, 'totalCashFromFinancingActivities': -865000000.0, 'effectOfExchangeRate': -1000000.0, 'changeInCash': 699000000.0}, '2021-12-31': {'netIncome': 4084000000.0, 'depreciation': 709000000.0, 'changeToAccountReceivables': 172000000.0, 'changeToInventory': 49000000.0, 'changeToLiabilities': 300000000.0, 'changeToOperatingActivities': -142000000.0, 'totalCashFromOperatingActivities': 5082000000.0, 'capitalExpenditures': -422000000.0, 'investments': -2000000.0, 'otherCashflowsFromInvestingActivities': -200000000.0, 'totalCashflowsFromInvestingActivities': -624000000.0, 'dividendsPaid': -23000000.0, 'salePurchaseOfStock': 12000000.0, 'netIssuancePaymentsOfDebt': -1889000000.0, 'totalCashFromFinancingActivities': -1900000000.0, 'effectOfExchangeRate': 1000000.0, 'changeInCash': 2590000000.0}, '2020-12-31': {'netIncome': -95000000.0, 'depreciation': 778000000.0, 'changeToAccountReceivables': -1000000.0, 'changeToInventory': -70000000.0, 'changeToLiabilities': 305000000.0, 'changeToOperatingActivities': -24000000.0, 'totalCashFromOperatingActivities': 768000000.0, 'capitalExpenditures': -241000000.0, 'otherCashflowsFromInvestingActivities': 121000000.0, 'totalCashflowsFromInvestingActivities': -120000000.0, 'dividendsPaid': -23000000.0, 'salePurchaseOfStock': 3000000.0, 'netIssuancePaymentsOfDebt': 1000000000.0, 'totalCashFromFinancingActivities': 980000000.0, 'effectOfExchangeRate': 1000000.0, 'changeInCash': 1629000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-17 07:49:50,155 - INFO - Found 1 findings
+2026-02-17 07:49:50,156 - INFO - Populating memory with findings...
+2026-02-17 07:49:51,338 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 07:49:51,366 - INFO - Loading faiss with AVX2 support.
+2026-02-17 07:49:51,403 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-17 07:49:51,411 - INFO - Memory populated with 1 documents
+2026-02-17 07:49:51,411 - INFO - Running governor...
+2026-02-17 07:49:51,857 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 23:48:35,649 - INFO - Starting VibeInvestor analysis
+2026-02-17 23:48:35,650 - INFO - Running finder...
+2026-02-17 23:48:42,542 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 23:48:42,548 - INFO - Finder returned type: <class 'list'>
+2026-02-17 23:48:42,549 - INFO - Finder raw output: [{'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through four segments: North American Flat-Rolled, Mini Mill, Tubular, and European.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '2.47', 'market_cap': '6.87B', 'revenue': '19.68B'}, 'financials': {'balance_sheet': {'intangibleAssets': '1.48B', 'capitalSurplus': '5.99B', 'totalLiabilities': '7.4B', 'propertyPlantEquipment': '6.35B', 'totalAssets': '17.98B', 'retainedEarnings': '1.77B', 'totalStockholderEquity': '10.58B', 'cash': '644M'}, 'cash_flow': {'freeCashFlow': '1.47B', 'capitalExpenditure': '-360M', 'operatingCashFlow': '1.83B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Energy Transfer LP', 'ticker': 'ET', 'summary': 'Energy Transfer LP provides energy transportation, storage, and other services. The company owns and operates approximately 120,000 miles of pipelines and associated energy infrastructure across 41 states.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '8.42', 'market_cap': '51.17B', 'revenue': '84.57B'}, 'financials': {'balance_sheet': {'intangibleAssets': '18.33B', 'capitalSurplus': '62.64B', 'totalLiabilities': '83.62B', 'propertyPlantEquipment': '63.68B', 'totalAssets': '108.73B', 'retainedEarnings': '2.09B', 'totalStockholderEquity': '25.11B', 'cash': '387M'}, 'cash_flow': {'freeCashFlow': '3.24B', 'capitalExpenditure': '-2.05B', 'operatingCashFlow': '5.29B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T Inc. provides telecommunications, media, and technology services globally. It operates through two segments, Communications and Latin America.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '8.74', 'market_cap': '130.35B', 'revenue': '120.71B'}, 'financials': {'balance_sheet': {'intangibleAssets': '84.85B', 'capitalSurplus': '139.27B', 'totalLiabilities': '276.6B', 'propertyPlantEquipment': '133.87B', 'totalAssets': '348.5B', 'retainedEarnings': '-17.47B', 'totalStockholderEquity': '71.89B', 'cash': '7.43B'}, 'cash_flow': {'freeCashFlow': '10.77B', 'capitalExpenditure': '-19.18B', 'operatingCashFlow': '29.95B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-17 23:48:42,550 - INFO - Found 3 findings
+2026-02-17 23:48:42,550 - INFO - Populating memory with findings...
+2026-02-17 23:48:43,737 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 23:48:43,968 - INFO - Loading faiss with AVX2 support.
+2026-02-17 23:48:44,429 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-17 23:48:44,526 - INFO - Memory populated with 3 documents
+2026-02-17 23:48:44,527 - INFO - Running governor...
+2026-02-17 23:48:44,993 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:04:02,005 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:04:02,005 - INFO - Running finder...
+2026-02-18 07:04:16,247 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:04:16,254 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:04:16,255 - INFO - Finder raw output: [{'company_name': 'Teck Resources Limited', 'ticker': 'TECK', 'summary': 'Teck Resources Limited is a Canadian mining company. The company explores for, develops, and produces natural resources including: copper, zinc, steelmaking coal, and energy.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '7.74', 'market_cap': '26.998B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'currency_symbol': 'CAD', 'intangibleAssets': '3.338B', 'totalLiab': '14.573B', 'totalStockholderEquity': '18.545B', 'otherCurrentLiab': '1.564B', 'totalAssets': '33.118B', 'commonStock': '2.257B', 'otherCurrentAssets': '1.421B', 'retainedEarnings': '16.385B', 'otherLiab': '2.969B', 'goodWill': '2.168B', 'treasuryStock': '-997M', 'otherAssets': '2.712B', 'cash': '1.531B', 'totalCurrentLiabilities': '4.175B', 'shortLongTermDebt': '10M', 'propertyPlantEquipment': '19.188B', 'totalCurrentAssets': '5.466B', 'longTermDebt': '5.704B', 'inventory': '1.656B', 'accountsReceivable': '858M'}, 'cash_flow': {'currency_symbol': 'CAD', 'investments': '-654M', 'changeToLiabilities': '-58M', 'totalCashflowsFromInvestingActivities': '-1.335B', 'netBorrowings': '1.008B', 'totalCashFromFinancingActivities': '485M', 'changeToOperatingActivities': '-753M', 'netIncome': '3.57B', 'capitalExpenditures': '-702M', 'totalCashFromOperatingActivities': '5.372B', 'depreciation': '1.288B', 'otherCashflowsFromInvestingActivities': '21M', 'dividendsPaid': '-406M', 'otherCashflowsFromFinancingActivities': '-117M', 'changeToInventory': '-108M', 'repurchaseOfStock': '-103M', 'changeToAccountReceivables': '-159M', 'effectOfExchangeRate': '-113M'}, 'earnings_history': {'maxAge': 1, 'earnings': [{'date': '2023-11-01T00:00:00.000Z', 'epsActual': 0.98, 'epsEstimate': 0.99, 'surprise': -0.01, 'surprisePercent': -0.0101}, {'date': '2023-07-26T00:00:00.000Z', 'epsActual': 1.74, 'epsEstimate': 1.22, 'surprise': 0.52, 'surprisePercent': 0.4262}, {'date': '2023-04-26T00:00:00.000Z', 'epsActual': 1.72, 'epsEstimate': 1.51, 'surprise': 0.21, 'surprisePercent': 0.1391}, {'date': '2023-02-21T00:00:00.000Z', 'epsActual': 1.42, 'epsEstimate': 1.38, 'surprise': 0.04, 'surprisePercent': 0.029}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through three segments: North American Flat-Rolled (Flat-Rolled), Tubular, and European.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '4.03', 'market_cap': '6.968B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'currency_symbol': 'USD', 'intangibleAssets': '472M', 'totalLiab': '7.28B', 'totalStockholderEquity': '6.905B', 'otherCurrentLiab': '1.645B', 'totalAssets': '14.185B', 'commonStock': '1.389B', 'otherCurrentAssets': '763M', 'retainedEarnings': '5.368B', 'otherLiab': '2.006B', 'goodWill': '1.332B', 'treasuryStock': '150M', 'otherAssets': '1.26B', 'cash': '517M', 'totalCurrentLiabilities': '3.671B', 'shortLongTermDebt': '380M', 'propertyPlantEquipment': '9.18B', 'totalCurrentAssets': '3.064B', 'longTermDebt': '2.86B', 'inventory': '1.129B', 'accountsReceivable': '648M'}, 'cash_flow': {'currency_symbol': 'USD', 'investments': '-195M', 'changeToLiabilities': '-143M', 'totalCashflowsFromInvestingActivities': '-575M', 'netBorrowings': '-17M', 'totalCashFromFinancingActivities': '-220M', 'changeToOperatingActivities': '-36M', 'netIncome': '1.628B', 'capitalExpenditures': '-360M', 'totalCashFromOperatingActivities': '1.875B', 'depreciation': '692M', 'otherCashflowsFromInvestingActivities': '-20M', 'dividendsPaid': '-4M', 'otherCashflowsFromFinancingActivities': '-199M', 'changeToInventory': '-251M', 'repurchaseOfStock': '-20M', 'changeToAccountReceivables': '-112M', 'effectOfExchangeRate': '-2M'}, 'earnings_history': {'maxAge': 1, 'earnings': [{'date': '2024-01-25T00:00:00.000Z', 'epsActual': -0.08, 'epsEstimate': -0.11, 'surprise': 0.03, 'surprisePercent': 0.2727}, {'date': '2023-10-26T00:00:00.000Z', 'epsActual': 0.69, 'epsEstimate': 0.76, 'surprise': -0.07, 'surprisePercent': -0.0921}, {'date': '2023-07-27T00:00:00.000Z', 'epsActual': 1.92, 'epsEstimate': 1.78, 'surprise': 0.14, 'surprisePercent': 0.0787}, {'date': '2023-04-27T00:00:00.000Z', 'epsActual': 1.07, 'epsEstimate': 0.79, 'surprise': 0.28, 'surprisePercent': 0.3544}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:04:16,259 - INFO - Found 2 findings
+2026-02-18 07:04:16,259 - INFO - Populating memory with findings...
+2026-02-18 07:04:17,407 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:04:17,527 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:04:17,591 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:04:17,599 - INFO - Memory populated with 2 documents
+2026-02-18 07:04:17,599 - INFO - Running governor...
+2026-02-18 07:04:18,013 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:06:45,000 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:06:45,001 - INFO - Running finder...
+2026-02-18 07:06:45,726 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:06:45,731 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:06:45,732 - INFO - Finder raw output: []
+2026-02-18 07:06:45,732 - INFO - Found 0 findings
+2026-02-18 07:06:45,733 - WARNING - No findings returned
+2026-02-18 07:07:22,990 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:07:22,990 - INFO - Running finder...
+2026-02-18 07:07:36,415 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:07:36,421 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:07:36,421 - INFO - Finder raw output: [{'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through North American Flat-Rolled (Flat-Rolled), U. S. Steel Europe (USSE), Tubular, and Other segments.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '2.71', 'market_cap': '6.999B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'intangibleAssets': '1.418B', 'totalLiab': '6.525B', 'totalStockholderEquity': '7.521B', 'otherCurrentLiab': '1.211B', 'totalAssets': '14.046B', 'commonStock': '1.57B', 'otherLiab': '1.588B', 'retainedEarnings': '5.996B', 'otherCurrentAssets': '724M', 'netTangibleAssets': '6.103B', 'propertyPlantEquipment': '5.68B', 'totalCurrentAssets': '4.014B', 'capitalSurplus': '3.944B', 'totalCurrentLiabilities': '2.552B', 'longTermDebt': '2.499B', 'inventory': '1.402B', 'accountsReceivable': '1.791B', 'shortLongTermDebt': '50M', 'otherAssets': '2.234B', 'cash': '97.0M', 'netDebt': '2.402B'}, 'cash_flow': {'investments': '-80M', 'changeToLiabilities': '-20M', 'totalCashflowsFromInvestingActivities': '-222M', 'netBorrowings': '-12M', 'totalCashFromFinancingActivities': '-12M', 'changeToOperatingActivities': '206M', 'netIncome': '2.551B', 'depreciation': '469M', 'otherCashflowsFromInvestingActivities': '-62M', 'dividendsPaid': '-129M', 'totalCashFromOperatingActivities': '2.817B', 'changeToAccountReceivables': '-209M', 'capitalExpenditures': '-388M', 'issuanceOfStock': '143M', 'changeToInventory': '-45M', 'repurchaseOfStock': '-3M', 'effectOfExchangeRate': '-11M', 'changeInCash': '2.581B'}, 'earnings_history': {'history': [{'quarter': 4, 'year': 2022, 'epsActual': 0.27, 'epsEstimate': 0.25}, {'quarter': 1, 'year': 2023, 'epsActual': 0.95, 'epsEstimate': 0.79}, {'quarter': 2, 'year': 2023, 'epsActual': 1.92, 'epsEstimate': 1.1}, {'quarter': 3, 'year': 2023, 'epsActual': 0.8, 'epsEstimate': 0.78}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Stellantis N.V.', 'ticker': 'STLA', 'summary': 'Stellantis N.V. designs, engineers, manufactures, distributes, and sells automobiles, light commercial vehicles, engines, transmission systems, metallurgical products, and production systems worldwide. It operates through five segments: North America, Europe, Middle East & Africa, South America, and Asia Pacific.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '3.79', 'market_cap': '68.654B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'intangibleAssets': '23.093B', 'totalLiab': '117.191B', 'totalStockholderEquity': '63.069B', 'otherCurrentLiab': '22.256B', 'totalAssets': '180.26B', 'commonStock': 'Not disclosed', 'otherLiab': '27.699B', 'retainedEarnings': 'Not disclosed', 'otherCurrentAssets': '24.763B', 'netTangibleAssets': '39.976B', 'propertyPlantEquipment': '38.113B', 'totalCurrentAssets': '84.336B', 'capitalSurplus': 'Not disclosed', 'totalCurrentLiabilities': '67.236B', 'longTermDebt': '22.127B', 'inventory': '16.796B', 'accountsReceivable': '19.391B', 'shortLongTermDebt': 'Not disclosed', 'otherAssets': '34.718B', 'cash': '42.192B', 'netDebt': '-20.065B'}, 'cash_flow': {'investments': '-1.352B', 'changeToLiabilities': '4.202B', 'totalCashflowsFromInvestingActivities': '-7.172B', 'netBorrowings': '-2.053B', 'totalCashFromFinancingActivities': '-6.69B', 'changeToOperatingActivities': '-2.877B', 'netIncome': '16.775B', 'depreciation': '5.682B', 'otherCashflowsFromInvestingActivities': '-2.83B', 'dividendsPaid': '-4.525B', 'totalCashFromOperatingActivities': '21.066B', 'changeToAccountReceivables': '-747M', 'capitalExpenditures': '-5.338B', 'issuanceOfStock': '70M', 'changeToInventory': '-1.365B', 'repurchaseOfStock': '-2.232B', 'effectOfExchangeRate': '1.502B', 'otherCashflowsFromFinancingActivities': '150M', 'changeInCash': '8.671B'}, 'earnings_history': {'history': [{'quarter': 4, 'year': 2022, 'epsActual': 1.66, 'epsEstimate': 1.41}, {'quarter': 1, 'year': 2023, 'epsActual': 1.77, 'epsEstimate': 1.44}, {'quarter': 2, 'year': 2023, 'epsActual': 1.63, 'epsEstimate': 1.53}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:07:36,422 - INFO - Found 2 findings
+2026-02-18 07:07:36,423 - INFO - Populating memory with findings...
+2026-02-18 07:07:37,580 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:07:37,700 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:07:37,732 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:07:37,744 - INFO - Memory populated with 2 documents
+2026-02-18 07:07:37,745 - INFO - Running governor...
+2026-02-18 07:07:38,156 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:11:03,299 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:11:03,299 - INFO - Running finder...
+2026-02-18 07:11:19,347 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:11:19,353 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:11:19,353 - INFO - Finder raw output: [{'company_name': 'Alliance Resource Partners, L.P.', 'ticker': 'ARLP', 'summary': 'Alliance Resource Partners, L.P. is a diversified natural resource company that generates income from thermal and metallurgical coal production and sales, as well as oil and gas mineral interests. The company operates through various segments, including Illinois Basin Coal, Appalachia Coal, and Minerals.', 'source': 'https://finance.yahoo.com/quote/ARLP/', 'metrics': {'pe_ratio': '5.76', 'market_cap': '3.189B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': 112444000.0, 'totalAssets': 3198063000.0, 'accountsPayable': 79559000.0, 'currentDebt': 4000000.0, 'propertyPlantEquipment': 1565399000.0, 'totalLiabilities': 886887000.0, 'goodwill': 8592000.0, 'retainedEarnings': 1823834000.0, 'totalStockholderEquity': 2311176000.0}, '2021-12-31': {'intangibleAssets': 118031000.0, 'totalAssets': 2839118000.0, 'accountsPayable': 68604000.0, 'currentDebt': 4000000.0, 'propertyPlantEquipment': 1570177000.0, 'totalLiabilities': 833733000.0, 'goodwill': 8592000.0, 'retainedEarnings': 1305886000.0, 'totalStockholderEquity': 2005385000.0}, '2020-12-31': {'intangibleAssets': 123618000.0, 'totalAssets': 2621647000.0, 'accountsPayable': 54398000.0, 'currentDebt': 4000000.0, 'propertyPlantEquipment': 1568392000.0, 'totalLiabilities': 868784000.0, 'goodwill': 8592000.0, 'retainedEarnings': 1006935000.0, 'totalStockholderEquity': 1752863000.0}}, 'cash_flow': {'2022-12-31': {'depreciation': 144494000.0, 'netIncome': 517948000.0, 'capitalExpenditures': -148359000.0, 'investments': -2386000.0, 'changeInWorkingCapital': -12058000.0, 'cashFromFinancingActivities': -230964000.0, 'cashFromInvestingActivities': -151009000.0, 'cashFromOperatingActivities': 665332000.0}, '2021-12-31': {'depreciation': 152294000.0, 'netIncome': 298408000.0, 'capitalExpenditures': -98593000.0, 'investments': -101000.0, 'changeInWorkingCapital': 38672000.0, 'cashFromFinancingActivities': -131130000.0, 'cashFromInvestingActivities': -98694000.0, 'cashFromOperatingActivities': 428424000.0}, '2020-12-31': {'depreciation': 159705000.0, 'netIncome': 117449000.0, 'capitalExpenditures': -86479000.0, 'investments': -150000.0, 'changeInWorkingCapital': 10381000.0, 'cashFromFinancingActivities': -131022000.0, 'cashFromInvestingActivities': -86629000.0, 'cashFromOperatingActivities': 237391000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Alpha Metallurgical Resources, Inc.', 'ticker': 'ARM', 'summary': 'Alpha Metallurgical Resources, Inc. operates as a met coal supplier. It has operations located in Virginia and West Virginia. The firm has a reserve base of high-quality metallurgical coal, used primarily in the steel-making process.', 'source': 'https://finance.yahoo.com/quote/ARM/', 'metrics': {'pe_ratio': '3.06', 'market_cap': '4.438B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': 8479000.0, 'totalAssets': 2680988000.0, 'accountsPayable': 130828000.0, 'currentDebt': 7474000.0, 'propertyPlantEquipment': 1019667000.0, 'totalLiabilities': 468981000.0, 'goodwill': 12975000.0, 'retainedEarnings': 1890021000.0, 'totalStockholderEquity': 2212007000.0}, '2021-12-31': {'intangibleAssets': 8634000.0, 'totalAssets': 1925480000.0, 'accountsPayable': 90941000.0, 'currentDebt': 10083000.0, 'propertyPlantEquipment': 1043415000.0, 'totalLiabilities': 467716000.0, 'goodwill': 12975000.0, 'retainedEarnings': 1129054000.0, 'totalStockholderEquity': 1457764000.0}, '2020-12-31': {'intangibleAssets': 8789000.0, 'totalAssets': 1599852000.0, 'accountsPayable': 67784000.0, 'currentDebt': 11156000.0, 'propertyPlantEquipment': 1073903000.0, 'totalLiabilities': 578871000.0, 'goodwill': 12975000.0, 'retainedEarnings': 771881000.0, 'totalStockholderEquity': 1020981000.0}}, 'cash_flow': {'2022-12-31': {'depreciation': 116977000.0, 'netIncome': 1421677000.0, 'capitalExpenditures': -129325000.0, 'investments': -1188000.0, 'changeInWorkingCapital': -73047000.0, 'cashFromFinancingActivities': -1357408000.0, 'cashFromInvestingActivities': -130513000.0, 'cashFromOperatingActivities': 1620448000.0}, '2021-12-31': {'depreciation': 119177000.0, 'netIncome': 401366000.0, 'capitalExpenditures': -82184000.0, 'investments': -1168000.0, 'changeInWorkingCapital': 6413000.0, 'cashFromFinancingActivities': -243758000.0, 'cashFromInvestingActivities': -83352000.0, 'cashFromOperatingActivities': 482466000.0}, '2020-12-31': {'depreciation': 126626000.0, 'netIncome': -180353000.0, 'capitalExpenditures': -93422000.0, 'investments': -1168000.0, 'changeInWorkingCapital': 5117000.0, 'cashFromFinancingActivities': -51666000.0, 'cashFromInvestingActivities': -94590000.0, 'cashFromOperatingActivities': 31000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:11:19,354 - INFO - Found 2 findings
+2026-02-18 07:11:19,355 - INFO - Populating memory with findings...
+2026-02-18 07:11:20,524 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:11:20,642 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:11:20,674 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:11:20,680 - INFO - Memory populated with 2 documents
+2026-02-18 07:11:20,681 - INFO - Running governor...
+2026-02-18 07:11:21,106 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:21:16,386 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:21:16,387 - INFO - Running finder...
+2026-02-18 07:21:17,803 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:21:17,808 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:21:17,809 - INFO - Finder raw output: []
+2026-02-18 07:21:17,809 - INFO - Found 0 findings
+2026-02-18 07:21:17,809 - WARNING - No findings returned
+2026-02-18 07:21:52,184 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:21:52,184 - INFO - Running finder...
+2026-02-18 07:22:00,515 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:00,520 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:22:00,521 - INFO - Finder raw output: [{'company_name': 'United Parcel Service, Inc.', 'ticker': 'UPS', 'summary': 'United Parcel Service is a global logistics company offering a range of solutions including transportation, distribution, contract logistics, and customs brokerage. It serves businesses and consumers in over 220 countries and territories.', 'source': 'https://finance.yahoo.com/quote/UPS/', 'metrics': {'pe_ratio': '16.39', 'market_cap': '122.532B', 'revenue': '91.054B'}, 'financials': {'balance_sheet': {'intangibleAssets': '9.042B', 'totalLiabilities': '88.876B', 'capitalSurplus': '11.958B', 'propertyPlantEquipment': '29.407B', 'totalAssets': '112.978B', 'currentAssets': '28.751B', 'currentLiabilities': '30.093B', 'retainedEarnings': '35.486B', 'totalEquityGrossMinorityInterest': '24.102B'}, 'cash_flow': {'netIncome': '7.074B', 'capitalExpenditure': '-4.164B', 'freeCashFlow': '6.345B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Qualcomm Incorporated', 'ticker': 'QCOM', 'summary': 'Qualcomm Incorporated designs, develops, manufactures, and markets digital telecommunications products and services worldwide. It operates through two segments, QCT (Qualcomm CDMA Technologies) and QTL (Qualcomm Technology Licensing).', 'source': 'https://finance.yahoo.com/quote/QCOM/', 'metrics': {'pe_ratio': '26.77', 'market_cap': '188.623B', 'revenue': '36.408B'}, 'financials': {'balance_sheet': {'intangibleAssets': '3.67B', 'totalLiabilities': '34.268B', 'capitalSurplus': '16.349B', 'propertyPlantEquipment': '3.979B', 'totalAssets': '76.888B', 'currentAssets': '37.737B', 'currentLiabilities': '11.321B', 'retainedEarnings': '21.537B', 'totalEquityGrossMinorityInterest': '42.62B'}, 'cash_flow': {'netIncome': '7.232B', 'capitalExpenditure': '-834M', 'freeCashFlow': '7.625B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Microsoft Corporation', 'ticker': 'MSFT', 'summary': 'Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide. It operates in three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.', 'source': 'https://finance.yahoo.com/quote/MSFT/', 'metrics': {'pe_ratio': '37.54', 'market_cap': '3.074T', 'revenue': '220.526B'}, 'financials': {'balance_sheet': {'intangibleAssets': '18.764B', 'totalLiabilities': '198.295B', 'capitalSurplus': '74.923B', 'propertyPlantEquipment': '108.42B', 'totalAssets': '452.03B', 'currentAssets': '157.93B', 'currentLiabilities': '97.165B', 'retainedEarnings': '174.383B', 'totalEquityGrossMinorityInterest': '253.735B'}, 'cash_flow': {'netIncome': '72.361B', 'capitalExpenditure': '-28.054B', 'freeCashFlow': '49.072B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:22:00,522 - INFO - Found 3 findings
+2026-02-18 07:22:00,522 - INFO - Populating memory with findings...
+2026-02-18 07:22:01,669 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:22:01,837 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:22:01,865 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:22:01,878 - INFO - Memory populated with 3 documents
+2026-02-18 07:22:01,878 - INFO - Running governor...
+2026-02-18 07:22:02,308 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:22:06,037 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:06,043 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:22:08,181 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:08,185 - INFO - Governor analysis complete
+2026-02-18 07:22:08,185 - INFO - Report compiled
+2026-02-18 07:22:08,186 - INFO - Generating PDF report via LLM...
+2026-02-18 07:22:08,754 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:22:12,348 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:12,350 - INFO - PDF report text generated
+2026-02-18 07:24:40,241 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:24:40,242 - INFO - Running finder...
+2026-02-18 07:24:41,586 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:24:41,590 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:24:41,591 - INFO - Finder raw output: []
+2026-02-18 07:24:41,591 - INFO - Found 0 findings
+2026-02-18 07:24:41,591 - WARNING - No findings returned
+2026-02-18 07:24:58,279 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:24:58,279 - INFO - Running finder...
+2026-02-18 07:25:05,298 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:25:05,303 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:25:05,304 - INFO - Finder raw output: [{'company_name': 'Alliance Resource Partners, L.P.', 'ticker': 'ARLP', 'summary': 'Alliance Resource Partners, L.P. is a diversified natural resource company that generates income from coal production and oil and gas mineral interests. They operate primarily in the Illinois Basin, and also have royalty interests in premier oil and gas producing regions.', 'source': 'https://www.allianceresource.com/', 'metrics': {'pe_ratio': '4.93', 'market_cap': '3.183B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 3542754000.0, 'totalLiabilities': 1483408000.0, 'totalStockholderEquity': 2059346000.0}}, 'cash_flow': {'2023-12-31': {'freeCashFlow': 489818000.0, 'operatingCashflow': 637768000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'HF Sinclair Corporation', 'ticker': 'DINO', 'summary': 'HF Sinclair Corporation operates as an independent energy company. It produces and markets light products, heavy products, specialty products, renewable diesel, and other products.', 'source': 'https://www.hfsinclair.com/', 'metrics': {'pe_ratio': '6.88', 'market_cap': '9.333B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 16910000000.0, 'totalLiabilities': 6322000000.0, 'totalStockholderEquity': 10588000000.0}}, 'cash_flow': {'2023-12-31': {'freeCashFlow': 1736000000.0, 'operatingCashflow': 2482000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Ovintiv Inc.', 'ticker': 'OVV', 'summary': 'Ovintiv Inc., together with its subsidiaries, engages in the exploration, development, and production of natural gas, oil, and natural gas liquids in the United States and Canada.', 'source': 'https://www.ovintiv.com/', 'metrics': {'pe_ratio': '6.72', 'market_cap': '11.594B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 19749000000.0, 'totalLiabilities': 8778000000.0, 'totalStockholderEquity': 10971000000.0}}, 'cash_flow': {'2023-12-31': {'freeCashFlow': 2413000000.0, 'operatingCashflow': 3527000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:25:05,304 - INFO - Found 3 findings
+2026-02-18 07:25:05,305 - INFO - Populating memory with findings...
+2026-02-18 07:25:06,458 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:25:06,627 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:25:06,659 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:25:06,670 - INFO - Memory populated with 3 documents
+2026-02-18 07:25:06,671 - INFO - Running governor...
+2026-02-18 07:25:07,106 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:25:11,361 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:25:11,365 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:25:13,522 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:25:13,525 - INFO - Governor analysis complete
+2026-02-18 07:25:13,526 - INFO - Report compiled
+2026-02-18 07:25:13,526 - INFO - Generating PDF report via LLM...
+2026-02-18 07:25:13,527 - INFO - Analysis complete
+2026-02-18 07:37:31,893 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:37:31,893 - INFO - Running finder...
+2026-02-18 07:37:39,147 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:37:39,151 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:37:39,152 - INFO - Finder raw output: [{'company_name': 'United Fire Group Inc.', 'ticker': 'UFCS', 'summary': "United Fire Group Inc. engages in the property and casualty insurance business in the United States. It operates through Commercial Lines, Personal Lines, and Life segments. The company offers commercial multiple peril, commercial auto, workers' compensation, and other commercial lines; and personal auto, homeowners, and other personal lines.", 'source': 'https://www.nasdaq.com/market-activity/stocks/ufcs', 'metrics': {'pe_ratio': '10.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 1487341000.0, 'totalLiab': 714731000.0, 'totalStockholderEquity': 772610000.0}}, 'cash_flow': 'Data unavailable', 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Greif, Inc.', 'ticker': 'GEF', 'summary': 'Greif, Inc. produces and sells industrial packaging products and services worldwide. It operates through three segments: Rigid Industrial Packaging, Paper Packaging & Services, and Land Management.', 'source': 'https://www.nasdaq.com/market-activity/stocks/gef', 'metrics': {'pe_ratio': '9.15', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-10-31': {'totalAssets': 4424645000.0, 'totalLiab': 2518309000.0, 'totalStockholderEquity': 1833597000.0}}, 'cash_flow': 'Data unavailable', 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'H&R Block, Inc.', 'ticker': 'HRB', 'summary': 'H&R Block, Inc., through its subsidiaries, provides assisted income tax return preparation, digital do-it-yourself (DIY) tax solutions, and other services and products in the United States, Canada, and Australia. It offers income tax return preparation and related services and products via in-person, online, and virtual channels.', 'source': 'https://www.nasdaq.com/market-activity/stocks/hrb', 'metrics': {'pe_ratio': '11.24', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2024-04-30': {'totalAssets': 6488100000.0, 'totalLiab': 5061800000.0, 'totalStockholderEquity': 1426300000.0}}, 'cash_flow': 'Data unavailable', 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:37:39,153 - INFO - Found 3 findings
+2026-02-18 07:37:39,154 - INFO - Populating memory with findings...
+2026-02-18 07:37:40,300 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:37:40,469 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:37:40,502 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:37:40,512 - INFO - Memory populated with 3 documents
+2026-02-18 07:37:40,513 - INFO - Running governor...
+2026-02-18 07:37:40,934 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:37:41,539 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:37:44,138 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:37:44,143 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:37:46,413 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:37:46,416 - INFO - Governor analysis complete
+2026-02-18 07:37:46,416 - INFO - Report compiled
+2026-02-18 07:37:46,417 - INFO - Generating PDF report via LLM...
+2026-02-18 07:38:32,156 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:38:32,157 - INFO - Running finder...
+2026-02-18 07:38:55,931 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:38:55,936 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:38:55,937 - INFO - Finder raw output: [{'company_name': 'United Fire Group Inc.', 'ticker': 'UFCS', 'summary': 'United Fire Group, Inc. engages in the insurance business. It operates through the Commercial Lines and Personal Lines segments. The Commercial Lines segment includes commercial property, auto, and liability coverages. The Personal Lines segment covers personal property, auto, and liability.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '12.87', 'market_cap': '331.574M', 'revenue': '1.124B'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': '4452000.0', 'totalLiab': '685415000.0', 'totalStockholderEquity': '472259000.0', 'otherCurrentLiab': '90219000.0', 'totalAssets': '1157674000.0', 'commonStock': '28630000.0', 'otherCurrentAssets': '3275000.0', 'retainedEarnings': '443629000.0', 'otherLiab': '12251000.0', 'goodWill': 'Not disclosed', 'treasuryStock': '-14000.0', 'otherAssets': '4898000.0', 'cash': '2257000.0', 'totalCurrentLiabilities': '142229000.0'}, '2021-12-31': {'intangibleAssets': '4452000.0', 'totalLiab': '643509000.0', 'totalStockholderEquity': '518879000.0', 'otherCurrentLiab': '65201000.0', 'totalAssets': '1162388000.0', 'commonStock': '28630000.0', 'otherCurrentAssets': '3822000.0', 'retainedEarnings': '490263000.0', 'otherLiab': '12159000.0', 'goodWill': 'Not disclosed', 'treasuryStock': '-14000.0', 'otherAssets': '4856000.0', 'cash': '2239000.0', 'totalCurrentLiabilities': '107632000.0'}, '2020-12-31': {'intangibleAssets': '4452000.0', 'totalLiab': '596103000.0', 'totalStockholderEquity': '558349000.0', 'otherCurrentLiab': '65185000.0', 'totalAssets': '1154452000.0', 'commonStock': '28630000.0', 'otherCurrentAssets': '3508000.0', 'retainedEarnings': '529711000.0', 'otherLiab': '11896000.0', 'goodWill': 'Not disclosed', 'treasuryStock': '-14000.0', 'otherAssets': '4814000.0', 'cash': '2216000.0', 'totalCurrentLiabilities': '107805000.0'}}, 'cash_flow': {'2022-12-31': {'investments': '-11084000.0', 'changeToLiabilities': '-3641000.0', 'totalCashflowsFromInvestingActivities': '-11084000.0', 'netBorrowings': '2000000.0', 'totalCashFromFinancingActivities': '-1991000.0', 'changeToOperatingActivities': '30551000.0', 'netIncome': '-46750000.0', 'changeInCash': '-47000.0', 'totalCashFromOperatingActivities': '105880000.0', 'depreciation': '469000.0', 'otherCashflowsFromInvestingActivities': '-107000.0', 'dividendsPaid': '-3991000.0'}, '2021-12-31': {'investments': '-14715000.0', 'changeToLiabilities': '-1074000.0', 'totalCashflowsFromInvestingActivities': '-14715000.0', 'netBorrowings': 'Not disclosed', 'totalCashFromFinancingActivities': '-3990000.0', 'changeToOperatingActivities': '-10295000.0', 'netIncome': '67487000.0', 'changeInCash': '23000.0', 'totalCashFromOperatingActivities': '58714000.0', 'depreciation': '469000.0', 'otherCashflowsFromInvestingActivities': '-110000.0', 'dividendsPaid': '-3990000.0'}, '2020-12-31': {'investments': '-15816000.0', 'changeToLiabilities': '-1029000.0', 'totalCashflowsFromInvestingActivities': '-15816000.0', 'netBorrowings': 'Not disclosed', 'totalCashFromFinancingActivities': '-3990000.0', 'changeToOperatingActivities': '-14054000.0', 'netIncome': '30268000.0', 'changeInCash': '-1000.0', 'totalCashFromOperatingActivities': '5080000.0', 'depreciation': '469000.0', 'otherCashflowsFromInvestingActivities': '-111000.0', 'dividendsPaid': '-3990000.0'}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'PACCAR Inc', 'ticker': 'PCAR', 'summary': 'PACCAR Inc designs, manufactures, and markets light-, medium-, and heavy-duty trucks. It also provides financial services and aftermarket parts for trucks and related commercial vehicles.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '13.48', 'market_cap': '37.253B', 'revenue': '33.77B'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': '74600000.0', 'totalLiab': '24787400000.0', 'totalStockholderEquity': '14200600000.0', 'otherCurrentLiab': '3816300000.0', 'totalAssets': '38988000000.0', 'commonStock': '372000000.0', 'otherCurrentAssets': '429600000.0', 'retainedEarnings': '13880900000.0', 'otherLiab': '3738700000.0', 'goodWill': '175100000.0', 'treasuryStock': '-53200000.0', 'otherAssets': '1492700000.0', 'cash': '3699500000.0', 'totalCurrentLiabilities': '8710500000.0'}, '2021-12-31': {'intangibleAssets': '76800000.0', 'totalLiab': '23157600000.0', 'totalStockholderEquity': '13999300000.0', 'otherCurrentLiab': '3689400000.0', 'totalAssets': '37156900000.0', 'commonStock': '372000000.0', 'otherCurrentAssets': '445300000.0', 'retainedEarnings': '13680500000.0', 'otherLiab': '3549700000.0', 'goodWill': '175100000.0', 'treasuryStock': '-53200000.0', 'otherAssets': '1492700000.0', 'cash': '4267700000.0', 'totalCurrentLiabilities': '7936100000.0'}, '2020-12-31': {'intangibleAssets': '79000000.0', 'totalLiab': '21531200000.0', 'totalStockholderEquity': '13428000000.0', 'otherCurrentLiab': '3276000000.0', 'totalAssets': '34959200000.0', 'commonStock': '372000000.0', 'otherCurrentAssets': '424400000.0', 'retainedEarnings': '13108400000.0', 'otherLiab': '3332200000.0', 'goodWill': '175100000.0', 'treasuryStock': '-53200000.0', 'otherAssets': '1453700000.0', 'cash': '4458500000.0', 'totalCurrentLiabilities': '7186900000.0'}}, 'cash_flow': {'2022-12-31': {'investments': '-492100000.0', 'changeToLiabilities': '136500000.0', 'totalCashflowsFromInvestingActivities': '-585300000.0', 'netBorrowings': '-115000000.0', 'totalCashFromFinancingActivities': '-2263200000.0', 'changeToOperatingActivities': '-27200000.0', 'netIncome': '3008600000.0', 'changeInCash': '-569200000.0', 'totalCashFromOperatingActivities': '3209300000.0', 'depreciation': '294100000.0', 'otherCashflowsFromInvestingActivities': '-10500000.0', 'dividendsPaid': '-891800000.0'}, '2021-12-31': {'investments': '-1021900000.0', 'changeToLiabilities': '-31700000.0', 'totalCashflowsFromInvestingActivities': '-1177600000.0', 'netBorrowings': '-1900000.0', 'totalCashFromFinancingActivities': '-2225800000.0', 'changeToOperatingActivities': '-110900000.0', 'netIncome': '1912600000.0', 'changeInCash': '-189300000.0', 'totalCashFromOperatingActivities': '2406400000.0', 'depreciation': '279800000.0', 'otherCashflowsFromInvestingActivities': '-13700000.0', 'dividendsPaid': '-783200000.0'}, '2020-12-31': {'investments': '-879700000.0', 'changeToLiabilities': '-44200000.0', 'totalCashflowsFromInvestingActivities': '-959800000.0', 'netBorrowings': '29000000.0', 'totalCashFromFinancingActivities': '-659300000.0', 'changeToOperatingActivities': '-55100000.0', 'netIncome': '1314800000.0', 'changeInCash': '1530900000.0', 'totalCashFromOperatingActivities': '2172100000.0', 'depreciation': '270500000.0', 'otherCashflowsFromInvestingActivities': '-13700000.0', 'dividendsPaid': '-746000000.0'}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:38:55,938 - INFO - Found 2 findings
+2026-02-18 07:38:55,938 - INFO - Populating memory with findings...
+2026-02-18 07:38:57,111 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:38:57,226 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:38:57,254 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:38:57,263 - INFO - Memory populated with 2 documents
+2026-02-18 07:38:57,263 - INFO - Running governor...
+2026-02-18 07:38:57,676 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:38:58,257 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:39:00,955 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:00,959 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:39:02,932 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:02,935 - INFO - Governor analysis complete
+2026-02-18 07:39:02,935 - INFO - Report compiled
+2026-02-18 07:39:02,936 - INFO - Generating PDF report via LLM...
+2026-02-18 07:39:06,535 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:07,353 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:07,356 - INFO - PDF report text generated
+2026-02-18 07:39:07,357 - INFO - PDF report saved: investment_report.pdf
+2026-02-18 07:39:07,357 - INFO - Analysis complete

@@ -1,12 +1,13 @@
 import asyncio
 import json
 from logger import logger
-from unittest import result
+from prompts import REPORTER_TASK
 from finder import run_finder
 from memory import populate_memory
 from governor import run_governor
 from utils import generate_pdf_report
-from langchain_google_genai import ChatGoogleGenerativeAI
+from config import build_llm
+from langchain.agents import create_agent
 
 
 USER_QUERY = (
@@ -72,12 +73,15 @@ async def main():
     JSON Report:
     {report_text_json}
     """
-    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
-    response = llm.invoke(llm_report_prompt)
-    report_text_json = response.content
+    reporter_agent = create_agent(
+        model=build_llm('governor'),
+        tools=[generate_pdf_report],
+        system_prompt=REPORTER_TASK
+    )
+    report_text_json = reporter_agent.invoke({
+        "messages": [{"role": 'user', 'content': llm_report_prompt}]
+    })
     logger.info("PDF report text generated")
-
-    generate_pdf_report(report_text_json, filename="investment_report.pdf")
     logger.info("PDF report saved: investment_report.pdf")
     logger.info("Analysis complete")
 
