@@ -796,3 +796,110 @@
 2026-02-19 00:05:10,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
 2026-02-19 00:05:10,927 - INFO - AFC is enabled with max remote calls: 10.
 2026-02-19 00:05:15,415 - WARNING - No valid opportunities returned from finder agent
+2026-02-19 09:52:25,710 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:52:25,711 - INFO - Running finder...
+2026-02-19 09:52:25,712 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:52:27,770 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:52:27,780 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:52:27,780 - INFO - Finder raw output: []
+2026-02-19 09:52:27,780 - INFO - Found 0 findings
+2026-02-19 09:52:27,781 - WARNING - No findings returned
+2026-02-19 09:53:40,981 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:53:40,982 - INFO - Running finder...
+2026-02-19 09:53:47,634 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:53:47,636 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:53:47,636 - INFO - Finder raw output: [{'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T Inc. is a telecommunications, media, and technology company, providing services to consumers and businesses. It operates through various segments including Communications, WarnerMedia, and Latin America.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '7.54', 'market_cap': '126.78B', 'revenue': '120.71B'}, 'financials': {'balance_sheet': {'intangibleAssets': '144.38B', 'totalLiab': '302.72B', 'totalAssets': '343.7B', 'propertyPlantEquipment': '60.17B', 'totalCurrentAssets': '36.27B', 'otherLiab': '74.88B', 'goodwill': '72.63B', 'otherAssets': '20.33B', 'cash': '6.91B', 'totalCurrentLiabilities': '61.35B'}, 'cash_flow': {'capitalExpenditure': '-17.14B', 'freeCashFlow': '10.66B', 'operatingCashFlow': '31.87B'}, 'earnings_history': {'epsActual': '0.55', 'epsEstimate': '0.55'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Citigroup Inc.', 'ticker': 'C', 'summary': 'Citigroup Inc. is a global financial services company. The company provides a range of financial products and services to consumers, corporations, governments, and institutions.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '12.22', 'market_cap': '120.42B', 'revenue': '77.27B'}, 'financials': {'balance_sheet': {'intangibleAssets': '11.56B', 'totalLiab': '1.68T', 'totalAssets': '1.79T', 'totalCurrentAssets': 'N/A', 'otherLiab': '18.9B', 'goodwill': '10.08B', 'otherAssets': '35.38B', 'cash': '422.51B', 'totalCurrentLiabilities': 'N/A'}, 'cash_flow': {'capitalExpenditure': '-714M', 'freeCashFlow': 'N/A', 'operatingCashFlow': 'N/A'}, 'earnings_history': {'epsActual': '1.59', 'epsEstimate': '1.22'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-19 09:53:47,636 - INFO - Found 2 findings
+2026-02-19 09:53:47,636 - INFO - Populating memory with findings...
+2026-02-19 09:53:49,405 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:54:39,767 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:54:39,767 - INFO - Running finder...
+2026-02-19 09:54:46,466 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:46,470 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:54:46,470 - INFO - Finder raw output: [{'company_name': 'United Fire Group Inc.', 'ticker': 'UFCS', 'summary': 'United Fire Group Inc. engages in the insurance business. The company offers commercial lines, personal lines, and life insurance products.', 'source': 'N/A', 'metrics': {'pe_ratio': '7.77', 'market_cap': '281.54M', 'revenue': '1.29B'}, 'financials': {'balance_sheet': {'2022-12-31': {'totalAssets': 1821970000.0, 'totalLiabilities': 1139278000.0, 'totalStockholderEquity': 682692000.0}, '2021-12-31': {'totalAssets': 1852148000.0, 'totalLiabilities': 1089807000.0, 'totalStockholderEquity': 762341000.0}, '2020-12-31': {'totalAssets': 1774876000.0, 'totalLiabilities': 1006614000.0, 'totalStockholderEquity': 768262000.0}, '2019-12-31': {'totalAssets': 1783411000.0, 'totalLiabilities': 985356000.0, 'totalStockholderEquity': 798055000.0}}, 'cash_flow': {'2022-12-31': {'totalCashFromOperatingActivities': 74500000.0, 'capitalExpenditures': -3300000.0, 'issuanceOfStock': 106000.0, 'repurchaseOfStock': -1229000.0, 'netIssuancePaymentsOfDebt': -21254000.0, 'freeCashFlow': 71200000.0}, '2021-12-31': {'totalCashFromOperatingActivities': 10472000.0, 'capitalExpenditures': -3241000.0, 'issuanceOfStock': 114000.0, 'repurchaseOfStock': -1219000.0, 'netIssuancePaymentsOfDebt': -1184000.0, 'freeCashFlow': 7231000.0}, '2020-12-31': {'totalCashFromOperatingActivities': 91279000.0, 'capitalExpenditures': -3081000.0, 'issuanceOfStock': 127000.0, 'repurchaseOfStock': -1204000.0, 'netIssuancePaymentsOfDebt': -19110000.0, 'freeCashFlow': 88198000.0}, '2019-12-31': {'totalCashFromOperatingActivities': 119196000.0, 'capitalExpenditures': -2854000.0, 'issuanceOfStock': 144000.0, 'repurchaseOfStock': -1178000.0, 'netIssuancePaymentsOfDebt': -11510000.0, 'freeCashFlow': 116342000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-19 09:54:46,471 - INFO - Found 1 findings
+2026-02-19 09:54:46,471 - INFO - Populating memory with findings...
+2026-02-19 09:54:47,297 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:54:47,376 - INFO - Loading faiss.
+2026-02-19 09:54:48,416 - INFO - Successfully loaded faiss.
+2026-02-19 09:54:48,423 - INFO - Memory populated with 1 documents
+2026-02-19 09:54:48,423 - INFO - Running governor...
+2026-02-19 09:54:48,906 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:54:49,003 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:54:50,838 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:50,842 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:54:53,277 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:53,281 - INFO - Governor analysis complete
+2026-02-19 09:54:53,281 - INFO - Report compiled
+2026-02-19 09:54:53,281 - INFO - Generating PDF report via LLM...
+2026-02-19 09:54:55,321 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:56,213 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:56,216 - INFO - PDF report text generated
+2026-02-19 09:54:56,216 - INFO - PDF report saved: investment_report.pdf
+2026-02-19 09:54:56,216 - INFO - Analysis complete
+2026-02-19 09:55:20,272 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:55:20,273 - INFO - Running finder...
+2026-02-19 09:55:31,224 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:31,263 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:55:31,264 - INFO - Finder raw output: [{'company_name': 'Unum Group', 'ticker': 'UNM', 'summary': 'Unum Group is an insurance company that provides financial protection benefits in the United States, the United Kingdom, and Poland. Its products include disability, life, accident, critical illness, dental, and vision insurance.', 'source': 'https://finance.yahoo.com/quote/UNM/', 'metrics': {'pe_ratio': '8.63', 'market_cap': '10.199B', 'revenue': '12.339B'}, 'financials': {'balance_sheet': {'intangibleAssets': '2.757B', 'totalLiabilities': '17.474B', 'propertyPlantEquipment': '268M', 'totalAssets': '27.166B', 'cash': '1.23B', 'accountsPayable': '642M', 'equity': '9.692B', 'currentAssets': '3.404B', 'currentLiabilities': '2.282B'}, 'cash_flow': {'capitalExpenditure': '-14M', 'issuanceOfStock': '10M', 'netIncome': '1.14B', 'operatingCashFlow': '1.471B', 'freeCashFlow': '1.457B', 'financingCashFlow': '-1.463B', 'investmentCashFlow': '-140M'}, 'earnings_history': {'2023-07-26': '1.97', '2023-04-26': '1.89', '2023-01-25': '1.67', '2022-10-26': '1.43'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'H&R Block, Inc.', 'ticker': 'HRB', 'summary': 'H&R Block, Inc., through its subsidiaries, provides assisted income tax return preparation, digital do-it-yourself (DDIY) tax solutions, and other services in the United States, Canada, and Australia.', 'source': 'https://finance.yahoo.com/quote/HRB/', 'metrics': {'pe_ratio': '11.37', 'market_cap': '5.783B', 'revenue': '3.545B'}, 'financials': {'balance_sheet': {'intangibleAssets': '1.331B', 'totalLiabilities': '3.273B', 'propertyPlantEquipment': '269.4M', 'totalAssets': '4.806B', 'cash': '596.8M', 'accountsPayable': '465.3M', 'equity': '1.533B', 'currentAssets': '1.154B', 'currentLiabilities': '1.256B'}, 'cash_flow': {'capitalExpenditure': '-44.1M', 'issuanceOfStock': '8.2M', 'netIncome': '508.4M', 'operatingCashFlow': '559.5M', 'freeCashFlow': '515.4M', 'financingCashFlow': '-301.2M', 'investmentCashFlow': '-90.6M'}, 'earnings_history': {'2023-08-01': '3.01', '2023-05-09': '4.66', '2023-02-07': '-2.78', '2022-11-01': '-0.87'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Lincoln National Corporation', 'ticker': 'LNC', 'summary': 'Lincoln National Corporation, through its subsidiaries, operates multiple insurance and retirement solutions businesses in the United States. It operates through four segments: Annuities, Retirement Plan Services, Life Insurance, and Group Protection.', 'source': 'https://finance.yahoo.com/quote/LNC/', 'metrics': {'pe_ratio': '6.48', 'market_cap': '3.993B', 'revenue': '16.854B'}, 'financials': {'balance_sheet': {'intangibleAssets': '644M', 'totalLiabilities': '62.441B', 'propertyPlantEquipment': '146M', 'totalAssets': '71.137B', 'cash': '1.402B', 'accountsPayable': '568M', 'equity': '8.696B', 'currentAssets': '3.078B', 'currentLiabilities': '3.982B'}, 'cash_flow': {'capitalExpenditure': '-11M', 'issuanceOfStock': 'Not disclosed', 'netIncome': '620M', 'operatingCashFlow': '1.719B', 'freeCashFlow': '1.708B', 'financingCashFlow': '-2.127B', 'investmentCashFlow': '195M'}, 'earnings_history': {'2023-07-31': '1.71', '2023-05-03': '1.64', '2023-02-08': '-16.31', '2022-11-02': '1.46'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-19 09:55:31,264 - INFO - Found 3 findings
+2026-02-19 09:55:31,264 - INFO - Populating memory with findings...
+2026-02-19 09:55:32,097 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:55:32,350 - INFO - Loading faiss.
+2026-02-19 09:55:32,392 - INFO - Successfully loaded faiss.
+2026-02-19 09:55:32,397 - INFO - Memory populated with 3 documents
+2026-02-19 09:55:32,397 - INFO - Running governor...
+2026-02-19 09:55:32,959 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:55:32,996 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:55:34,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:34,903 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:55:38,666 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:38,668 - INFO - Governor analysis complete
+2026-02-19 09:55:38,668 - INFO - Report compiled
+2026-02-19 09:55:38,668 - INFO - Generating PDF report via LLM...
+2026-02-19 09:55:40,910 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:42,122 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:42,124 - INFO - PDF report text generated
+2026-02-19 09:55:42,124 - INFO - PDF report saved: investment_report.pdf
+2026-02-19 09:55:42,124 - INFO - Analysis complete
+2026-02-19 15:14:21,358 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:18:29,982 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:07,758 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:07,766 - INFO - Loading faiss.
+2026-02-19 15:19:07,814 - INFO - Successfully loaded faiss.
+2026-02-19 15:19:08,650 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:09,450 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:09,491 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:19:10,792 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:49,146 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:49,155 - INFO - Loading faiss.
+2026-02-19 15:19:49,190 - INFO - Successfully loaded faiss.
+2026-02-19 15:19:50,036 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:50,927 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:50,943 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:19:52,204 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:52,207 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:19:54,670 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:20:48,334 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:20:48,344 - INFO - Loading faiss.
+2026-02-19 15:20:48,385 - INFO - Successfully loaded faiss.
+2026-02-19 15:20:49,242 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:20:50,236 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:20:50,245 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:20:51,518 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:20:51,521 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:20:52,999 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:43,620 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:43,630 - INFO - Loading faiss.
+2026-02-19 15:21:43,671 - INFO - Successfully loaded faiss.
+2026-02-19 15:21:44,503 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:21:44,593 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:45,755 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:45,759 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:47,164 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:47,808 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:48,323 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:21:48,351 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:49,492 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:49,494 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:51,550 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"

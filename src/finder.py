@@ -119,93 +119,15 @@ finder_agent = create_agent(
 )
 
 #@tool('finder-agent')
-import json
-
-llm = build_llm("finder")
-
-
-def get_candidate_tickers(query):
-    prompt = f"""
-    Based on this investment query:
-
-    "{query}"
-
-    List up to 8 publicly traded U.S. stock ticker symbols 
-    that might match the sector or criteria mentioned.
-
-    Return ONLY a JSON list of ticker symbols.
-    Example:
-    ["AAPL", "MSFT", "GOOGL"]
-    """
-
-    response = llm.invoke(prompt)
-    content = response.content.strip()
-
-    try:
-        return json.loads(content)
-    except:
-        return []
-    
-
-def passes_undervaluation_filters(stock):
-    try:
-        info = stock.info
-
-        pe = info.get("trailingPE")
-        debt_to_equity = info.get("debtToEquity")
-        market_cap = info.get("marketCap")
-        book_value = info.get("bookValue")
-
-        # Basic deterministic filters
-        if pe and pe < 20:
-            if debt_to_equity and debt_to_equity < 100:
-                return True
-
-        return False
-    except:
-        return False
-    
-
-def build_company_object(ticker, stock):
-    info = stock.info
-
-    return {
-        "company_name": info.get("longName", "Unknown"),
-        "ticker": ticker,
-        "summary": info.get("longBusinessSummary", "")[:300],
-        "metrics": {
-            "pe_ratio": info.get("trailingPE", "Not disclosed"),
-            "market_cap": info.get("marketCap", "Not disclosed"),
-            "revenue": info.get("totalRevenue", "Not disclosed")
-        },
-        "financials": {
-            "balance_sheet": stock.balance_sheet.to_dict() if not stock.balance_sheet.empty else "Data unavailable",
-            "cash_flow": stock.cashflow.to_dict() if not stock.cashflow.empty else "Data unavailable"
-        }
-    }
-
-
 async def run_finder(query):
-    print("[FINDER] Getting candidate tickers...")
-
-    tickers = get_candidate_tickers(query)
-    print("[DEBUG] Candidate tickers:", tickers)
-
-    findings = []
-
-    for ticker in tickers:
-        stock = yf.Ticker(ticker)
-
-        if stock.history(period="1d").empty:
-            continue
-
-        if passes_undervaluation_filters(stock):
-            company_obj = build_company_object(ticker, stock)
-            findings.append(company_obj)
-
-        if len(findings) >= 5:
-            break
-
-    print("[DEBUG] Final findings count:", len(findings))
-
-    return findings
+    '''
+    Runs the finder agent with the given query and returns the extracted findings.
+    
+    :param query: Description
+    '''
+    #print(get_public_financials("MSFT"))  # Test the tool independently
+    result = finder_agent.invoke({
+        'messages': [{'role': 'user', 'content': query}]
+    })
+    raw_output = result['messages'][-1].content
+    return extract_json(raw_output)

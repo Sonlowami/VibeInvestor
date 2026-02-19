@@ -1,62 +1,162 @@
+from finder import run_finder
+from memory import populate_memory, retrieve_memory
+from governor import run_governor
+from verifier import verify_groundedness
+from utils import generate_pdf_report
 import asyncio
 import json
-import warnings
-
-# Suppress langchain-core Pydantic V1 compatibility warning for Python 3.14
-warnings.filterwarnings("ignore", message=".*Core Pydantic V1 functionality.*")
-
-from logger import logger
-from prompts import REPORTER_TASK
-from finder import run_finder
-from memory import (populate_memory, init_persistent_store, write_session_memory, read_recent_sessions, prune_memory)
-from orchestrator import orchestrate
-from session_state import SessionState
-from governor import run_governor
-from utils import generate_pdf_report
-from config import build_llm
-from langchain.agents import create_agent
-import uuid
 
 
+def normalize_findings(raw_findings):
+    if raw_findings is None:
+        return []
 
-USER_QUERY = (
-    "Which discovered investment opportunity best matches the system goal "
-    "of asymmetric upside with limited attention, based on available evidence?"
-)
+    if isinstance(raw_findings, str):
+        try:
+            raw_findings = json.loads(raw_findings)
+        except Exception:
+            return []
 
-async def main():
-    logger.info("Starting VibeInvestor analysis")
-    init_persistent_store()
+    if isinstance(raw_findings, dict):
+        raw_findings = [raw_findings]
 
-    session_id = str(uuid.uuid4())
-    session_state = SessionState(session_id, USER_QUERY)
-    logger.info(f"Session initialized with ID: {session_id}")
-    
-    previous_sessions = read_recent_sessions(limit=5)
-    logger.info(f"[INFO] Injecting previous session context into planning")
+    if not isinstance(raw_findings, list):
+        return []
+
+    return [item for item in raw_findings if isinstance(item, dict)]
 
 
-    logger.info("[INFO] Running finder...")
-    result = await orchestrate(USER_QUERY, previous_sessions)
+### HW3 ADDITION ###
+def evaluate_run(query, findings, selected_opportunity, groundedness_score):
+    """
+    Quantitative Evaluation Metrics (HW3)
 
-    plan = result["plan"]
-    findings = result["findings"]
-    critique = result["critique"]
+    Metrics:
+    1. Task Completion
+    2. Plan Adherence
+    3. Groundedness
+    """
 
-    if findings:
-        session_state.selected_tickers = [f["ticker"] for f in findings]
-        session_state.financials = findings
-        session_state.metrics = result["metrics"]
+    # Metric 1 — Task Completion
+    task_completion = 1 if findings and selected_opportunity else 0
 
-        write_session_memory(
-            session_id=session_state.session_id,
-            user_query=session_state.user_query,
-            selected_tickers=session_state.selected_tickers,
-            financial_summary=session_state.financials,
-            metrics=session_state.metrics
+    # Metric 2 — Plan Adherence
+    adherence_score = 0
+    if selected_opportunity:
+        query_keywords = query.lower().split()
+        match_count = sum(
+            1 for word in query_keywords
+            if word in selected_opportunity.lower()
         )
-        prune_memory()
-    else:
-        logger.warning("No valid opportunities returned from finder agent")
+        adherence_score = match_count / max(len(query_keywords), 1)
 
-asyncio.run(main())
+    # Metric 3 — Groundedness (already computed by verifier)
+    groundedness = groundedness_score
+
+    evaluation = {
+        "task_completion": task_completion,
+        "plan_adherence_score": round(adherence_score, 2),
+        "groundedness_score": groundedness
+    }
+
+    print("\n[EVALUATION OUTPUT]")
+    print(evaluation)
+
+    return evaluation
+
+
+async def main(query):
+
+    ### HW3 ADDITION ###
+    # Adaptive control parameters
+    max_attempts = 2
+    attempt = 0
+
+    best_opportunity = None
+    groundedness_score = 0
+
+    while attempt < max_attempts:
+
+        print(f"\n[MAIN] Attempt {attempt + 1}")
+
+        # 1. Finder
+        print("[MAIN] Running finder...")
+        raw_findings = await run_finder(query)
+        findings = normalize_findings(raw_findings)
+
+        if not findings:
+            print("[MAIN] No findings returned.")
+
+        # 2. Memory Write (Long-Term)
+        print("[MAIN] Populating memory...")
+        documents = [f["summary"] for f in findings] if findings else []
+        metadatas = [{"source": f.get("source", "unknown")} for f in findings] if findings else []
+
+        if documents:
+            populate_memory(documents, metadatas)
+
+        # 3. Memory Read (Long-Term Reuse)
+        print("[MAIN] Retrieving relevant past memory...")
+        past_memory_docs = retrieve_memory(query)
+
+        past_memory_text = ""
+        if past_memory_docs:
+            past_memory_text = "\n\n".join(
+                [doc.page_content for doc in past_memory_docs]
+            )
+
+        # 4. Governor (Decision Node)
+        print("[MAIN] Running governor...")
+        best_opportunity = run_governor(
+            findings,
+            past_memory=past_memory_text
+        )
+
+        # 5. Groundedness Verification
+        print("[MAIN] Verifying groundedness...")
+        groundedness_result = verify_groundedness(best_opportunity, past_memory_docs)
+        if isinstance(groundedness_result, dict):
+            groundedness_score = groundedness_result.get("groundedness_score", 0)
+        else:
+            groundedness_score = groundedness_result or 0
+
+        # 6. Evaluation Metrics
+        evaluation_metrics = evaluate_run(
+            query,
+            findings,
+            best_opportunity,
+            groundedness_score
+        )
+
+        ### HW3 ADDITION — ADAPTIVE DECISION ###
+        if (
+            evaluation_metrics["task_completion"] == 1
+            and evaluation_metrics["groundedness_score"] >= 0.5
+        ):
+            print("[ADAPTIVE] Acceptable result achieved.")
+            break
+
+        print("[ADAPTIVE] Performance insufficient. Relaxing query...")
+
+        # Modify query slightly for retry
+        query = query + " broader related signals"
+
+        attempt += 1
+
+    # 7. Reporting
+    print("[MAIN] Generating report...")
+    report_text = (
+        f"Query: {query}\n\n"
+        f"Selected Opportunity:\n{best_opportunity}\n\n"
+        f"Groundedness Score: {groundedness_score}"
+    )
+    generate_pdf_report.invoke(
+        {"text": report_text, "filename": "investment_report.pdf"}
+    )
+
+    print("[MAIN] Done.")
+
+
+if __name__ == "__main__":
+    user_query = input("Enter your query: ")
+    asyncio.run(main(user_query))

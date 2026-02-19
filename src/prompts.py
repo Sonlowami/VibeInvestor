@@ -201,4 +201,3 @@ GOAL: Provide a pdf report using the text passed by the user
 TOOLS:
 - generate_pdf_report: call this tool with the text and a filename
 """
-
