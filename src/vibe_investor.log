@@ -1,0 +1,56 @@
+2026-02-19 21:52:28,402 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:28,408 - INFO - Populating memory with 1 findings...
+2026-02-19 21:52:29,568 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:52:29,858 - INFO - Loading faiss with AVX2 support.
+2026-02-19 21:52:29,890 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-19 21:52:30,305 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:52:30,316 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:52:34,654 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:34,659 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:52:36,773 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:37,454 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:52:39,489 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:40,360 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:52,153 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:52,159 - INFO - Populating memory with 1 findings...
+2026-02-19 21:52:53,329 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:52:54,093 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:52:54,106 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:52:58,785 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:52:58,791 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:01,442 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:02,263 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:04,476 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:05,947 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:10,312 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:10,316 - INFO - Populating memory with 1 findings...
+2026-02-19 21:53:11,472 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:53:12,083 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:53:12,097 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:17,041 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:17,047 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:19,753 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:20,395 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:22,305 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:23,612 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:37,149 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:37,153 - INFO - Populating memory with 1 findings...
+2026-02-19 21:53:38,336 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:53:39,147 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 21:53:39,161 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:44,782 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:44,788 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:46,617 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:47,310 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 21:53:48,971 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:50,437 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:53:51,583 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:54:00,694 - INFO - Web search returned 3 pages
+2026-02-19 21:54:00,694 - INFO - Searched pages: ['URL: https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'URL: https://www.reddit.com/r/ValueInvesting/comments/1r2ecm3/what_are_your_guys_favorite_decently_undervalued/', 'URL: https://global.morningstar.com/en-gb/stocks/2-newly-undervalued-stocks-this-month']
+2026-02-19 21:54:02,237 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:54:05,093 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: AT&T"}}}
+2026-02-19 21:54:07,305 - ERROR - $AT&T: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2026-02-19 21:54:08,809 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:54:12,995 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:54:19,910 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 21:54:56,557 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"

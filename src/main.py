@@ -1,5 +1,5 @@
 from finder import run_finder
-from memory import populate_memory, retrieve_memory
+from memory import populate_memory, retrieve_top_k
 from governor import run_governor
 from verifier import verify_groundedness
 from utils import generate_pdf_report
@@ -130,7 +130,7 @@ async def main(query):
 
         #Memory Read (Contextual Influencing)
         print("[MAIN] Consulting long-term memory...")
-        past_docs = retrieve_memory(original_query)
+        past_docs = retrieve_top_k(original_query)
         memory_context = "\n\n".join([d.page_content for d in past_docs]) if past_docs else ""
 
         # Governor (Decision)
