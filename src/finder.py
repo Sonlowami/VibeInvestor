@@ -11,7 +11,7 @@ from langchain.tools import tool
 from pydantic import BaseModel, Field
 from langchain.agents import create_agent
 import yfinance as yf
-
+from memory import populate_memory
 
 
 load_dotenv()
@@ -125,7 +125,6 @@ async def run_finder(query):
     
     :param query: Description
     '''
-    #print(get_public_financials("MSFT"))  # Test the tool independently
     result = finder_agent.invoke({
         'messages': [{'role': 'user', 'content': query}]
     })

@@ -1,5 +1,5 @@
 from finder import run_finder
-from memory import populate_memory, retrieve_memory
+from memory import populate_memory, retrieve_top_k
 from governor import run_governor
 from verifier import verify_groundedness
 from utils import generate_pdf_report
@@ -126,13 +126,11 @@ async def main(query):
 
         #Persistent Memory Write
         print("[MAIN] Updating Persistent Memory (FAISS)...")
-        docs = [f.get("summary", f.get("company_name", "")) for f in findings]
-        metas = [{"ticker": f.get("ticker", "N/A"), "source": f.get("source", "web")} for f in findings]
-        populate_memory(docs, metas)
+        populate_memory(findings)
 
         #Memory Read (Contextual Influencing)
         print("[MAIN] Consulting long-term memory...")
-        past_docs = retrieve_memory(original_query)
+        past_docs = retrieve_top_k(original_query)
         memory_context = "\n\n".join([d.page_content for d in past_docs]) if past_docs else ""
 
         # Governor (Decision)
