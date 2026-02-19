@@ -126,9 +126,7 @@ async def main(query):
 
         #Persistent Memory Write
         print("[MAIN] Updating Persistent Memory (FAISS)...")
-        docs = [f.get("summary", f.get("company_name", "")) for f in findings]
-        metas = [{"ticker": f.get("ticker", "N/A"), "source": f.get("source", "web")} for f in findings]
-        populate_memory(docs, metas)
+        populate_memory(findings)
 
         #Memory Read (Contextual Influencing)
         print("[MAIN] Consulting long-term memory...")
