@@ -7,14 +7,13 @@ def run_governor(findings, past_memory=""):
     """
     Governor selects the best opportunity.
     
-    Now integrates long-term memory context (HW3).
+    Now integrates long-term memory context
     """
 
     findings_text = "\n\n".join(
         [f"- {f['summary']}" for f in findings]
     )
 
-    ### HW3 ADDITION ###
     memory_section = ""
     if past_memory:
         memory_section = f"""
@@ -23,20 +22,20 @@ def run_governor(findings, past_memory=""):
         """
 
     prompt = f"""
-    You are a strategic decision-making governor.
-
-    Your task:
-    Select the single best opportunity from the list.
-
+    You are a Senior Investment Strategist.
+    Select the single best opportunity from the Current Findings.
+    
     Current Findings:
     {findings_text}
 
     {memory_section}
 
-    Consider whether past memory suggests recurring themes,
-    validated patterns, or prior strong signals.
-
-    Output only the selected opportunity summary.
+    OUTPUT STRUCTURE:
+    1. Opportunity Name & Ticker
+    2. Executive Summary (Why this specifically?)
+    3. Key Evidence (Bullet points from findings)
+    4. Strategic Alignment (How it matches the user's intent)
+    5. Contextual Note (Reference to past memory if applicable)
     """
 
     response = llm.invoke(prompt)

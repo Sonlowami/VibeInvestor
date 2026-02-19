@@ -15,7 +15,7 @@ import yfinance as yf
 
 
 load_dotenv()
-# Initialize LLM
+
 llm = build_llm("finder")
 
 def _clean_text(s: str) -> str:
@@ -27,7 +27,7 @@ def scrape_page_text(url, timeout=8):
         resp = requests.get(url, timeout=timeout, headers={"User-Agent": "vibe-investor-bot/1.0 (+https://example.org)"})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.content, "lxml")
-        # remove scripts/styles
+        
         for tag in soup(["script", "style", "noscript", "header", "footer", "meta", "iframe"]):
             tag.decompose()
         # prefer <article> or <main>
@@ -63,7 +63,7 @@ def web_search_tool(query: str, num_results=5, per_page_limit=3000):
         results = data.get("organic_results", []) or []
         pages = []
         for r in results[:num_results]:
-            # try common url keys
+            
             url = r.get("link") or r.get("url") or r.get("displayed_url") or r.get("source")
             title = r.get("title") or r.get("name") or ""
             snippet = r.get("snippet", "")

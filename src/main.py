@@ -5,158 +5,206 @@ from verifier import verify_groundedness
 from utils import generate_pdf_report
 import asyncio
 import json
+import re
+from logger import logger
+import pandas as pd
+from datetime import datetime
 
-
-def normalize_findings(raw_findings):
-    if raw_findings is None:
+def robust_extract_findings(raw_text: str):
+    """
+    Robust extraction to handle semi-structured Gemini outputs.
+    Ensures discovery doesn't fail due to conversational preambles
+    """
+    if not raw_text or not str(raw_text).strip():
         return []
 
-    if isinstance(raw_findings, str):
-        try:
-            raw_findings = json.loads(raw_findings)
-        except Exception:
-            return []
+    #Try to find JSON in markdown blocks
+    json_match = re.search(r"```json\s*([\s\S]*?)\s*```", raw_text)
+    content_to_parse = json_match.group(1) if json_match else raw_text
 
-    if isinstance(raw_findings, dict):
-        raw_findings = [raw_findings]
+    #Strict JSON parsing
+    try:
+        clean_content = re.sub(r",\s*([\]}])", r"\1", content_to_parse.strip())
+        data = json.loads(clean_content)
+        if isinstance(data, list): return data
+        if isinstance(data, dict): return [data]
+    except Exception:
+        logger.warning("Strict JSON parsing failed. Attempting regex extraction.")
 
-    if not isinstance(raw_findings, list):
-        return []
+    #Fallback: Regex-based object extraction
+    try:
+        items = re.findall(r"\{[^{}]*\"company_name\"[^{}]*\}", raw_text, re.DOTALL)
+        parsed_items = []
+        for item in items:
+            try:
+                parsed_items.append(json.loads(item))
+            except: continue
+        if parsed_items: return parsed_items
+    except Exception:
+        pass
 
-    return [item for item in raw_findings if isinstance(item, dict)]
+    return []
 
-
-### HW3 ADDITION ###
 def evaluate_run(query, findings, selected_opportunity, groundedness_score):
     """
-    Quantitative Evaluation Metrics (HW3)
-
-    Metrics:
-    1. Task Completion
-    2. Plan Adherence
-    3. Groundedness
+    Quantitative Evaluation Metrics
+    Uses a small LLM call for semantic Plan Adherence.
     """
+    # Metric 1: Task Completion (Binary)
+    task_completion = 1.0 if (findings and selected_opportunity) else 0.0
 
-    # Metric 1 — Task Completion
-    task_completion = 1 if findings and selected_opportunity else 0
-
-    # Metric 2 — Plan Adherence
-    adherence_score = 0
+    # Metric 2: Semantic Plan Adherence (LLM Call)
+    adherence_score = 0.0
     if selected_opportunity:
-        query_keywords = query.lower().split()
-        match_count = sum(
-            1 for word in query_keywords
-            if word in selected_opportunity.lower()
-        )
-        adherence_score = match_count / max(len(query_keywords), 1)
+        adherence_prompt = f"""
+        Rate how well the Selected Opportunity matches the user's Original Query.
+        
+        Original Query: {query}
+        Selected Opportunity: {selected_opportunity}
+        
+        Return ONLY a JSON object:
+        {{
+          "score": float (0.0 to 1.0),
+          "reason": "short explanation"
+        }}
+        """
+        try:
+            # Reusing build_llm from your config to keep it consistent
+            from config import build_llm
+            eval_llm = build_llm("governor") 
+            resp = eval_llm.invoke(adherence_prompt)
+            from utils import extract_json
 
-    # Metric 3 — Groundedness (already computed by verifier)
-    groundedness = groundedness_score
+            adherence_data = extract_json(resp.content)
+            adherence_score = float(adherence_data.get("score", 0.0))
+        except Exception as e:
+            print(f"Adherence Eval Error: {e}")
+            adherence_score = 0.0
+
+    # Metric 3: Groundedness
+    groundedness = float(groundedness_score)
 
     evaluation = {
         "task_completion": task_completion,
-        "plan_adherence_score": round(adherence_score, 2),
-        "groundedness_score": groundedness
+        "plan_adherence": adherence_score,
+        "groundedness": groundedness
     }
-
-    print("\n[EVALUATION OUTPUT]")
-    print(evaluation)
-
+    
+    print(f"\n[EVALUATION] {evaluation}")
     return evaluation
 
-
 async def main(query):
-
-    ### HW3 ADDITION ###
-    # Adaptive control parameters
-    max_attempts = 2
+    
+    max_attempts = 3
     attempt = 0
-
+    feedback = ""
+    
     best_opportunity = None
-    groundedness_score = 0
+    final_groundedness = 0
+    original_query = query
 
     while attempt < max_attempts:
+        print(f"\n--- [MAIN] Iteration {attempt + 1} ---")
+        
+        # Adapt the query based on previous attempt feedback
+        current_query = f"{query} {feedback}".strip() if attempt > 0 else query
 
-        print(f"\n[MAIN] Attempt {attempt + 1}")
+        # Finder (Discovery)
+        print("[MAIN] Running Finder...")
+        raw_output = await run_finder(current_query)
 
-        # 1. Finder
-        print("[MAIN] Running finder...")
-        raw_findings = await run_finder(query)
-        findings = normalize_findings(raw_findings)
+        if isinstance(raw_output, list):
+            findings = raw_output
+        else:
+            findings = robust_extract_findings(raw_output)
 
         if not findings:
-            print("[MAIN] No findings returned.")
+            print("[ADAPTIVE] Failure: No findings. Strategy: Relaxing constraints.")
+            feedback = "Include related public companies even if undervaluation is borderline."
+            attempt += 1
+            continue
 
-        # 2. Memory Write (Long-Term)
-        print("[MAIN] Populating memory...")
-        documents = [f["summary"] for f in findings] if findings else []
-        metadatas = [{"source": f.get("source", "unknown")} for f in findings] if findings else []
+        #Persistent Memory Write
+        print("[MAIN] Updating Persistent Memory (FAISS)...")
+        docs = [f.get("summary", f.get("company_name", "")) for f in findings]
+        metas = [{"ticker": f.get("ticker", "N/A"), "source": f.get("source", "web")} for f in findings]
+        populate_memory(docs, metas)
 
-        if documents:
-            populate_memory(documents, metadatas)
+        #Memory Read (Contextual Influencing)
+        print("[MAIN] Consulting long-term memory...")
+        past_docs = retrieve_memory(original_query)
+        memory_context = "\n\n".join([d.page_content for d in past_docs]) if past_docs else ""
 
-        # 3. Memory Read (Long-Term Reuse)
-        print("[MAIN] Retrieving relevant past memory...")
-        past_memory_docs = retrieve_memory(query)
+        # Governor (Decision)
+        print("[MAIN] Running Governor...")
+        best_opportunity = run_governor(findings, past_memory=memory_context)
 
-        past_memory_text = ""
-        if past_memory_docs:
-            past_memory_text = "\n\n".join(
-                [doc.page_content for doc in past_memory_docs]
-            )
+        #Verifier (Grounding)
+        print("[MAIN] Verifying Groundedness...")
+        v_res = verify_groundedness(best_opportunity, findings)
+        final_groundedness = v_res.get("groundedness_score", 0) if isinstance(v_res, dict) else (v_res or 0)
 
-        # 4. Governor (Decision Node)
-        print("[MAIN] Running governor...")
-        best_opportunity = run_governor(
-            findings,
-            past_memory=past_memory_text
-        )
+        #Evaluation
+        metrics = evaluate_run(original_query, findings, best_opportunity, final_groundedness)
 
-        # 5. Groundedness Verification
-        print("[MAIN] Verifying groundedness...")
-        groundedness_result = verify_groundedness(best_opportunity, past_memory_docs)
-        if isinstance(groundedness_result, dict):
-            groundedness_score = groundedness_result.get("groundedness_score", 0)
-        else:
-            groundedness_score = groundedness_result or 0
-
-        # 6. Evaluation Metrics
-        evaluation_metrics = evaluate_run(
-            query,
-            findings,
-            best_opportunity,
-            groundedness_score
-        )
-
-        ### HW3 ADDITION — ADAPTIVE DECISION ###
-        if (
-            evaluation_metrics["task_completion"] == 1
-            and evaluation_metrics["groundedness_score"] >= 0.5
-        ):
-            print("[ADAPTIVE] Acceptable result achieved.")
+        #Adaptive Decision Bridge
+        if metrics["task_completion"] == 1.0 and metrics["groundedness"] >= 0.7:
+            print("[ADAPTIVE] Success threshold met.")
             break
-
-        print("[ADAPTIVE] Performance insufficient. Relaxing query...")
-
-        # Modify query slightly for retry
-        query = query + " broader related signals"
-
+        elif metrics["groundedness"] < 0.7:
+            print("[ADAPTIVE] Low groundedness. Strategy: Targeted re-discovery.")
+            feedback = f"Find more primary evidence for these specific claims: {best_opportunity[:100]}"
+        else:
+            print("[ADAPTIVE] Incomplete results. Strategy: Broaden search.")
+            feedback = "Relax valuation heuristics to find more candidates."
+            
         attempt += 1
 
-    # 7. Reporting
-    print("[MAIN] Generating report...")
-    report_text = (
-        f"Query: {query}\n\n"
-        f"Selected Opportunity:\n{best_opportunity}\n\n"
-        f"Groundedness Score: {groundedness_score}"
-    )
-    generate_pdf_report.invoke(
-        {"text": report_text, "filename": "investment_report.pdf"}
-    )
+    #Final Reporting
+    print("\n[MAIN] Generating Comprehensive PDF Report...")
+    
+    report_text = f"""
+    INVESTMENT RESEARCH INTELLIGENCE REPORT
+    ========================================
+    Target Query: {original_query}
+    Session ID: {pd.Timestamp.now().strftime('%Y%m%d-%H%M')}
+    
+    1. EXECUTIVE DECISION
+    ---------------------
+    {best_opportunity}
+    
+    2. SYSTEM PERFORMANCE & EVALUATION
+    ----------------------------------
+    - Task Completion: {metrics['task_completion'] * 100}%
+    - Plan Adherence:  {metrics['plan_adherence'] * 100}%
+    - Groundedness:    {metrics['groundedness'] * 100}%
+    
+    3. ADAPTIVE EXECUTION TRACE
+    ---------------------------
+    - Total Iterations: {attempt + 1}
+    - Final Strategy: {"Success on first pass" if attempt == 0 else "Adaptive refinement applied"}
+    - Memory Context: {"Integrated" if past_docs else "New discovery"}
+    
+    4. DATA SOURCE INTEGRITY
+    ------------------------
+    This report was generated by a multi-agent orchestration (Finder -> Governor -> Verifier)
+    and cross-referenced against FAISS persistent long-term memory.
+    """
+    
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    filename = f"reports/HW3_Final_Investment_Report_{timestamp}.pdf"
+    generate_pdf_report.invoke({"text": report_text, "filename": filename})
+    print("[MAIN] Pipeline Complete.")
 
-    print("[MAIN] Done.")
-
+    return {
+        "query": original_query,
+        "attempts": attempt + 1,
+        "task_completion": metrics["task_completion"],
+        "plan_adherence": metrics["plan_adherence"],
+        "groundedness": metrics["groundedness"],
+        "result": best_opportunity[:100] + "..."
+    }
 
 if __name__ == "__main__":
-    user_query = input("Enter your query: ")
+    user_query = input("Enter investment query: ")
     asyncio.run(main(user_query))
