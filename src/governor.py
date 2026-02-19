@@ -1,32 +1,43 @@
-from memory import retrieve_top_k
-from verifier import verify_groundedness
-from prompts import GOVERNOR_TASK
-from langchain_google_genai import ChatGoogleGenerativeAI
+from config import build_llm
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+llm = build_llm("governor")
 
-async def run_governor(user_query):
-    retrieved_chunks = retrieve_top_k(user_query, k=5)
 
-    context = "\n\n".join(
-        [doc.page_content for doc in retrieved_chunks]
+def run_governor(findings, past_memory=""):
+    """
+    Governor selects the best opportunity.
+    
+    Now integrates long-term memory context
+    """
+
+    findings_text = "\n\n".join(
+        [f"- {f['summary']}" for f in findings]
     )
 
-    prompt = GOVERNOR_TASK.format(
-        question=user_query,
-        context=context
-    )
+    memory_section = ""
+    if past_memory:
+        memory_section = f"""
+        Past Relevant Memory:
+        {past_memory}
+        """
+
+    prompt = f"""
+    You are a Senior Investment Strategist.
+    Select the single best opportunity from the Current Findings.
+    
+    Current Findings:
+    {findings_text}
+
+    {memory_section}
+
+    OUTPUT STRUCTURE:
+    1. Opportunity Name & Ticker
+    2. Executive Summary (Why this specifically?)
+    3. Key Evidence (Bullet points from findings)
+    4. Strategic Alignment (How it matches the user's intent)
+    5. Contextual Note (Reference to past memory if applicable)
+    """
 
     response = llm.invoke(prompt)
-    answer = response.content
 
-    verification = verify_groundedness(
-        answer,
-        retrieved_chunks
-    )
-
-    return {
-        "answer": answer,
-        "verification": verification,
-        "used_chunks": retrieved_chunks
-    }
+    return response.content

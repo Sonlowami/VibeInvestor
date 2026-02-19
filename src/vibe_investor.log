@@ -73,3 +73,1016 @@
 2026-02-05 22:51:57,160 - INFO - PDF report text generated
 2026-02-05 22:51:57,162 - INFO - PDF report saved: investment_report.pdf
 2026-02-05 22:51:57,162 - INFO - Analysis complete
+2026-02-09 19:02:46,465 - INFO - Starting VibeInvestor analysis
+2026-02-09 19:02:46,466 - INFO - Running finder...
+2026-02-09 19:02:49,287 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-09 19:02:49,661 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-09 19:02:49,663 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.1775091868386325 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 10.400455422s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}.
+2026-02-09 19:02:51,025 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-09 19:02:51,026 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 2.3560837349525814 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 9.037284068s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}.
+2026-02-09 19:02:53,556 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-09 19:02:53,558 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 4.380132090869372 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 6.50486435s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '6s'}]}}.
+2026-02-09 19:02:58,116 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-09 19:02:58,118 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 8.64708303398933 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 1.945401406s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '1s'}]}}.
+2026-02-09 19:03:07,712 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-09 19:03:07,713 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 16.502927924783492 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 52.351667578s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}.
+2026-02-09 19:03:25,183 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:20:32,055 - INFO - Starting VibeInvestor analysis
+2026-02-10 07:20:32,055 - INFO - Running finder...
+2026-02-10 07:20:33,895 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:20:35,074 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:20:35,103 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.245272400935625 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 24.276766452s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}.
+2026-02-10 07:20:36,532 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:20:36,533 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 2.908744694181663 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 22.792079739s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}.
+2026-02-10 07:20:39,626 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:20:39,628 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 4.322541288239229 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 19.698038482s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}.
+2026-02-10 07:20:44,136 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:20:44,137 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 8.192169062051168 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 15.192330542s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '15s'}]}}.
+2026-02-10 07:20:53,402 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:20:53,404 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 16.63383291244323 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 5.983597175s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}.
+2026-02-10 07:21:11,017 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 07:25:52,571 - INFO - Starting VibeInvestor analysis
+2026-02-10 07:25:52,571 - INFO - Running finder...
+2026-02-10 07:26:03,796 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:26:15,023 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-10 07:26:15,026 - INFO - Finder returned type: <class 'list'>
+2026-02-10 07:26:15,026 - INFO - Found 10 findings
+2026-02-10 07:26:15,027 - INFO - Populating memory with findings...
+2026-02-10 07:26:16,001 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/embedding-001:batchEmbedContents "HTTP/1.1 404 Not Found"
+2026-02-10 07:38:44,848 - INFO - Starting VibeInvestor analysis
+2026-02-10 07:38:44,848 - INFO - Running finder...
+2026-02-10 07:39:03,403 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:39:14,968 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-10 07:39:14,971 - INFO - Finder returned type: <class 'list'>
+2026-02-10 07:39:14,972 - INFO - Found 10 findings
+2026-02-10 07:39:14,972 - INFO - Populating memory with findings...
+2026-02-10 07:39:16,199 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-10 07:40:15,771 - INFO - Starting VibeInvestor analysis
+2026-02-10 07:40:15,772 - INFO - Running finder...
+2026-02-10 07:40:28,965 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:40:40,133 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-10 07:40:40,137 - INFO - Finder returned type: <class 'list'>
+2026-02-10 07:40:40,137 - INFO - Found 10 findings
+2026-02-10 07:40:40,137 - INFO - Populating memory with findings...
+2026-02-10 07:40:41,448 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-10 07:40:41,981 - INFO - Loading faiss with AVX2 support.
+2026-02-10 07:40:42,531 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-10 07:40:42,631 - INFO - Memory populated with 10 documents
+2026-02-10 07:40:42,631 - INFO - Running governor...
+2026-02-10 07:40:43,188 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-10 07:40:43,194 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:40:44,722 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-10 07:40:44,725 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:40:47,693 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-10 07:40:47,695 - INFO - Governor analysis complete
+2026-02-10 07:40:47,696 - INFO - Report compiled
+2026-02-10 07:40:47,696 - INFO - Generating PDF report via LLM...
+2026-02-10 07:40:48,723 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 07:40:51,482 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-10 07:40:51,485 - INFO - PDF report text generated
+2026-02-10 07:40:51,488 - INFO - PDF report saved: investment_report.pdf
+2026-02-10 07:40:51,489 - INFO - Analysis complete
+2026-02-13 08:32:29,707 - INFO - Starting VibeInvestor analysis
+2026-02-13 08:32:29,708 - INFO - Running finder...
+2026-02-13 08:32:41,775 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:32:50,944 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:32:50,949 - INFO - Finder returned type: <class 'list'>
+2026-02-13 08:32:50,949 - INFO - Found 10 findings
+2026-02-13 08:32:50,951 - INFO - Populating memory with findings...
+2026-02-13 08:32:52,165 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 08:32:52,685 - INFO - Loading faiss with AVX2 support.
+2026-02-13 08:32:53,263 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-13 08:32:53,351 - INFO - Memory populated with 10 documents
+2026-02-13 08:32:53,353 - INFO - Running governor...
+2026-02-13 08:32:53,794 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 08:32:53,805 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:32:57,058 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:32:57,061 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:33:01,887 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:33:01,890 - INFO - Governor analysis complete
+2026-02-13 08:33:01,891 - INFO - Report compiled
+2026-02-13 08:33:01,891 - INFO - Generating PDF report via LLM...
+2026-02-13 08:33:02,985 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:33:07,204 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:33:07,207 - INFO - PDF report text generated
+2026-02-13 08:33:07,211 - INFO - PDF report saved: investment_report.pdf
+2026-02-13 08:33:07,211 - INFO - Analysis complete
+2026-02-13 08:48:41,150 - INFO - Starting VibeInvestor analysis
+2026-02-13 08:48:41,151 - INFO - Running finder...
+2026-02-13 08:48:57,823 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:49:06,214 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:49:06,218 - INFO - Finder returned type: <class 'list'>
+2026-02-13 08:49:06,219 - INFO - Finder raw output: [{'company_name': 'Allstate Corp', 'ticker': 'ALL', 'summary': 'Allstate appears undervalued due to its very low P/E ratio. This suggests that the stock price may be low relative to its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '5.24', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Comcast Corp', 'ticker': 'CMCSA', 'summary': 'Comcast shows potential undervaluation with a low P/E ratio, indicating that its stock might be priced attractively compared to its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '5.87', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Charter Communications Inc', 'ticker': 'CHTR', 'summary': 'Charter Communications is possibly undervalued, reflected in its low P/E ratio. This could mean the stock is trading at a discount compared to its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '6.53', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'APA Corporation', 'ticker': 'APA', 'summary': "APA Corporation's low P/E ratio suggests it may be undervalued. The stock price may be lower than justified by its earnings.", 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '6.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'HP Inc', 'ticker': 'HPQ', 'summary': "HP Inc is potentially undervalued due to a low P/E ratio. This indicates the market price may not fully reflect the company's earnings.", 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.33', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'PayPal Holdings Inc', 'ticker': 'PYPL', 'summary': "PayPal's low P/E ratio suggests it may be undervalued. The current stock price might be a good entry point given its earnings.", 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Mosaic Company', 'ticker': 'MOS', 'summary': 'Mosaic Company appears undervalued with a low P/E ratio. The stock price may be attractive compared to its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.67', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Synchrony Financial', 'ticker': 'SYF', 'summary': "Synchrony Financial's low P/E ratio indicates potential undervaluation. It suggests the stock price is low relative to its earnings.", 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.96', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Arch Capital Group Ltd', 'ticker': 'ACGL', 'summary': 'Arch Capital Group shows a low P/E ratio, suggesting it may be undervalued. The stock price might be lower than justified by its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '8.27', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Edison International', 'ticker': 'EIX', 'summary': "Edison International has a low P/E ratio, indicating potential undervaluation. The market price may not fully reflect the company's earnings.", 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '8.35', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}]
+2026-02-13 08:49:06,220 - INFO - Found 10 findings
+2026-02-13 08:49:06,220 - INFO - Populating memory with findings...
+2026-02-13 08:49:06,908 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 08:49:07,331 - INFO - Loading faiss with AVX2 support.
+2026-02-13 08:49:07,349 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-13 08:49:07,357 - INFO - Memory populated with 10 documents
+2026-02-13 08:49:07,357 - INFO - Running governor...
+2026-02-13 08:49:07,868 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 08:49:07,881 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:49:09,863 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:49:09,867 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:49:12,162 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:49:12,165 - INFO - Governor analysis complete
+2026-02-13 08:49:12,165 - INFO - Report compiled
+2026-02-13 08:49:12,166 - INFO - Generating PDF report via LLM...
+2026-02-13 08:49:12,726 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 08:49:16,112 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 08:49:16,115 - INFO - PDF report text generated
+2026-02-13 08:49:16,118 - INFO - PDF report saved: investment_report.pdf
+2026-02-13 08:49:16,118 - INFO - Analysis complete
+2026-02-13 09:02:16,407 - INFO - Starting VibeInvestor analysis
+2026-02-13 09:02:16,408 - INFO - Running finder...
+2026-02-13 09:02:24,974 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:02:33,397 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:02:33,400 - INFO - Finder returned type: <class 'list'>
+2026-02-13 09:02:33,401 - INFO - Finder raw output: [{'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T appears undervalued with a low P/E ratio and a significant market cap, suggesting potential for growth. However, the 1 yr. % Change in EPS (Basic) is concerning.', 'source': 'https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'metrics': {'pe_ratio': '8.98', 'market_cap': '204.176B', 'revenue': 'Not disclosed'}}, {'company_name': 'Banco Bradesco S.A.', 'ticker': 'BBD', 'summary': 'Banco Bradesco S.A. shows a low P/E ratio, indicating undervaluation. The positive 1 yr. % Change in EPS (Basic) further supports this.', 'source': 'https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'metrics': {'pe_ratio': '9.35', 'market_cap': '43.46B', 'revenue': 'Not disclosed'}}, {'company_name': 'Pinterest, Inc.', 'ticker': 'PINS', 'summary': 'Pinterest has a relatively low P/E ratio for a growth stock and a positive 1 yr. % Change in EPS (Basic), suggesting it may be undervalued. However, its market cap is smaller compared to other listed companies.', 'source': 'https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'metrics': {'pe_ratio': '7.06', 'market_cap': '12.606B', 'revenue': 'Not disclosed'}}, {'company_name': 'AGNC Investment Corp.', 'ticker': 'AGNC', 'summary': 'AGNC Investment Corp. has a low P/E ratio and a notable market cap. The positive 1 yr. % Change in EPS (Basic) suggests potential undervaluation.', 'source': 'https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'metrics': {'pe_ratio': '7.63', 'market_cap': '12.604B', 'revenue': 'Not disclosed'}}, {'company_name': 'Mosaic Company', 'ticker': 'MOS', 'summary': 'Mosaic Company has a low P/E ratio and a significant market cap. This, coupled with a strong 1 yr. % Change in EPS (Basic), indicates potential undervaluation.', 'source': 'https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'metrics': {'pe_ratio': '7.79', 'market_cap': '9.449B', 'revenue': 'Not disclosed'}}, {'company_name': 'Allstate Corp', 'ticker': 'ALL', 'summary': 'Allstate Corp has a very low P/E ratio. This suggests undervaluation compared to other companies in the S&P 500.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '5.24', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Comcast Corp', 'ticker': 'CMCSA', 'summary': 'Comcast Corp has a low P/E ratio, implying it is undervalued relative to its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '5.87', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'HP Inc', 'ticker': 'HPQ', 'summary': 'HP Inc has a low P/E ratio, suggesting undervaluation based on earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.33', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'PayPal Holdings Inc', 'ticker': 'PYPL', 'summary': 'PayPal Holdings Inc. has a low P/E ratio, suggesting it is undervalued based on its earnings.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}]
+2026-02-13 09:02:33,402 - INFO - Found 9 findings
+2026-02-13 09:02:33,402 - INFO - Populating memory with findings...
+2026-02-13 09:02:34,147 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 09:02:34,573 - INFO - Loading faiss with AVX2 support.
+2026-02-13 09:02:34,706 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-13 09:02:34,712 - INFO - Memory populated with 9 documents
+2026-02-13 09:02:34,713 - INFO - Running governor...
+2026-02-13 09:02:35,181 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 09:02:35,193 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:02:36,702 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:02:36,706 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:02:40,519 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:02:40,522 - INFO - Governor analysis complete
+2026-02-13 09:02:40,523 - INFO - Report compiled
+2026-02-13 09:02:40,523 - INFO - Generating PDF report via LLM...
+2026-02-13 09:02:41,071 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:02:43,883 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:02:43,885 - INFO - PDF report text generated
+2026-02-13 09:02:43,888 - INFO - PDF report saved: investment_report.pdf
+2026-02-13 09:02:43,888 - INFO - Analysis complete
+2026-02-13 09:10:09,805 - INFO - Starting VibeInvestor analysis
+2026-02-13 09:10:09,806 - INFO - Running finder...
+2026-02-13 09:10:18,659 - INFO - Web search returned 5 pages
+2026-02-13 09:10:18,660 - INFO - Searched pages: ['URL: https://finance.yahoo.com/research-hub/screener/undervalued_growth_stocks/', 'URL: https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'URL: https://finance.yahoo.com/news/3-stocks-estimated-trading-46-113830961.html', 'URL: https://www.morningstar.com/stocks/10-undervalued-stocks-that-crushed-q2-earnings', 'URL: https://www.marketbeat.com/market-data/low-pe-stocks/']
+2026-02-13 09:10:18,664 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:10:28,267 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:10:28,270 - INFO - Finder returned type: <class 'list'>
+2026-02-13 09:10:28,271 - INFO - Finder raw output: [{'company_name': 'Allstate Corp', 'ticker': 'ALL', 'summary': 'Allstate has the lowest trailing P/E ratio in the S&P 500 at 5.24, suggesting it may be undervalued compared to its earnings. The search results indicate a low P/E ratio is an indicator of a potentially undervalued stock.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '5.24', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Comcast Corp', 'ticker': 'CMCSA', 'summary': 'Comcast has a low trailing P/E ratio of 5.87, which may indicate the stock is trading below its assumed value. This low ratio, according to the search results, suggests potential undervaluation.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '5.87', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'APA Corporation', 'ticker': 'APA', 'summary': 'APA Corporation has a trailing P/E ratio of 6.63, suggesting potential undervaluation. A low P/E ratio can be an indicator that the stock is trading below its intrinsic value.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '6.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'HP Inc', 'ticker': 'HPQ', 'summary': 'HP Inc has a P/E ratio of 7.33, according to the search results. The low P/E ratio suggests that it may be undervalued.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.33', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'PayPal Holdings Inc', 'ticker': 'PYPL', 'summary': 'PayPal Holdings has a P/E ratio of 7.63, which might indicate it is undervalued relative to its earnings. The search results suggest a low P/E ratio is an indicator of potentially undervalued stocks.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Mosaic Company', 'ticker': 'MOS', 'summary': 'The Mosaic Company has a P/E ratio of 7.67, suggesting potential undervaluation. The search results indicate that a low P/E ratio could mean the stock is trading below its assumed value.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.67', 'market_cap': '9.449B', 'revenue': 'Not disclosed'}}, {'company_name': 'Synchrony Financial', 'ticker': 'SYF', 'summary': 'Synchrony Financial has a P/E ratio of 7.96. This relatively low P/E ratio, according to the search results, suggests potential undervaluation.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '7.96', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Arch Capital Group Ltd', 'ticker': 'ACGL', 'summary': 'Arch Capital Group has a low P/E ratio of 8.27 according to the search results. Stocks with low P/E ratios can be undervalued.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '8.27', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'Edison International', 'ticker': 'EIX', 'summary': 'Edison International has a P/E ratio of 8.35, which could indicate that the stock is undervalued relative to its earnings. Low P/E ratios can be an indicator of undervaluation.', 'source': 'https://www.nerdwallet.com/investing/learn/undervalued-stocks', 'metrics': {'pe_ratio': '8.35', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}}, {'company_name': 'American Healthcare REIT', 'ticker': 'AHR', 'summary': 'American Healthcare REIT is estimated to be trading at a 46.4% discount to its fair value based on future cash flows. The company has turned profitable and forecasts robust annual earnings growth, suggesting it may be undervalued.', 'source': 'https://finance.yahoo.com/news/3-stocks-estimated-trading-46-113830961.html', 'metrics': {'pe_ratio': 'Not disclosed', 'market_cap': '8.35 billion', 'revenue': '1.72 billion (Integrated Senior Health Campuses)'}}]
+2026-02-13 09:10:28,272 - INFO - Found 10 findings
+2026-02-13 09:10:28,273 - INFO - Populating memory with findings...
+2026-02-13 09:10:29,495 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 09:10:29,979 - INFO - Loading faiss with AVX2 support.
+2026-02-13 09:10:30,103 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-13 09:10:30,116 - INFO - Memory populated with 10 documents
+2026-02-13 09:10:30,117 - INFO - Running governor...
+2026-02-13 09:10:30,551 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-13 09:10:30,564 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:10:33,645 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:10:33,649 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:10:37,564 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:10:37,567 - INFO - Governor analysis complete
+2026-02-13 09:10:37,567 - INFO - Report compiled
+2026-02-13 09:10:37,567 - INFO - Generating PDF report via LLM...
+2026-02-13 09:10:38,133 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-13 09:10:43,063 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-13 09:10:43,067 - INFO - PDF report text generated
+2026-02-13 09:10:43,071 - INFO - PDF report saved: investment_report.pdf
+2026-02-13 09:10:43,072 - INFO - Analysis complete
+2026-02-17 00:09:07,286 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:09:07,286 - INFO - Running finder...
+2026-02-17 00:09:33,324 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:09:33,325 - INFO - Running finder...
+2026-02-17 00:10:31,381 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:10:31,382 - INFO - Running finder...
+2026-02-17 00:12:17,934 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:12:17,935 - INFO - Running finder...
+2026-02-17 00:12:23,607 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:12:23,620 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:12:23,621 - INFO - Finder raw output: ```json
+[
+  {
+    "company_name": "AT&T Inc.",
+    "ticker": "T",
+    "summary": "AT&T appears undervalued due to its low P/E ratio relative to the sector and positive free cash flow. The company's market cap also suggests potential undervaluation.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Citigroup Inc.",
+    "ticker": "C",
+    "summary": "Citigroup seems undervalued based on its low P/E ratio and the fact that its market cap is significantly below its book value. A healthy balance sheet further supports this assessment.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Energy Transfer LP",
+    "ticker": "ET",
+    "summary": "Energy Transfer LP shows potential undervaluation with its low P/E ratio, strong free cash flow, and positive operating income. These factors suggest the company is trading below its intrinsic value.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Occidental Petroleum Corporation",
+    "ticker": "OXY",
+    "summary": "Occidental Petroleum may be undervalued due to its low P/E ratio compared to the sector and a healthy balance sheet. Positive operating income further strengthens this case.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Pfizer Inc.",
+    "ticker": "PFE",
+    "summary": "Pfizer's undervaluation is suggested by its low P/E ratio and strong free cash flow. The company also maintains a healthy balance sheet.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  }
+]
+```
+2026-02-17 00:12:23,625 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 00:15:10,386 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:15:10,387 - INFO - Running finder...
+2026-02-17 00:15:11,797 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:15:11,802 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:15:11,802 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 00:15:11,803 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 00:15:31,365 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:15:31,365 - INFO - Running finder...
+2026-02-17 00:15:32,891 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:15:32,896 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:15:32,897 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 00:15:32,897 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 00:16:08,516 - INFO - Starting VibeInvestor analysis
+2026-02-17 00:16:08,517 - INFO - Running finder...
+2026-02-17 00:16:12,932 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 00:16:12,946 - INFO - Finder returned type: <class 'str'>
+2026-02-17 00:16:12,948 - INFO - Finder raw output: ```json
+[
+  {
+    "company_name": "AT&T Inc.",
+    "ticker": "T",
+    "summary": "AT&T appears undervalued due to its low P/E ratio relative to the sector and positive free cash flow. The company's market cap may be below its intrinsic value, suggesting potential undervaluation.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Citigroup Inc.",
+    "ticker": "C",
+    "summary": "Citigroup shows potential undervaluation with a low P/E ratio compared to its sector. A healthy balance sheet and positive operating income further support this assessment.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  },
+  {
+    "company_name": "Energy Transfer LP",
+    "ticker": "ET",
+    "summary": "Energy Transfer might be undervalued based on its strong free cash flow and potentially low debt-to-equity ratio. Positive and stable operating income adds to the undervaluation case.",
+    "source": "Various Yahoo Finance data",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": {
+      "balance_sheet": "Data unavailable",
+      "cash_flow": "Data unavailable",
+      "earnings_history": "Data unavailable",
+      "insider_transactions": "Data unavailable",
+      "institutional_holders": "Data unavailable"
+    }
+  }
+]
+```
+2026-02-17 00:16:12,952 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:01:14,490 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:01:14,491 - INFO - Running finder...
+2026-02-17 07:01:16,249 - WARNING - Failed to multipart ingest runs: langsmith.utils.LangSmithError: Failed to POST https://api.smith.langchain.com/runs/multipart in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/runs/multipart', '{"error":"API key has expired"}\n')
+2026-02-17 07:01:18,456 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:01:18,511 - INFO - Finder returned type: <class 'str'>
+2026-02-17 07:01:18,512 - INFO - Finder raw output: ```json
+[
+  {
+    "company_name": "AT&T Inc.",
+    "ticker": "T",
+    "summary": "AT&T appears undervalued due to its low P/E ratio and significant market capitalization. The company's consistent revenue indicates stability, potentially making it an attractive investment.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Citigroup Inc.",
+    "ticker": "C",
+    "summary": "Citigroup is potentially undervalued, suggested by its low P/E ratio. The company's substantial market capitalization reflects its significant presence in the financial sector.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Pfizer Inc.",
+    "ticker": "PFE",
+    "summary": "Pfizer may be undervalued given its low P/E ratio. Its substantial market capitalization and consistent revenue highlight its established position in the pharmaceutical industry.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Intel Corporation",
+    "ticker": "INTC",
+    "summary": "Intel shows signs of undervaluation with a low P/E ratio. Its significant market capitalization and consistent revenue demonstrate its importance in the technology sector.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  },
+  {
+    "company_name": "Verizon Communications Inc.",
+    "ticker": "VZ",
+    "summary": "Verizon might be undervalued due to its low P/E ratio. The company's large market capitalization and stable revenue reflect its strong position in the telecommunications industry.",
+    "source": "N/A",
+    "metrics": {
+      "pe_ratio": "Not disclosed",
+      "market_cap": "Not disclosed",
+      "revenue": "Not disclosed"
+    },
+    "financials": "Data unavailable"
+  }
+]
+```
+2026-02-17 07:01:18,514 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:01:18,919 - WARNING - Failed to send compressed multipart ingest: langsmith.utils.LangSmithError: Failed to POST https://api.smith.langchain.com/runs/multipart in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/runs/multipart', '{"error":"API key has expired"}\n')
+2026-02-17 07:14:01,283 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:14:01,284 - INFO - Running finder...
+2026-02-17 07:14:02,973 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:14:02,979 - INFO - Finder returned type: <class 'str'>
+2026-02-17 07:14:02,979 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 07:14:02,979 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:16:35,042 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:16:35,043 - INFO - Running finder...
+2026-02-17 07:17:06,069 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:17:06,069 - INFO - Running finder...
+2026-02-17 07:17:07,702 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:17:07,706 - INFO - Finder returned type: <class 'str'>
+2026-02-17 07:17:07,707 - INFO - Finder raw output: ```json
+[]
+```
+2026-02-17 07:17:07,707 - ERROR - Unexpected type from finder: <class 'str'>
+2026-02-17 07:20:43,721 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:20:43,722 - INFO - Running finder...
+2026-02-17 07:20:44,678 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:20:44,685 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:20:44,688 - INFO - Finder raw output: []
+2026-02-17 07:20:44,690 - INFO - Found 0 findings
+2026-02-17 07:20:44,691 - WARNING - No findings returned
+2026-02-17 07:33:56,636 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:33:56,637 - INFO - Running finder...
+2026-02-17 07:33:57,570 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:33:57,575 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:33:57,575 - INFO - Finder raw output: []
+2026-02-17 07:33:57,576 - INFO - Found 0 findings
+2026-02-17 07:33:57,576 - WARNING - No findings returned
+2026-02-17 07:36:37,869 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:36:37,870 - INFO - Running finder...
+2026-02-17 07:36:46,683 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-17 07:36:53,594 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:36:53,598 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:36:53,599 - INFO - Finder raw output: [{'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T Inc. is a telecommunications, media, and technology company, providing services and products in the United States and internationally. It operates through Communications, Latin America, and WarnerMedia segments.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '8.19', 'market_cap': '130.492B', 'revenue': '120.713B'}, 'financials': {'balance_sheet': {'totalAssets': '393.658B', 'totalLiab': '273.802B', 'totalStockholderEquity': '119.856B'}, 'cash_flow': {'freeCashFlow': '14.325B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Citigroup Inc.', 'ticker': 'C', 'summary': 'Citigroup Inc. is a global financial services company offering a range of financial products and services to consumers, corporations, governments, and institutions.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '12.01', 'market_cap': '119.323B', 'revenue': '77.268B'}, 'financials': {'balance_sheet': {'totalAssets': '2.419T', 'totalLiab': '2.191T', 'totalStockholderEquity': '217.719B'}, 'cash_flow': {'freeCashFlow': 'Not disclosed'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Energy Transfer LP', 'ticker': 'ET', 'summary': 'Energy Transfer LP provides energy transportation and storage services in the United States. It operates through intrastate and interstate pipelines and storage facilities.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '11.63', 'market_cap': '50.75B', 'revenue': '93.039B'}, 'financials': {'balance_sheet': {'totalAssets': '99.673B', 'totalLiab': '73.264B', 'totalStockholderEquity': '26.409B'}, 'cash_flow': {'freeCashFlow': '3.213B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Kraft Heinz Company', 'ticker': 'KHC', 'summary': 'The Kraft Heinz Company manufactures and markets food and beverage products in North America and internationally. Its products include condiments and sauces, cheese and dairy products, meals, meats, refreshment beverages, coffee, and other grocery products.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '27.15', 'market_cap': '41.193B', 'revenue': '26.647B'}, 'financials': {'balance_sheet': {'totalAssets': '80.82B', 'totalLiab': '49.455B', 'totalStockholderEquity': '31.365B'}, 'cash_flow': {'freeCashFlow': '2.585B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-17 07:36:53,600 - INFO - Found 4 findings
+2026-02-17 07:36:53,600 - INFO - Populating memory with findings...
+2026-02-17 07:36:54,823 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 07:36:55,065 - INFO - Loading faiss with AVX2 support.
+2026-02-17 07:36:55,517 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-17 07:36:55,588 - INFO - Memory populated with 4 documents
+2026-02-17 07:36:55,589 - INFO - Running governor...
+2026-02-17 07:36:56,153 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 07:47:21,298 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:47:21,299 - INFO - Running finder...
+2026-02-17 07:49:39,592 - INFO - Starting VibeInvestor analysis
+2026-02-17 07:49:39,593 - INFO - Running finder...
+2026-02-17 07:49:50,150 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 07:49:50,153 - INFO - Finder returned type: <class 'list'>
+2026-02-17 07:49:50,155 - INFO - Finder raw output: [{'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through North American Flat-Rolled (Flat-Rolled), U. S. Steel Europe (USSE), Tubular, and Other segments.', 'source': 'https://finance.yahoo.com/quote/X/', 'metrics': {'pe_ratio': '2.34', 'market_cap': '6.769B', 'revenue': '20.67B'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': 145000000.0, 'totalLiabilities': 7921000000.0, 'commonStock': 12000000.0, 'retainedEarnings': 9387000000.0, 'totalAssets': 18340000000.0, 'cash': 531000000.0, 'totalStockholderEquity': 10419000000.0}, '2021-12-31': {'intangibleAssets': 156000000.0, 'totalLiabilities': 9119000000.0, 'commonStock': 12000000.0, 'retainedEarnings': 3259000000.0, 'totalAssets': 15992000000.0, 'cash': 2511000000.0, 'totalStockholderEquity': 6873000000.0}, '2020-12-31': {'intangibleAssets': 167000000.0, 'totalLiabilities': 11429000000.0, 'commonStock': 12000000.0, 'retainedEarnings': -136000000.0, 'totalAssets': 13699000000.0, 'cash': 2453000000.0, 'totalStockholderEquity': 2270000000.0}}, 'cash_flow': {'2022-12-31': {'netIncome': 1604000000.0, 'depreciation': 698000000.0, 'changeToAccountReceivables': -184000000.0, 'changeToInventory': 25000000.0, 'changeToLiabilities': -170000000.0, 'changeToOperatingActivities': -179000000.0, 'totalCashFromOperatingActivities': 2294000000.0, 'capitalExpenditures': -736000000.0, 'investments': 21000000.0, 'otherCashflowsFromInvestingActivities': -14000000.0, 'totalCashflowsFromInvestingActivities': -729000000.0, 'dividendsPaid': -23000000.0, 'salePurchaseOfStock': -2000000.0, 'netIssuancePaymentsOfDebt': -840000000.0, 'totalCashFromFinancingActivities': -865000000.0, 'effectOfExchangeRate': -1000000.0, 'changeInCash': 699000000.0}, '2021-12-31': {'netIncome': 4084000000.0, 'depreciation': 709000000.0, 'changeToAccountReceivables': 172000000.0, 'changeToInventory': 49000000.0, 'changeToLiabilities': 300000000.0, 'changeToOperatingActivities': -142000000.0, 'totalCashFromOperatingActivities': 5082000000.0, 'capitalExpenditures': -422000000.0, 'investments': -2000000.0, 'otherCashflowsFromInvestingActivities': -200000000.0, 'totalCashflowsFromInvestingActivities': -624000000.0, 'dividendsPaid': -23000000.0, 'salePurchaseOfStock': 12000000.0, 'netIssuancePaymentsOfDebt': -1889000000.0, 'totalCashFromFinancingActivities': -1900000000.0, 'effectOfExchangeRate': 1000000.0, 'changeInCash': 2590000000.0}, '2020-12-31': {'netIncome': -95000000.0, 'depreciation': 778000000.0, 'changeToAccountReceivables': -1000000.0, 'changeToInventory': -70000000.0, 'changeToLiabilities': 305000000.0, 'changeToOperatingActivities': -24000000.0, 'totalCashFromOperatingActivities': 768000000.0, 'capitalExpenditures': -241000000.0, 'otherCashflowsFromInvestingActivities': 121000000.0, 'totalCashflowsFromInvestingActivities': -120000000.0, 'dividendsPaid': -23000000.0, 'salePurchaseOfStock': 3000000.0, 'netIssuancePaymentsOfDebt': 1000000000.0, 'totalCashFromFinancingActivities': 980000000.0, 'effectOfExchangeRate': 1000000.0, 'changeInCash': 1629000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-17 07:49:50,155 - INFO - Found 1 findings
+2026-02-17 07:49:50,156 - INFO - Populating memory with findings...
+2026-02-17 07:49:51,338 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 07:49:51,366 - INFO - Loading faiss with AVX2 support.
+2026-02-17 07:49:51,403 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-17 07:49:51,411 - INFO - Memory populated with 1 documents
+2026-02-17 07:49:51,411 - INFO - Running governor...
+2026-02-17 07:49:51,857 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 23:48:35,649 - INFO - Starting VibeInvestor analysis
+2026-02-17 23:48:35,650 - INFO - Running finder...
+2026-02-17 23:48:42,542 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-17 23:48:42,548 - INFO - Finder returned type: <class 'list'>
+2026-02-17 23:48:42,549 - INFO - Finder raw output: [{'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through four segments: North American Flat-Rolled, Mini Mill, Tubular, and European.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '2.47', 'market_cap': '6.87B', 'revenue': '19.68B'}, 'financials': {'balance_sheet': {'intangibleAssets': '1.48B', 'capitalSurplus': '5.99B', 'totalLiabilities': '7.4B', 'propertyPlantEquipment': '6.35B', 'totalAssets': '17.98B', 'retainedEarnings': '1.77B', 'totalStockholderEquity': '10.58B', 'cash': '644M'}, 'cash_flow': {'freeCashFlow': '1.47B', 'capitalExpenditure': '-360M', 'operatingCashFlow': '1.83B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Energy Transfer LP', 'ticker': 'ET', 'summary': 'Energy Transfer LP provides energy transportation, storage, and other services. The company owns and operates approximately 120,000 miles of pipelines and associated energy infrastructure across 41 states.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '8.42', 'market_cap': '51.17B', 'revenue': '84.57B'}, 'financials': {'balance_sheet': {'intangibleAssets': '18.33B', 'capitalSurplus': '62.64B', 'totalLiabilities': '83.62B', 'propertyPlantEquipment': '63.68B', 'totalAssets': '108.73B', 'retainedEarnings': '2.09B', 'totalStockholderEquity': '25.11B', 'cash': '387M'}, 'cash_flow': {'freeCashFlow': '3.24B', 'capitalExpenditure': '-2.05B', 'operatingCashFlow': '5.29B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T Inc. provides telecommunications, media, and technology services globally. It operates through two segments, Communications and Latin America.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '8.74', 'market_cap': '130.35B', 'revenue': '120.71B'}, 'financials': {'balance_sheet': {'intangibleAssets': '84.85B', 'capitalSurplus': '139.27B', 'totalLiabilities': '276.6B', 'propertyPlantEquipment': '133.87B', 'totalAssets': '348.5B', 'retainedEarnings': '-17.47B', 'totalStockholderEquity': '71.89B', 'cash': '7.43B'}, 'cash_flow': {'freeCashFlow': '10.77B', 'capitalExpenditure': '-19.18B', 'operatingCashFlow': '29.95B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-17 23:48:42,550 - INFO - Found 3 findings
+2026-02-17 23:48:42,550 - INFO - Populating memory with findings...
+2026-02-17 23:48:43,737 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-17 23:48:43,968 - INFO - Loading faiss with AVX2 support.
+2026-02-17 23:48:44,429 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-17 23:48:44,526 - INFO - Memory populated with 3 documents
+2026-02-17 23:48:44,527 - INFO - Running governor...
+2026-02-17 23:48:44,993 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:04:02,005 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:04:02,005 - INFO - Running finder...
+2026-02-18 07:04:16,247 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:04:16,254 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:04:16,255 - INFO - Finder raw output: [{'company_name': 'Teck Resources Limited', 'ticker': 'TECK', 'summary': 'Teck Resources Limited is a Canadian mining company. The company explores for, develops, and produces natural resources including: copper, zinc, steelmaking coal, and energy.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '7.74', 'market_cap': '26.998B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'currency_symbol': 'CAD', 'intangibleAssets': '3.338B', 'totalLiab': '14.573B', 'totalStockholderEquity': '18.545B', 'otherCurrentLiab': '1.564B', 'totalAssets': '33.118B', 'commonStock': '2.257B', 'otherCurrentAssets': '1.421B', 'retainedEarnings': '16.385B', 'otherLiab': '2.969B', 'goodWill': '2.168B', 'treasuryStock': '-997M', 'otherAssets': '2.712B', 'cash': '1.531B', 'totalCurrentLiabilities': '4.175B', 'shortLongTermDebt': '10M', 'propertyPlantEquipment': '19.188B', 'totalCurrentAssets': '5.466B', 'longTermDebt': '5.704B', 'inventory': '1.656B', 'accountsReceivable': '858M'}, 'cash_flow': {'currency_symbol': 'CAD', 'investments': '-654M', 'changeToLiabilities': '-58M', 'totalCashflowsFromInvestingActivities': '-1.335B', 'netBorrowings': '1.008B', 'totalCashFromFinancingActivities': '485M', 'changeToOperatingActivities': '-753M', 'netIncome': '3.57B', 'capitalExpenditures': '-702M', 'totalCashFromOperatingActivities': '5.372B', 'depreciation': '1.288B', 'otherCashflowsFromInvestingActivities': '21M', 'dividendsPaid': '-406M', 'otherCashflowsFromFinancingActivities': '-117M', 'changeToInventory': '-108M', 'repurchaseOfStock': '-103M', 'changeToAccountReceivables': '-159M', 'effectOfExchangeRate': '-113M'}, 'earnings_history': {'maxAge': 1, 'earnings': [{'date': '2023-11-01T00:00:00.000Z', 'epsActual': 0.98, 'epsEstimate': 0.99, 'surprise': -0.01, 'surprisePercent': -0.0101}, {'date': '2023-07-26T00:00:00.000Z', 'epsActual': 1.74, 'epsEstimate': 1.22, 'surprise': 0.52, 'surprisePercent': 0.4262}, {'date': '2023-04-26T00:00:00.000Z', 'epsActual': 1.72, 'epsEstimate': 1.51, 'surprise': 0.21, 'surprisePercent': 0.1391}, {'date': '2023-02-21T00:00:00.000Z', 'epsActual': 1.42, 'epsEstimate': 1.38, 'surprise': 0.04, 'surprisePercent': 0.029}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through three segments: North American Flat-Rolled (Flat-Rolled), Tubular, and European.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '4.03', 'market_cap': '6.968B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'currency_symbol': 'USD', 'intangibleAssets': '472M', 'totalLiab': '7.28B', 'totalStockholderEquity': '6.905B', 'otherCurrentLiab': '1.645B', 'totalAssets': '14.185B', 'commonStock': '1.389B', 'otherCurrentAssets': '763M', 'retainedEarnings': '5.368B', 'otherLiab': '2.006B', 'goodWill': '1.332B', 'treasuryStock': '150M', 'otherAssets': '1.26B', 'cash': '517M', 'totalCurrentLiabilities': '3.671B', 'shortLongTermDebt': '380M', 'propertyPlantEquipment': '9.18B', 'totalCurrentAssets': '3.064B', 'longTermDebt': '2.86B', 'inventory': '1.129B', 'accountsReceivable': '648M'}, 'cash_flow': {'currency_symbol': 'USD', 'investments': '-195M', 'changeToLiabilities': '-143M', 'totalCashflowsFromInvestingActivities': '-575M', 'netBorrowings': '-17M', 'totalCashFromFinancingActivities': '-220M', 'changeToOperatingActivities': '-36M', 'netIncome': '1.628B', 'capitalExpenditures': '-360M', 'totalCashFromOperatingActivities': '1.875B', 'depreciation': '692M', 'otherCashflowsFromInvestingActivities': '-20M', 'dividendsPaid': '-4M', 'otherCashflowsFromFinancingActivities': '-199M', 'changeToInventory': '-251M', 'repurchaseOfStock': '-20M', 'changeToAccountReceivables': '-112M', 'effectOfExchangeRate': '-2M'}, 'earnings_history': {'maxAge': 1, 'earnings': [{'date': '2024-01-25T00:00:00.000Z', 'epsActual': -0.08, 'epsEstimate': -0.11, 'surprise': 0.03, 'surprisePercent': 0.2727}, {'date': '2023-10-26T00:00:00.000Z', 'epsActual': 0.69, 'epsEstimate': 0.76, 'surprise': -0.07, 'surprisePercent': -0.0921}, {'date': '2023-07-27T00:00:00.000Z', 'epsActual': 1.92, 'epsEstimate': 1.78, 'surprise': 0.14, 'surprisePercent': 0.0787}, {'date': '2023-04-27T00:00:00.000Z', 'epsActual': 1.07, 'epsEstimate': 0.79, 'surprise': 0.28, 'surprisePercent': 0.3544}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:04:16,259 - INFO - Found 2 findings
+2026-02-18 07:04:16,259 - INFO - Populating memory with findings...
+2026-02-18 07:04:17,407 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:04:17,527 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:04:17,591 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:04:17,599 - INFO - Memory populated with 2 documents
+2026-02-18 07:04:17,599 - INFO - Running governor...
+2026-02-18 07:04:18,013 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:06:45,000 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:06:45,001 - INFO - Running finder...
+2026-02-18 07:06:45,726 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:06:45,731 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:06:45,732 - INFO - Finder raw output: []
+2026-02-18 07:06:45,732 - INFO - Found 0 findings
+2026-02-18 07:06:45,733 - WARNING - No findings returned
+2026-02-18 07:07:22,990 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:07:22,990 - INFO - Running finder...
+2026-02-18 07:07:36,415 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:07:36,421 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:07:36,421 - INFO - Finder raw output: [{'company_name': 'United States Steel Corporation', 'ticker': 'X', 'summary': 'United States Steel Corporation produces and sells steel products. It operates through North American Flat-Rolled (Flat-Rolled), U. S. Steel Europe (USSE), Tubular, and Other segments.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '2.71', 'market_cap': '6.999B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'intangibleAssets': '1.418B', 'totalLiab': '6.525B', 'totalStockholderEquity': '7.521B', 'otherCurrentLiab': '1.211B', 'totalAssets': '14.046B', 'commonStock': '1.57B', 'otherLiab': '1.588B', 'retainedEarnings': '5.996B', 'otherCurrentAssets': '724M', 'netTangibleAssets': '6.103B', 'propertyPlantEquipment': '5.68B', 'totalCurrentAssets': '4.014B', 'capitalSurplus': '3.944B', 'totalCurrentLiabilities': '2.552B', 'longTermDebt': '2.499B', 'inventory': '1.402B', 'accountsReceivable': '1.791B', 'shortLongTermDebt': '50M', 'otherAssets': '2.234B', 'cash': '97.0M', 'netDebt': '2.402B'}, 'cash_flow': {'investments': '-80M', 'changeToLiabilities': '-20M', 'totalCashflowsFromInvestingActivities': '-222M', 'netBorrowings': '-12M', 'totalCashFromFinancingActivities': '-12M', 'changeToOperatingActivities': '206M', 'netIncome': '2.551B', 'depreciation': '469M', 'otherCashflowsFromInvestingActivities': '-62M', 'dividendsPaid': '-129M', 'totalCashFromOperatingActivities': '2.817B', 'changeToAccountReceivables': '-209M', 'capitalExpenditures': '-388M', 'issuanceOfStock': '143M', 'changeToInventory': '-45M', 'repurchaseOfStock': '-3M', 'effectOfExchangeRate': '-11M', 'changeInCash': '2.581B'}, 'earnings_history': {'history': [{'quarter': 4, 'year': 2022, 'epsActual': 0.27, 'epsEstimate': 0.25}, {'quarter': 1, 'year': 2023, 'epsActual': 0.95, 'epsEstimate': 0.79}, {'quarter': 2, 'year': 2023, 'epsActual': 1.92, 'epsEstimate': 1.1}, {'quarter': 3, 'year': 2023, 'epsActual': 0.8, 'epsEstimate': 0.78}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Stellantis N.V.', 'ticker': 'STLA', 'summary': 'Stellantis N.V. designs, engineers, manufactures, distributes, and sells automobiles, light commercial vehicles, engines, transmission systems, metallurgical products, and production systems worldwide. It operates through five segments: North America, Europe, Middle East & Africa, South America, and Asia Pacific.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '3.79', 'market_cap': '68.654B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'intangibleAssets': '23.093B', 'totalLiab': '117.191B', 'totalStockholderEquity': '63.069B', 'otherCurrentLiab': '22.256B', 'totalAssets': '180.26B', 'commonStock': 'Not disclosed', 'otherLiab': '27.699B', 'retainedEarnings': 'Not disclosed', 'otherCurrentAssets': '24.763B', 'netTangibleAssets': '39.976B', 'propertyPlantEquipment': '38.113B', 'totalCurrentAssets': '84.336B', 'capitalSurplus': 'Not disclosed', 'totalCurrentLiabilities': '67.236B', 'longTermDebt': '22.127B', 'inventory': '16.796B', 'accountsReceivable': '19.391B', 'shortLongTermDebt': 'Not disclosed', 'otherAssets': '34.718B', 'cash': '42.192B', 'netDebt': '-20.065B'}, 'cash_flow': {'investments': '-1.352B', 'changeToLiabilities': '4.202B', 'totalCashflowsFromInvestingActivities': '-7.172B', 'netBorrowings': '-2.053B', 'totalCashFromFinancingActivities': '-6.69B', 'changeToOperatingActivities': '-2.877B', 'netIncome': '16.775B', 'depreciation': '5.682B', 'otherCashflowsFromInvestingActivities': '-2.83B', 'dividendsPaid': '-4.525B', 'totalCashFromOperatingActivities': '21.066B', 'changeToAccountReceivables': '-747M', 'capitalExpenditures': '-5.338B', 'issuanceOfStock': '70M', 'changeToInventory': '-1.365B', 'repurchaseOfStock': '-2.232B', 'effectOfExchangeRate': '1.502B', 'otherCashflowsFromFinancingActivities': '150M', 'changeInCash': '8.671B'}, 'earnings_history': {'history': [{'quarter': 4, 'year': 2022, 'epsActual': 1.66, 'epsEstimate': 1.41}, {'quarter': 1, 'year': 2023, 'epsActual': 1.77, 'epsEstimate': 1.44}, {'quarter': 2, 'year': 2023, 'epsActual': 1.63, 'epsEstimate': 1.53}]}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:07:36,422 - INFO - Found 2 findings
+2026-02-18 07:07:36,423 - INFO - Populating memory with findings...
+2026-02-18 07:07:37,580 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:07:37,700 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:07:37,732 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:07:37,744 - INFO - Memory populated with 2 documents
+2026-02-18 07:07:37,745 - INFO - Running governor...
+2026-02-18 07:07:38,156 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:11:03,299 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:11:03,299 - INFO - Running finder...
+2026-02-18 07:11:19,347 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:11:19,353 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:11:19,353 - INFO - Finder raw output: [{'company_name': 'Alliance Resource Partners, L.P.', 'ticker': 'ARLP', 'summary': 'Alliance Resource Partners, L.P. is a diversified natural resource company that generates income from thermal and metallurgical coal production and sales, as well as oil and gas mineral interests. The company operates through various segments, including Illinois Basin Coal, Appalachia Coal, and Minerals.', 'source': 'https://finance.yahoo.com/quote/ARLP/', 'metrics': {'pe_ratio': '5.76', 'market_cap': '3.189B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': 112444000.0, 'totalAssets': 3198063000.0, 'accountsPayable': 79559000.0, 'currentDebt': 4000000.0, 'propertyPlantEquipment': 1565399000.0, 'totalLiabilities': 886887000.0, 'goodwill': 8592000.0, 'retainedEarnings': 1823834000.0, 'totalStockholderEquity': 2311176000.0}, '2021-12-31': {'intangibleAssets': 118031000.0, 'totalAssets': 2839118000.0, 'accountsPayable': 68604000.0, 'currentDebt': 4000000.0, 'propertyPlantEquipment': 1570177000.0, 'totalLiabilities': 833733000.0, 'goodwill': 8592000.0, 'retainedEarnings': 1305886000.0, 'totalStockholderEquity': 2005385000.0}, '2020-12-31': {'intangibleAssets': 123618000.0, 'totalAssets': 2621647000.0, 'accountsPayable': 54398000.0, 'currentDebt': 4000000.0, 'propertyPlantEquipment': 1568392000.0, 'totalLiabilities': 868784000.0, 'goodwill': 8592000.0, 'retainedEarnings': 1006935000.0, 'totalStockholderEquity': 1752863000.0}}, 'cash_flow': {'2022-12-31': {'depreciation': 144494000.0, 'netIncome': 517948000.0, 'capitalExpenditures': -148359000.0, 'investments': -2386000.0, 'changeInWorkingCapital': -12058000.0, 'cashFromFinancingActivities': -230964000.0, 'cashFromInvestingActivities': -151009000.0, 'cashFromOperatingActivities': 665332000.0}, '2021-12-31': {'depreciation': 152294000.0, 'netIncome': 298408000.0, 'capitalExpenditures': -98593000.0, 'investments': -101000.0, 'changeInWorkingCapital': 38672000.0, 'cashFromFinancingActivities': -131130000.0, 'cashFromInvestingActivities': -98694000.0, 'cashFromOperatingActivities': 428424000.0}, '2020-12-31': {'depreciation': 159705000.0, 'netIncome': 117449000.0, 'capitalExpenditures': -86479000.0, 'investments': -150000.0, 'changeInWorkingCapital': 10381000.0, 'cashFromFinancingActivities': -131022000.0, 'cashFromInvestingActivities': -86629000.0, 'cashFromOperatingActivities': 237391000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Alpha Metallurgical Resources, Inc.', 'ticker': 'ARM', 'summary': 'Alpha Metallurgical Resources, Inc. operates as a met coal supplier. It has operations located in Virginia and West Virginia. The firm has a reserve base of high-quality metallurgical coal, used primarily in the steel-making process.', 'source': 'https://finance.yahoo.com/quote/ARM/', 'metrics': {'pe_ratio': '3.06', 'market_cap': '4.438B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': 8479000.0, 'totalAssets': 2680988000.0, 'accountsPayable': 130828000.0, 'currentDebt': 7474000.0, 'propertyPlantEquipment': 1019667000.0, 'totalLiabilities': 468981000.0, 'goodwill': 12975000.0, 'retainedEarnings': 1890021000.0, 'totalStockholderEquity': 2212007000.0}, '2021-12-31': {'intangibleAssets': 8634000.0, 'totalAssets': 1925480000.0, 'accountsPayable': 90941000.0, 'currentDebt': 10083000.0, 'propertyPlantEquipment': 1043415000.0, 'totalLiabilities': 467716000.0, 'goodwill': 12975000.0, 'retainedEarnings': 1129054000.0, 'totalStockholderEquity': 1457764000.0}, '2020-12-31': {'intangibleAssets': 8789000.0, 'totalAssets': 1599852000.0, 'accountsPayable': 67784000.0, 'currentDebt': 11156000.0, 'propertyPlantEquipment': 1073903000.0, 'totalLiabilities': 578871000.0, 'goodwill': 12975000.0, 'retainedEarnings': 771881000.0, 'totalStockholderEquity': 1020981000.0}}, 'cash_flow': {'2022-12-31': {'depreciation': 116977000.0, 'netIncome': 1421677000.0, 'capitalExpenditures': -129325000.0, 'investments': -1188000.0, 'changeInWorkingCapital': -73047000.0, 'cashFromFinancingActivities': -1357408000.0, 'cashFromInvestingActivities': -130513000.0, 'cashFromOperatingActivities': 1620448000.0}, '2021-12-31': {'depreciation': 119177000.0, 'netIncome': 401366000.0, 'capitalExpenditures': -82184000.0, 'investments': -1168000.0, 'changeInWorkingCapital': 6413000.0, 'cashFromFinancingActivities': -243758000.0, 'cashFromInvestingActivities': -83352000.0, 'cashFromOperatingActivities': 482466000.0}, '2020-12-31': {'depreciation': 126626000.0, 'netIncome': -180353000.0, 'capitalExpenditures': -93422000.0, 'investments': -1168000.0, 'changeInWorkingCapital': 5117000.0, 'cashFromFinancingActivities': -51666000.0, 'cashFromInvestingActivities': -94590000.0, 'cashFromOperatingActivities': 31000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:11:19,354 - INFO - Found 2 findings
+2026-02-18 07:11:19,355 - INFO - Populating memory with findings...
+2026-02-18 07:11:20,524 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:11:20,642 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:11:20,674 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:11:20,680 - INFO - Memory populated with 2 documents
+2026-02-18 07:11:20,681 - INFO - Running governor...
+2026-02-18 07:11:21,106 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:21:16,386 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:21:16,387 - INFO - Running finder...
+2026-02-18 07:21:17,803 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:21:17,808 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:21:17,809 - INFO - Finder raw output: []
+2026-02-18 07:21:17,809 - INFO - Found 0 findings
+2026-02-18 07:21:17,809 - WARNING - No findings returned
+2026-02-18 07:21:52,184 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:21:52,184 - INFO - Running finder...
+2026-02-18 07:22:00,515 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:00,520 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:22:00,521 - INFO - Finder raw output: [{'company_name': 'United Parcel Service, Inc.', 'ticker': 'UPS', 'summary': 'United Parcel Service is a global logistics company offering a range of solutions including transportation, distribution, contract logistics, and customs brokerage. It serves businesses and consumers in over 220 countries and territories.', 'source': 'https://finance.yahoo.com/quote/UPS/', 'metrics': {'pe_ratio': '16.39', 'market_cap': '122.532B', 'revenue': '91.054B'}, 'financials': {'balance_sheet': {'intangibleAssets': '9.042B', 'totalLiabilities': '88.876B', 'capitalSurplus': '11.958B', 'propertyPlantEquipment': '29.407B', 'totalAssets': '112.978B', 'currentAssets': '28.751B', 'currentLiabilities': '30.093B', 'retainedEarnings': '35.486B', 'totalEquityGrossMinorityInterest': '24.102B'}, 'cash_flow': {'netIncome': '7.074B', 'capitalExpenditure': '-4.164B', 'freeCashFlow': '6.345B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Qualcomm Incorporated', 'ticker': 'QCOM', 'summary': 'Qualcomm Incorporated designs, develops, manufactures, and markets digital telecommunications products and services worldwide. It operates through two segments, QCT (Qualcomm CDMA Technologies) and QTL (Qualcomm Technology Licensing).', 'source': 'https://finance.yahoo.com/quote/QCOM/', 'metrics': {'pe_ratio': '26.77', 'market_cap': '188.623B', 'revenue': '36.408B'}, 'financials': {'balance_sheet': {'intangibleAssets': '3.67B', 'totalLiabilities': '34.268B', 'capitalSurplus': '16.349B', 'propertyPlantEquipment': '3.979B', 'totalAssets': '76.888B', 'currentAssets': '37.737B', 'currentLiabilities': '11.321B', 'retainedEarnings': '21.537B', 'totalEquityGrossMinorityInterest': '42.62B'}, 'cash_flow': {'netIncome': '7.232B', 'capitalExpenditure': '-834M', 'freeCashFlow': '7.625B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Microsoft Corporation', 'ticker': 'MSFT', 'summary': 'Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide. It operates in three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.', 'source': 'https://finance.yahoo.com/quote/MSFT/', 'metrics': {'pe_ratio': '37.54', 'market_cap': '3.074T', 'revenue': '220.526B'}, 'financials': {'balance_sheet': {'intangibleAssets': '18.764B', 'totalLiabilities': '198.295B', 'capitalSurplus': '74.923B', 'propertyPlantEquipment': '108.42B', 'totalAssets': '452.03B', 'currentAssets': '157.93B', 'currentLiabilities': '97.165B', 'retainedEarnings': '174.383B', 'totalEquityGrossMinorityInterest': '253.735B'}, 'cash_flow': {'netIncome': '72.361B', 'capitalExpenditure': '-28.054B', 'freeCashFlow': '49.072B'}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:22:00,522 - INFO - Found 3 findings
+2026-02-18 07:22:00,522 - INFO - Populating memory with findings...
+2026-02-18 07:22:01,669 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:22:01,837 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:22:01,865 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:22:01,878 - INFO - Memory populated with 3 documents
+2026-02-18 07:22:01,878 - INFO - Running governor...
+2026-02-18 07:22:02,308 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:22:06,037 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:06,043 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:22:08,181 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:08,185 - INFO - Governor analysis complete
+2026-02-18 07:22:08,185 - INFO - Report compiled
+2026-02-18 07:22:08,186 - INFO - Generating PDF report via LLM...
+2026-02-18 07:22:08,754 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:22:12,348 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:22:12,350 - INFO - PDF report text generated
+2026-02-18 07:24:40,241 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:24:40,242 - INFO - Running finder...
+2026-02-18 07:24:41,586 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:24:41,590 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:24:41,591 - INFO - Finder raw output: []
+2026-02-18 07:24:41,591 - INFO - Found 0 findings
+2026-02-18 07:24:41,591 - WARNING - No findings returned
+2026-02-18 07:24:58,279 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:24:58,279 - INFO - Running finder...
+2026-02-18 07:25:05,298 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:25:05,303 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:25:05,304 - INFO - Finder raw output: [{'company_name': 'Alliance Resource Partners, L.P.', 'ticker': 'ARLP', 'summary': 'Alliance Resource Partners, L.P. is a diversified natural resource company that generates income from coal production and oil and gas mineral interests. They operate primarily in the Illinois Basin, and also have royalty interests in premier oil and gas producing regions.', 'source': 'https://www.allianceresource.com/', 'metrics': {'pe_ratio': '4.93', 'market_cap': '3.183B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 3542754000.0, 'totalLiabilities': 1483408000.0, 'totalStockholderEquity': 2059346000.0}}, 'cash_flow': {'2023-12-31': {'freeCashFlow': 489818000.0, 'operatingCashflow': 637768000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'HF Sinclair Corporation', 'ticker': 'DINO', 'summary': 'HF Sinclair Corporation operates as an independent energy company. It produces and markets light products, heavy products, specialty products, renewable diesel, and other products.', 'source': 'https://www.hfsinclair.com/', 'metrics': {'pe_ratio': '6.88', 'market_cap': '9.333B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 16910000000.0, 'totalLiabilities': 6322000000.0, 'totalStockholderEquity': 10588000000.0}}, 'cash_flow': {'2023-12-31': {'freeCashFlow': 1736000000.0, 'operatingCashflow': 2482000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Ovintiv Inc.', 'ticker': 'OVV', 'summary': 'Ovintiv Inc., together with its subsidiaries, engages in the exploration, development, and production of natural gas, oil, and natural gas liquids in the United States and Canada.', 'source': 'https://www.ovintiv.com/', 'metrics': {'pe_ratio': '6.72', 'market_cap': '11.594B', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 19749000000.0, 'totalLiabilities': 8778000000.0, 'totalStockholderEquity': 10971000000.0}}, 'cash_flow': {'2023-12-31': {'freeCashFlow': 2413000000.0, 'operatingCashflow': 3527000000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:25:05,304 - INFO - Found 3 findings
+2026-02-18 07:25:05,305 - INFO - Populating memory with findings...
+2026-02-18 07:25:06,458 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:25:06,627 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:25:06,659 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:25:06,670 - INFO - Memory populated with 3 documents
+2026-02-18 07:25:06,671 - INFO - Running governor...
+2026-02-18 07:25:07,106 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:25:11,361 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:25:11,365 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:25:13,522 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:25:13,525 - INFO - Governor analysis complete
+2026-02-18 07:25:13,526 - INFO - Report compiled
+2026-02-18 07:25:13,526 - INFO - Generating PDF report via LLM...
+2026-02-18 07:25:13,527 - INFO - Analysis complete
+2026-02-18 07:37:31,893 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:37:31,893 - INFO - Running finder...
+2026-02-18 07:37:39,147 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:37:39,151 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:37:39,152 - INFO - Finder raw output: [{'company_name': 'United Fire Group Inc.', 'ticker': 'UFCS', 'summary': "United Fire Group Inc. engages in the property and casualty insurance business in the United States. It operates through Commercial Lines, Personal Lines, and Life segments. The company offers commercial multiple peril, commercial auto, workers' compensation, and other commercial lines; and personal auto, homeowners, and other personal lines.", 'source': 'https://www.nasdaq.com/market-activity/stocks/ufcs', 'metrics': {'pe_ratio': '10.63', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-12-31': {'totalAssets': 1487341000.0, 'totalLiab': 714731000.0, 'totalStockholderEquity': 772610000.0}}, 'cash_flow': 'Data unavailable', 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Greif, Inc.', 'ticker': 'GEF', 'summary': 'Greif, Inc. produces and sells industrial packaging products and services worldwide. It operates through three segments: Rigid Industrial Packaging, Paper Packaging & Services, and Land Management.', 'source': 'https://www.nasdaq.com/market-activity/stocks/gef', 'metrics': {'pe_ratio': '9.15', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2023-10-31': {'totalAssets': 4424645000.0, 'totalLiab': 2518309000.0, 'totalStockholderEquity': 1833597000.0}}, 'cash_flow': 'Data unavailable', 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'H&R Block, Inc.', 'ticker': 'HRB', 'summary': 'H&R Block, Inc., through its subsidiaries, provides assisted income tax return preparation, digital do-it-yourself (DIY) tax solutions, and other services and products in the United States, Canada, and Australia. It offers income tax return preparation and related services and products via in-person, online, and virtual channels.', 'source': 'https://www.nasdaq.com/market-activity/stocks/hrb', 'metrics': {'pe_ratio': '11.24', 'market_cap': 'Not disclosed', 'revenue': 'Not disclosed'}, 'financials': {'balance_sheet': {'2024-04-30': {'totalAssets': 6488100000.0, 'totalLiab': 5061800000.0, 'totalStockholderEquity': 1426300000.0}}, 'cash_flow': 'Data unavailable', 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:37:39,153 - INFO - Found 3 findings
+2026-02-18 07:37:39,154 - INFO - Populating memory with findings...
+2026-02-18 07:37:40,300 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:37:40,469 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:37:40,502 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:37:40,512 - INFO - Memory populated with 3 documents
+2026-02-18 07:37:40,513 - INFO - Running governor...
+2026-02-18 07:37:40,934 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:37:41,539 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:37:44,138 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:37:44,143 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:37:46,413 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:37:46,416 - INFO - Governor analysis complete
+2026-02-18 07:37:46,416 - INFO - Report compiled
+2026-02-18 07:37:46,417 - INFO - Generating PDF report via LLM...
+2026-02-18 07:38:32,156 - INFO - Starting VibeInvestor analysis
+2026-02-18 07:38:32,157 - INFO - Running finder...
+2026-02-18 07:38:55,931 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:38:55,936 - INFO - Finder returned type: <class 'list'>
+2026-02-18 07:38:55,937 - INFO - Finder raw output: [{'company_name': 'United Fire Group Inc.', 'ticker': 'UFCS', 'summary': 'United Fire Group, Inc. engages in the insurance business. It operates through the Commercial Lines and Personal Lines segments. The Commercial Lines segment includes commercial property, auto, and liability coverages. The Personal Lines segment covers personal property, auto, and liability.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '12.87', 'market_cap': '331.574M', 'revenue': '1.124B'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': '4452000.0', 'totalLiab': '685415000.0', 'totalStockholderEquity': '472259000.0', 'otherCurrentLiab': '90219000.0', 'totalAssets': '1157674000.0', 'commonStock': '28630000.0', 'otherCurrentAssets': '3275000.0', 'retainedEarnings': '443629000.0', 'otherLiab': '12251000.0', 'goodWill': 'Not disclosed', 'treasuryStock': '-14000.0', 'otherAssets': '4898000.0', 'cash': '2257000.0', 'totalCurrentLiabilities': '142229000.0'}, '2021-12-31': {'intangibleAssets': '4452000.0', 'totalLiab': '643509000.0', 'totalStockholderEquity': '518879000.0', 'otherCurrentLiab': '65201000.0', 'totalAssets': '1162388000.0', 'commonStock': '28630000.0', 'otherCurrentAssets': '3822000.0', 'retainedEarnings': '490263000.0', 'otherLiab': '12159000.0', 'goodWill': 'Not disclosed', 'treasuryStock': '-14000.0', 'otherAssets': '4856000.0', 'cash': '2239000.0', 'totalCurrentLiabilities': '107632000.0'}, '2020-12-31': {'intangibleAssets': '4452000.0', 'totalLiab': '596103000.0', 'totalStockholderEquity': '558349000.0', 'otherCurrentLiab': '65185000.0', 'totalAssets': '1154452000.0', 'commonStock': '28630000.0', 'otherCurrentAssets': '3508000.0', 'retainedEarnings': '529711000.0', 'otherLiab': '11896000.0', 'goodWill': 'Not disclosed', 'treasuryStock': '-14000.0', 'otherAssets': '4814000.0', 'cash': '2216000.0', 'totalCurrentLiabilities': '107805000.0'}}, 'cash_flow': {'2022-12-31': {'investments': '-11084000.0', 'changeToLiabilities': '-3641000.0', 'totalCashflowsFromInvestingActivities': '-11084000.0', 'netBorrowings': '2000000.0', 'totalCashFromFinancingActivities': '-1991000.0', 'changeToOperatingActivities': '30551000.0', 'netIncome': '-46750000.0', 'changeInCash': '-47000.0', 'totalCashFromOperatingActivities': '105880000.0', 'depreciation': '469000.0', 'otherCashflowsFromInvestingActivities': '-107000.0', 'dividendsPaid': '-3991000.0'}, '2021-12-31': {'investments': '-14715000.0', 'changeToLiabilities': '-1074000.0', 'totalCashflowsFromInvestingActivities': '-14715000.0', 'netBorrowings': 'Not disclosed', 'totalCashFromFinancingActivities': '-3990000.0', 'changeToOperatingActivities': '-10295000.0', 'netIncome': '67487000.0', 'changeInCash': '23000.0', 'totalCashFromOperatingActivities': '58714000.0', 'depreciation': '469000.0', 'otherCashflowsFromInvestingActivities': '-110000.0', 'dividendsPaid': '-3990000.0'}, '2020-12-31': {'investments': '-15816000.0', 'changeToLiabilities': '-1029000.0', 'totalCashflowsFromInvestingActivities': '-15816000.0', 'netBorrowings': 'Not disclosed', 'totalCashFromFinancingActivities': '-3990000.0', 'changeToOperatingActivities': '-14054000.0', 'netIncome': '30268000.0', 'changeInCash': '-1000.0', 'totalCashFromOperatingActivities': '5080000.0', 'depreciation': '469000.0', 'otherCashflowsFromInvestingActivities': '-111000.0', 'dividendsPaid': '-3990000.0'}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'PACCAR Inc', 'ticker': 'PCAR', 'summary': 'PACCAR Inc designs, manufactures, and markets light-, medium-, and heavy-duty trucks. It also provides financial services and aftermarket parts for trucks and related commercial vehicles.', 'source': 'Not disclosed', 'metrics': {'pe_ratio': '13.48', 'market_cap': '37.253B', 'revenue': '33.77B'}, 'financials': {'balance_sheet': {'2022-12-31': {'intangibleAssets': '74600000.0', 'totalLiab': '24787400000.0', 'totalStockholderEquity': '14200600000.0', 'otherCurrentLiab': '3816300000.0', 'totalAssets': '38988000000.0', 'commonStock': '372000000.0', 'otherCurrentAssets': '429600000.0', 'retainedEarnings': '13880900000.0', 'otherLiab': '3738700000.0', 'goodWill': '175100000.0', 'treasuryStock': '-53200000.0', 'otherAssets': '1492700000.0', 'cash': '3699500000.0', 'totalCurrentLiabilities': '8710500000.0'}, '2021-12-31': {'intangibleAssets': '76800000.0', 'totalLiab': '23157600000.0', 'totalStockholderEquity': '13999300000.0', 'otherCurrentLiab': '3689400000.0', 'totalAssets': '37156900000.0', 'commonStock': '372000000.0', 'otherCurrentAssets': '445300000.0', 'retainedEarnings': '13680500000.0', 'otherLiab': '3549700000.0', 'goodWill': '175100000.0', 'treasuryStock': '-53200000.0', 'otherAssets': '1492700000.0', 'cash': '4267700000.0', 'totalCurrentLiabilities': '7936100000.0'}, '2020-12-31': {'intangibleAssets': '79000000.0', 'totalLiab': '21531200000.0', 'totalStockholderEquity': '13428000000.0', 'otherCurrentLiab': '3276000000.0', 'totalAssets': '34959200000.0', 'commonStock': '372000000.0', 'otherCurrentAssets': '424400000.0', 'retainedEarnings': '13108400000.0', 'otherLiab': '3332200000.0', 'goodWill': '175100000.0', 'treasuryStock': '-53200000.0', 'otherAssets': '1453700000.0', 'cash': '4458500000.0', 'totalCurrentLiabilities': '7186900000.0'}}, 'cash_flow': {'2022-12-31': {'investments': '-492100000.0', 'changeToLiabilities': '136500000.0', 'totalCashflowsFromInvestingActivities': '-585300000.0', 'netBorrowings': '-115000000.0', 'totalCashFromFinancingActivities': '-2263200000.0', 'changeToOperatingActivities': '-27200000.0', 'netIncome': '3008600000.0', 'changeInCash': '-569200000.0', 'totalCashFromOperatingActivities': '3209300000.0', 'depreciation': '294100000.0', 'otherCashflowsFromInvestingActivities': '-10500000.0', 'dividendsPaid': '-891800000.0'}, '2021-12-31': {'investments': '-1021900000.0', 'changeToLiabilities': '-31700000.0', 'totalCashflowsFromInvestingActivities': '-1177600000.0', 'netBorrowings': '-1900000.0', 'totalCashFromFinancingActivities': '-2225800000.0', 'changeToOperatingActivities': '-110900000.0', 'netIncome': '1912600000.0', 'changeInCash': '-189300000.0', 'totalCashFromOperatingActivities': '2406400000.0', 'depreciation': '279800000.0', 'otherCashflowsFromInvestingActivities': '-13700000.0', 'dividendsPaid': '-783200000.0'}, '2020-12-31': {'investments': '-879700000.0', 'changeToLiabilities': '-44200000.0', 'totalCashflowsFromInvestingActivities': '-959800000.0', 'netBorrowings': '29000000.0', 'totalCashFromFinancingActivities': '-659300000.0', 'changeToOperatingActivities': '-55100000.0', 'netIncome': '1314800000.0', 'changeInCash': '1530900000.0', 'totalCashFromOperatingActivities': '2172100000.0', 'depreciation': '270500000.0', 'otherCashflowsFromInvestingActivities': '-13700000.0', 'dividendsPaid': '-746000000.0'}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-18 07:38:55,938 - INFO - Found 2 findings
+2026-02-18 07:38:55,938 - INFO - Populating memory with findings...
+2026-02-18 07:38:57,111 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:38:57,226 - INFO - Loading faiss with AVX2 support.
+2026-02-18 07:38:57,254 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-18 07:38:57,263 - INFO - Memory populated with 2 documents
+2026-02-18 07:38:57,263 - INFO - Running governor...
+2026-02-18 07:38:57,676 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-18 07:38:58,257 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:39:00,955 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:00,959 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 07:39:02,932 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:02,935 - INFO - Governor analysis complete
+2026-02-18 07:39:02,935 - INFO - Report compiled
+2026-02-18 07:39:02,936 - INFO - Generating PDF report via LLM...
+2026-02-18 07:39:06,535 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:07,353 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 07:39:07,356 - INFO - PDF report text generated
+2026-02-18 07:39:07,357 - INFO - PDF report saved: investment_report.pdf
+2026-02-18 07:39:07,357 - INFO - Analysis complete
+2026-02-18 23:12:32,266 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:12:32,268 - INFO - Session initialized with ID: 10ff0171-9bd1-4719-a882-50eea34ac595
+2026-02-18 23:15:51,946 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:15:51,952 - INFO - Session initialized with ID: 22fb794c-73f1-4a34-a239-45b3b8015339
+2026-02-18 23:16:52,510 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:16:52,513 - INFO - Session initialized with ID: acc4e678-cbdd-4066-b03e-5c481cc1bac8
+2026-02-18 23:17:11,971 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:17:11,974 - INFO - Session initialized with ID: ad7f410e-e1bd-4c6b-99c5-b7f0bb1b05d3
+2026-02-18 23:18:06,885 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:18:06,889 - INFO - Session initialized with ID: cc43cc40-e2ed-4853-9f7f-380988d76938
+2026-02-18 23:18:06,889 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:18:06,889 - INFO - [INFO] Running finder...
+2026-02-18 23:18:20,642 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:18:20,643 - INFO - Session initialized with ID: 0b785db9-83da-47d6-8c54-452d1bda6779
+2026-02-18 23:18:20,643 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:18:20,643 - INFO - [INFO] Running finder...
+2026-02-18 23:18:23,004 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 23:18:35,085 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 23:18:44,896 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:18:44,899 - INFO - Session initialized with ID: 34f3e0c3-2ee6-467f-89f2-c552899cc238
+2026-02-18 23:18:44,899 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:18:44,899 - INFO - [INFO] Running finder...
+2026-02-18 23:18:49,777 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 23:19:04,929 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:19:04,931 - INFO - Session initialized with ID: cb956e44-4d56-4ea9-9705-ab402680f2db
+2026-02-18 23:19:04,931 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:19:04,931 - INFO - [INFO] Running finder...
+2026-02-18 23:19:06,643 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 23:19:06,645 - WARNING - No valid opportunities returned from finder agent
+2026-02-18 23:19:23,916 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:19:23,919 - INFO - Session initialized with ID: 6c723ee4-8f25-4e61-88b8-0447a4529e13
+2026-02-18 23:19:23,919 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:19:23,919 - INFO - [INFO] Running finder...
+2026-02-18 23:19:38,028 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 23:19:56,813 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:19:56,816 - INFO - Session initialized with ID: 088a3d59-b5c0-4711-b85c-1eeaf7c58f2b
+2026-02-18 23:19:56,816 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:19:56,816 - INFO - [INFO] Running finder...
+2026-02-18 23:20:26,771 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-18 23:56:10,377 - INFO - Starting VibeInvestor analysis
+2026-02-18 23:56:10,381 - INFO - Session initialized with ID: 78b67b3c-3351-4a86-b4a7-2deb21d5b6b2
+2026-02-18 23:56:10,381 - INFO - [INFO] Injecting previous session context into planning
+2026-02-18 23:56:10,381 - INFO - [INFO] Running finder...
+2026-02-19 00:01:38,320 - INFO - Starting VibeInvestor analysis
+2026-02-19 00:01:38,323 - INFO - Session initialized with ID: e629f8d6-8311-4c74-b01e-a6795a58e02f
+2026-02-19 00:01:38,323 - INFO - [INFO] Injecting previous session context into planning
+2026-02-19 00:01:38,323 - INFO - [INFO] Running finder...
+2026-02-19 00:03:18,412 - INFO - Starting VibeInvestor analysis
+2026-02-19 00:03:18,417 - INFO - Session initialized with ID: e6c09818-7e38-49ec-b329-ec685b23d67b
+2026-02-19 00:03:18,418 - INFO - [INFO] Injecting previous session context into planning
+2026-02-19 00:03:18,418 - INFO - [INFO] Running finder...
+2026-02-19 00:03:18,430 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 00:03:48,333 - INFO - Starting VibeInvestor analysis
+2026-02-19 00:03:48,335 - INFO - Session initialized with ID: 9f83d8c0-a594-471c-b314-d18537942cd3
+2026-02-19 00:03:48,336 - INFO - [INFO] Injecting previous session context into planning
+2026-02-19 00:03:48,336 - INFO - [INFO] Running finder...
+2026-02-19 00:03:48,347 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 00:04:28,517 - INFO - Starting VibeInvestor analysis
+2026-02-19 00:04:28,520 - INFO - Session initialized with ID: f17aa96e-ef67-4084-8e9b-a1642befff81
+2026-02-19 00:04:28,520 - INFO - [INFO] Injecting previous session context into planning
+2026-02-19 00:04:28,520 - INFO - [INFO] Running finder...
+2026-02-19 00:04:28,534 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 00:04:38,708 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 00:04:38,735 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 00:04:43,825 - WARNING - No valid opportunities returned from finder agent
+2026-02-19 00:04:58,063 - INFO - Starting VibeInvestor analysis
+2026-02-19 00:04:58,066 - INFO - Session initialized with ID: 9045beef-b3ca-446b-ae03-361fcb356871
+2026-02-19 00:04:58,066 - INFO - [INFO] Injecting previous session context into planning
+2026-02-19 00:04:58,066 - INFO - [INFO] Running finder...
+2026-02-19 00:04:58,077 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 00:05:10,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 00:05:10,927 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 00:05:15,415 - WARNING - No valid opportunities returned from finder agent
+2026-02-19 09:52:25,710 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:52:25,711 - INFO - Running finder...
+2026-02-19 09:52:25,712 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:52:27,770 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:52:27,780 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:52:27,780 - INFO - Finder raw output: []
+2026-02-19 09:52:27,780 - INFO - Found 0 findings
+2026-02-19 09:52:27,781 - WARNING - No findings returned
+2026-02-19 09:53:40,981 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:53:40,982 - INFO - Running finder...
+2026-02-19 09:53:47,634 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:53:47,636 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:53:47,636 - INFO - Finder raw output: [{'company_name': 'AT&T Inc.', 'ticker': 'T', 'summary': 'AT&T Inc. is a telecommunications, media, and technology company, providing services to consumers and businesses. It operates through various segments including Communications, WarnerMedia, and Latin America.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '7.54', 'market_cap': '126.78B', 'revenue': '120.71B'}, 'financials': {'balance_sheet': {'intangibleAssets': '144.38B', 'totalLiab': '302.72B', 'totalAssets': '343.7B', 'propertyPlantEquipment': '60.17B', 'totalCurrentAssets': '36.27B', 'otherLiab': '74.88B', 'goodwill': '72.63B', 'otherAssets': '20.33B', 'cash': '6.91B', 'totalCurrentLiabilities': '61.35B'}, 'cash_flow': {'capitalExpenditure': '-17.14B', 'freeCashFlow': '10.66B', 'operatingCashFlow': '31.87B'}, 'earnings_history': {'epsActual': '0.55', 'epsEstimate': '0.55'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Citigroup Inc.', 'ticker': 'C', 'summary': 'Citigroup Inc. is a global financial services company. The company provides a range of financial products and services to consumers, corporations, governments, and institutions.', 'source': 'Yahoo Finance', 'metrics': {'pe_ratio': '12.22', 'market_cap': '120.42B', 'revenue': '77.27B'}, 'financials': {'balance_sheet': {'intangibleAssets': '11.56B', 'totalLiab': '1.68T', 'totalAssets': '1.79T', 'totalCurrentAssets': 'N/A', 'otherLiab': '18.9B', 'goodwill': '10.08B', 'otherAssets': '35.38B', 'cash': '422.51B', 'totalCurrentLiabilities': 'N/A'}, 'cash_flow': {'capitalExpenditure': '-714M', 'freeCashFlow': 'N/A', 'operatingCashFlow': 'N/A'}, 'earnings_history': {'epsActual': '1.59', 'epsEstimate': '1.22'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-19 09:53:47,636 - INFO - Found 2 findings
+2026-02-19 09:53:47,636 - INFO - Populating memory with findings...
+2026-02-19 09:53:49,405 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:54:39,767 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:54:39,767 - INFO - Running finder...
+2026-02-19 09:54:46,466 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:46,470 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:54:46,470 - INFO - Finder raw output: [{'company_name': 'United Fire Group Inc.', 'ticker': 'UFCS', 'summary': 'United Fire Group Inc. engages in the insurance business. The company offers commercial lines, personal lines, and life insurance products.', 'source': 'N/A', 'metrics': {'pe_ratio': '7.77', 'market_cap': '281.54M', 'revenue': '1.29B'}, 'financials': {'balance_sheet': {'2022-12-31': {'totalAssets': 1821970000.0, 'totalLiabilities': 1139278000.0, 'totalStockholderEquity': 682692000.0}, '2021-12-31': {'totalAssets': 1852148000.0, 'totalLiabilities': 1089807000.0, 'totalStockholderEquity': 762341000.0}, '2020-12-31': {'totalAssets': 1774876000.0, 'totalLiabilities': 1006614000.0, 'totalStockholderEquity': 768262000.0}, '2019-12-31': {'totalAssets': 1783411000.0, 'totalLiabilities': 985356000.0, 'totalStockholderEquity': 798055000.0}}, 'cash_flow': {'2022-12-31': {'totalCashFromOperatingActivities': 74500000.0, 'capitalExpenditures': -3300000.0, 'issuanceOfStock': 106000.0, 'repurchaseOfStock': -1229000.0, 'netIssuancePaymentsOfDebt': -21254000.0, 'freeCashFlow': 71200000.0}, '2021-12-31': {'totalCashFromOperatingActivities': 10472000.0, 'capitalExpenditures': -3241000.0, 'issuanceOfStock': 114000.0, 'repurchaseOfStock': -1219000.0, 'netIssuancePaymentsOfDebt': -1184000.0, 'freeCashFlow': 7231000.0}, '2020-12-31': {'totalCashFromOperatingActivities': 91279000.0, 'capitalExpenditures': -3081000.0, 'issuanceOfStock': 127000.0, 'repurchaseOfStock': -1204000.0, 'netIssuancePaymentsOfDebt': -19110000.0, 'freeCashFlow': 88198000.0}, '2019-12-31': {'totalCashFromOperatingActivities': 119196000.0, 'capitalExpenditures': -2854000.0, 'issuanceOfStock': 144000.0, 'repurchaseOfStock': -1178000.0, 'netIssuancePaymentsOfDebt': -11510000.0, 'freeCashFlow': 116342000.0}}, 'earnings_history': 'Data unavailable', 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-19 09:54:46,471 - INFO - Found 1 findings
+2026-02-19 09:54:46,471 - INFO - Populating memory with findings...
+2026-02-19 09:54:47,297 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:54:47,376 - INFO - Loading faiss.
+2026-02-19 09:54:48,416 - INFO - Successfully loaded faiss.
+2026-02-19 09:54:48,423 - INFO - Memory populated with 1 documents
+2026-02-19 09:54:48,423 - INFO - Running governor...
+2026-02-19 09:54:48,906 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:54:49,003 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:54:50,838 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:50,842 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:54:53,277 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:53,281 - INFO - Governor analysis complete
+2026-02-19 09:54:53,281 - INFO - Report compiled
+2026-02-19 09:54:53,281 - INFO - Generating PDF report via LLM...
+2026-02-19 09:54:55,321 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:56,213 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:54:56,216 - INFO - PDF report text generated
+2026-02-19 09:54:56,216 - INFO - PDF report saved: investment_report.pdf
+2026-02-19 09:54:56,216 - INFO - Analysis complete
+2026-02-19 09:55:20,272 - INFO - Starting VibeInvestor analysis
+2026-02-19 09:55:20,273 - INFO - Running finder...
+2026-02-19 09:55:31,224 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:31,263 - INFO - Finder returned type: <class 'list'>
+2026-02-19 09:55:31,264 - INFO - Finder raw output: [{'company_name': 'Unum Group', 'ticker': 'UNM', 'summary': 'Unum Group is an insurance company that provides financial protection benefits in the United States, the United Kingdom, and Poland. Its products include disability, life, accident, critical illness, dental, and vision insurance.', 'source': 'https://finance.yahoo.com/quote/UNM/', 'metrics': {'pe_ratio': '8.63', 'market_cap': '10.199B', 'revenue': '12.339B'}, 'financials': {'balance_sheet': {'intangibleAssets': '2.757B', 'totalLiabilities': '17.474B', 'propertyPlantEquipment': '268M', 'totalAssets': '27.166B', 'cash': '1.23B', 'accountsPayable': '642M', 'equity': '9.692B', 'currentAssets': '3.404B', 'currentLiabilities': '2.282B'}, 'cash_flow': {'capitalExpenditure': '-14M', 'issuanceOfStock': '10M', 'netIncome': '1.14B', 'operatingCashFlow': '1.471B', 'freeCashFlow': '1.457B', 'financingCashFlow': '-1.463B', 'investmentCashFlow': '-140M'}, 'earnings_history': {'2023-07-26': '1.97', '2023-04-26': '1.89', '2023-01-25': '1.67', '2022-10-26': '1.43'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'H&R Block, Inc.', 'ticker': 'HRB', 'summary': 'H&R Block, Inc., through its subsidiaries, provides assisted income tax return preparation, digital do-it-yourself (DDIY) tax solutions, and other services in the United States, Canada, and Australia.', 'source': 'https://finance.yahoo.com/quote/HRB/', 'metrics': {'pe_ratio': '11.37', 'market_cap': '5.783B', 'revenue': '3.545B'}, 'financials': {'balance_sheet': {'intangibleAssets': '1.331B', 'totalLiabilities': '3.273B', 'propertyPlantEquipment': '269.4M', 'totalAssets': '4.806B', 'cash': '596.8M', 'accountsPayable': '465.3M', 'equity': '1.533B', 'currentAssets': '1.154B', 'currentLiabilities': '1.256B'}, 'cash_flow': {'capitalExpenditure': '-44.1M', 'issuanceOfStock': '8.2M', 'netIncome': '508.4M', 'operatingCashFlow': '559.5M', 'freeCashFlow': '515.4M', 'financingCashFlow': '-301.2M', 'investmentCashFlow': '-90.6M'}, 'earnings_history': {'2023-08-01': '3.01', '2023-05-09': '4.66', '2023-02-07': '-2.78', '2022-11-01': '-0.87'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}, {'company_name': 'Lincoln National Corporation', 'ticker': 'LNC', 'summary': 'Lincoln National Corporation, through its subsidiaries, operates multiple insurance and retirement solutions businesses in the United States. It operates through four segments: Annuities, Retirement Plan Services, Life Insurance, and Group Protection.', 'source': 'https://finance.yahoo.com/quote/LNC/', 'metrics': {'pe_ratio': '6.48', 'market_cap': '3.993B', 'revenue': '16.854B'}, 'financials': {'balance_sheet': {'intangibleAssets': '644M', 'totalLiabilities': '62.441B', 'propertyPlantEquipment': '146M', 'totalAssets': '71.137B', 'cash': '1.402B', 'accountsPayable': '568M', 'equity': '8.696B', 'currentAssets': '3.078B', 'currentLiabilities': '3.982B'}, 'cash_flow': {'capitalExpenditure': '-11M', 'issuanceOfStock': 'Not disclosed', 'netIncome': '620M', 'operatingCashFlow': '1.719B', 'freeCashFlow': '1.708B', 'financingCashFlow': '-2.127B', 'investmentCashFlow': '195M'}, 'earnings_history': {'2023-07-31': '1.71', '2023-05-03': '1.64', '2023-02-08': '-16.31', '2022-11-02': '1.46'}, 'insider_transactions': 'Data unavailable', 'institutional_holders': 'Data unavailable'}}]
+2026-02-19 09:55:31,264 - INFO - Found 3 findings
+2026-02-19 09:55:31,264 - INFO - Populating memory with findings...
+2026-02-19 09:55:32,097 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:55:32,350 - INFO - Loading faiss.
+2026-02-19 09:55:32,392 - INFO - Successfully loaded faiss.
+2026-02-19 09:55:32,397 - INFO - Memory populated with 3 documents
+2026-02-19 09:55:32,397 - INFO - Running governor...
+2026-02-19 09:55:32,959 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 09:55:32,996 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:55:34,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:34,903 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 09:55:38,666 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:38,668 - INFO - Governor analysis complete
+2026-02-19 09:55:38,668 - INFO - Report compiled
+2026-02-19 09:55:38,668 - INFO - Generating PDF report via LLM...
+2026-02-19 09:55:40,910 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:42,122 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 09:55:42,124 - INFO - PDF report text generated
+2026-02-19 09:55:42,124 - INFO - PDF report saved: investment_report.pdf
+2026-02-19 09:55:42,124 - INFO - Analysis complete
+2026-02-19 15:14:21,358 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:18:29,982 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:07,758 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:07,766 - INFO - Loading faiss.
+2026-02-19 15:19:07,814 - INFO - Successfully loaded faiss.
+2026-02-19 15:19:08,650 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:09,450 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:09,491 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:19:10,792 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:49,146 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:49,155 - INFO - Loading faiss.
+2026-02-19 15:19:49,190 - INFO - Successfully loaded faiss.
+2026-02-19 15:19:50,036 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:50,927 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:19:50,943 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:19:52,204 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:19:52,207 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:19:54,670 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:20:48,334 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:20:48,344 - INFO - Loading faiss.
+2026-02-19 15:20:48,385 - INFO - Successfully loaded faiss.
+2026-02-19 15:20:49,242 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:20:50,236 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:20:50,245 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:20:51,518 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:20:51,521 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:20:52,999 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:43,620 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:43,630 - INFO - Loading faiss.
+2026-02-19 15:21:43,671 - INFO - Successfully loaded faiss.
+2026-02-19 15:21:44,503 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:21:44,593 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:45,755 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:45,759 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:47,164 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:47,808 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:48,323 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 15:21:48,351 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:49,492 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 15:21:49,494 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 15:21:51,550 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:54:58,345 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:55:57,951 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:55:57,959 - INFO - Loading faiss.
+2026-02-19 18:55:58,005 - INFO - Successfully loaded faiss.
+2026-02-19 18:55:58,848 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 18:55:59,651 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 18:55:59,685 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 18:56:01,533 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:56:01,536 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 18:56:03,963 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:56:54,892 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:56:54,902 - INFO - Loading faiss.
+2026-02-19 18:56:54,969 - INFO - Successfully loaded faiss.
+2026-02-19 18:56:55,839 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 18:56:55,920 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 18:56:57,304 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:56:57,307 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 18:56:59,563 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:57:00,271 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:57:00,775 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 18:57:00,808 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 18:57:01,591 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 18:57:01,593 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 18:57:02,635 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:08:29,546 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:08:29,556 - INFO - Loading faiss.
+2026-02-19 19:08:29,609 - INFO - Successfully loaded faiss.
+2026-02-19 19:08:31,268 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:08:31,882 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:09:13,899 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:09:14,858 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:42:25,565 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:47:28,457 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:49:27,011 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:49:27,024 - INFO - Loading faiss.
+2026-02-19 19:49:27,329 - INFO - Successfully loaded faiss.
+2026-02-19 19:49:28,320 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:49:29,089 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:49:29,164 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 19:49:30,290 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:51:22,228 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:51:22,233 - INFO - Loading faiss.
+2026-02-19 19:51:22,266 - INFO - Successfully loaded faiss.
+2026-02-19 19:51:23,101 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:51:23,937 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:51:23,976 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 19:51:25,273 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:51:25,277 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 19:51:26,634 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:56:58,963 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:56:58,973 - INFO - Loading faiss.
+2026-02-19 19:56:59,032 - INFO - Successfully loaded faiss.
+2026-02-19 19:57:00,084 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:57:01,010 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 19:57:01,072 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 19:57:02,391 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:57:02,394 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 19:57:03,980 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 19:57:04,012 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 19:57:05,618 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:07:09,755 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:07:12,133 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:07:12,140 - INFO - Loading faiss.
+2026-02-19 20:07:12,186 - INFO - Successfully loaded faiss.
+2026-02-19 20:07:13,014 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:07:13,851 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:07:13,887 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:07:19,060 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:07:19,064 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:07:21,880 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:07:21,917 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:07:24,523 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:07:26,365 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:11,251 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:11,260 - INFO - Loading faiss.
+2026-02-19 20:08:11,299 - INFO - Successfully loaded faiss.
+2026-02-19 20:08:12,181 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:08:13,027 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:08:13,059 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:08:16,893 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:16,896 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:08:18,796 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:18,847 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:08:21,149 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:23,058 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:25,247 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:26,067 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:08:26,898 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:08:26,934 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:08:30,913 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:30,922 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:08:32,618 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:08:32,647 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:08:34,991 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:01,956 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:01,961 - INFO - Loading faiss.
+2026-02-19 20:15:01,998 - INFO - Successfully loaded faiss.
+2026-02-19 20:15:03,627 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:15:04,213 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:15:04,253 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:15:08,042 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:08,044 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:15:10,159 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:10,188 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:15:11,575 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:12,730 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:20,067 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:21,092 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:15:21,789 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:15:21,836 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:15:26,309 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:26,312 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:15:28,319 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:15:28,371 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:15:29,940 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:07,130 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:08,949 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:30:09,088 - INFO - Loading faiss.
+2026-02-19 20:30:09,125 - INFO - Successfully loaded faiss.
+2026-02-19 20:30:09,654 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:30:09,709 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:11,806 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:11,809 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:13,770 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:13,797 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:15,538 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:17,858 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:18,671 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:30:19,519 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:30:19,551 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:20,487 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-19 20:30:20,488 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.99 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}.
+2026-02-19 20:30:25,863 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:25,869 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:27,300 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:27,542 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:29,079 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:30,002 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-19 20:30:30,005 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.32 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}.
+2026-02-19 20:30:32,163 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:39,459 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:40,285 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:30:41,205 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:30:41,211 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:44,243 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:44,246 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:46,122 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:30:46,150 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:30:47,588 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:00,957 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:02,621 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:31:03,222 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:31:03,234 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:06,533 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:06,536 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:08,701 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:08,729 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:10,375 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:11,510 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:14,340 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:15,203 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:31:16,018 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:31:16,054 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:20,323 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:20,326 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:22,298 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:22,325 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:24,009 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:25,192 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:26,116 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:28,502 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:29,509 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:31:30,459 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-02-19 20:31:30,464 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:31,251 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-19 20:31:31,253 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}.
+2026-02-19 20:31:35,539 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:35,550 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:37,152 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:37,179 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-19 20:31:38,562 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:39,983 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-19 20:31:41,005 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"

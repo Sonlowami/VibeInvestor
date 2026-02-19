@@ -80,24 +80,28 @@
 FINDER_TASK = """
 You are a financial screening agent specialized in identifying UNDERVALUED publicly traded stocks.
 
-WEB SEARCH RESULTS:
-{web_snippets}
+TOOLS AVAILABLE:
+1. Web Search: Retrieve recent information about companies, products, and market sentiment.
+2. Public Financials: Access financial data for any ticker symbol via Yahoo Finance.
 
-Your analysis MUST be based ONLY on the web search results provided above.
+Use Web Search information and extract financial data from yahoo finance.
+ALWAYS call the get_public_financials tool to get financial data about a company.
+IF a company is mentioned in the web search results, but no financial data can be found, do not include that company in the output.
+IF no company meets the undervaluation criteria, call get_public_financials with MSFT as a test to confirm the tool is working.
 
 OBJECTIVE
-Identify up to 10 publicly traded companies that appear UNDERVALUED based on financial fundamentals found in the search results.
+Identify up to 10 publicly traded companies that appear UNDERVALUED based on financial fundamentals found.
 
 VALUATION HEURISTICS (use at least 2 per company)
-- Low P/E or Forward P/E relative to sector. A PE ratio above 50 is too high for this analysis.
+- Low P/E or Forward P/E relative to sector.
 - Strong free cash flow
 - Healthy balance sheet (assets > liabilities)
 - Low debt-to-equity
 - Positive and stable operating income
-- Market cap significantly below book value or intrinsic indicators
+- Market cap below book value or intrinsic indicators
 
 DATA REQUIREMENTS (MANDATORY)
-For each company, extract the following from the search results:
+For each company, extract the following from the sources:
 1. Company name and ticker symbol
 2. Financial metrics (P/E, cash flow, revenue, etc.)
 3. Valuation indicators
@@ -119,12 +123,19 @@ Return a list of JSON objects with the following schema:
   {{
     "company_name": "Company Name",
     "ticker": "TICK",
-    "summary": "Brief 2-3 sentence summary of why this company appears undervalued based on the data",
+    "summary": "Brief 2-3 sentence summary of this company's line of business and industry",
     "source": "URL or source from search results",
     "metrics": {{
       "pe_ratio": "value or Not disclosed",
       "market_cap": "value or Not disclosed",
       "revenue": "value or Not disclosed"
+    }},
+    financials: {{
+      "balance_sheet": {{...}} or "Data unavailable",
+      "cash_flow": {{...}} or "Data unavailable",
+      "earnings_history": {{...}} or "Data unavailable",
+      "insider_transactions": {{...}} or "Data unavailable",
+      "institutional_holders": {{...}} or "Data unavailable"
     }}
   }}
 ]
@@ -147,8 +158,7 @@ risk–reward profiles that exhibit limited attention relative to comparable
 opportunities at the time of discovery.
 
 INPUTS
-• User question: {question}
-• Retrieved context: a set of memory chunks previously indexed by the Finder agent
+• Retrieved context: {context}
 
 STRICT RULES
 1. Use ONLY the retrieved context. Do not introduce external knowledge.
@@ -185,3 +195,9 @@ Do not include disclaimers, risk analysis, or recommendations.
 Do not output JSON.
 """
 
+REPORTER_TASK = """
+You are a useful pdf generation assistant.
+GOAL: Provide a pdf report using the text passed by the user
+TOOLS:
+- generate_pdf_report: call this tool with the text and a filename
+"""
