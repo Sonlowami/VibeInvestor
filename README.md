@@ -140,6 +140,8 @@ python src/main.py
 .venv-py312/bin/python src/main.py
 ```
 
+You will be prompted to query the model. A sample query might be ```undervalued clean energy stocks```.
+
 ### What Happens When You Run It
 
 1. **Finder Agent** searches the web for undervalued stocks and emerging opportunities
