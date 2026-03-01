@@ -2,7 +2,7 @@ from finder import run_finder
 from memory import populate_memory, retrieve_top_k
 from governor import run_governor
 from verifier import verify_groundedness
-from utils import generate_pdf_report
+from utils import generate_pdf_report, extract_json
 import asyncio
 import json
 import re

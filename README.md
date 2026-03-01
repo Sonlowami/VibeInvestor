@@ -81,30 +81,50 @@ This project is a work in progress and an exploration of how far careful system 
 
 ### Prerequisites
 
-- Python 3.12+ (required for compatibility with vector database dependencies)
-- `pip` package manager
+- **Python 3.10+** (3.12+ recommended for full compatibility)
+- `pip` package manager  
 - API keys for:
   - **Google Gemini API** (for LLM access) — Get from [Google AI Studio](https://aistudio.google.com/apikey)
   - **SearchAPI.io** (for web search) — Get from [SearchAPI.io](https://www.searchapi.io/)
 
-### Installation
+### Quick Start: Gradio Web UI (Recommended)
 
-1. **Clone the repository** (if not already done):
-   ```bash
-   cd /Users/oswaldocamillegrimaud/Desktop/VibeInvestor
-   ```
+The easiest way to get started is with the Gradio web interface:
 
-2. **Create a Python 3.12 virtual environment**:
+```bash
+# Install dependencies (Python 3.10+ compatible)
+pip install -r requirements-gradio.txt
+
+# Create and configure .env file
+cp .env.example .env  # Then add your API keys
+
+# Launch the UI
+./launch_ui.sh        # macOS/Linux
+# OR
+launch_ui.bat         # Windows
+# OR manually
+python3 src/gradio_app.py
+```
+
+Then open http://localhost:7860 in your browser.
+
+**For a complete guide**, see [docs/GRADIO_GUIDE.md](docs/GRADIO_GUIDE.md).
+
+### Installation: Full Project
+
+For the complete project with all features (requires Python 3.11+):
+
+1. **Create a Python 3.12 virtual environment**:
    ```bash
    python3.12 -m venv .venv-py312
    ```
 
-3. **Activate the virtual environment**:
+2. **Activate the virtual environment**:
    ```bash
    source .venv-py312/bin/activate
    ```
 
-4. **Install dependencies**:
+3. **Install all dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
@@ -128,42 +148,66 @@ This project is a work in progress and an exploration of how far careful system 
 
 ### Running the Project
 
-**Basic execution** (with Python 3.12 environment activated):
+**Using the Gradio UI** (recommended for most users):
+```bash
+./launch_ui.sh  # macOS/Linux
+# or
+./run.sh        # Alternative launcher
+```
 
+**Using the CLI** (Python 3.12 environment activated):
 ```bash
 python src/main.py
 ```
 
-**Or, using the venv directly without activation**:
+You will be prompted to enter an investment query. A sample query might be: `undervalued clean energy stocks`.
 
-```bash
-.venv-py312/bin/python src/main.py
-```
+### Requirements: Choosing the Right File
 
-You will be prompted to query the model. A sample query might be ```undervalued clean energy stocks```.
+VibeInvestor comes with two requirements files for different use cases:
+
+#### **requirements-gradio.txt** (Recommended for UI)
+- ✓ Compatible with Python 3.10+
+- ✓ Minimal dependencies, faster installation
+- ✓ Includes everything for the web-based Gradio interface
+- Use this unless you need advanced features
+
+#### **requirements.txt** (Full Project)
+- ⚠️ Requires Python 3.11+
+- Includes browser automation and experimental features
+- Use this only if you need the complete system capabilities
+
+**Quick Decision**: Just want to use the UI? → Use `requirements-gradio.txt`
 
 ### What Happens When You Run It
 
-1. **Finder Agent** searches the web for undervalued stocks and emerging opportunities
+1. **Finder Agent** searches the web for investment opportunities
 2. **Results** are extracted and stored in a FAISS vector database for memory
 3. **Governor Agent** evaluates findings and surfaces the most promising opportunities
-4. **Output** is printed to the console
+4. **Verifier Agent** checks if decisions are well-supported by evidence
+5. **Output** is displayed in real-time in the UI (or console for CLI)
 
 ### Project Structure
 
 ```
 VibeInvestor/
+├── docs/                  # Documentation
+│   ├── GRADIO_GUIDE.md    # Complete UI user guide
+│   └── IMPLEMENTATION_SUMMARY.md  # Technical implementation details
 ├── src/
 │   ├── finder.py          # Finder agent: web search & opportunity discovery
 │   ├── governor.py        # Governor agent: arbitrates & escalates decisions
-│   ├── retriever.py       # Memory retrieval for context
+│   ├── verifier.py        # Verifier agent: checks evidence and groundedness
 │   ├── memory.py          # Vector database (FAISS) management
 │   ├── prompts.py         # Agent task definitions
 │   ├── utils.py           # Shared utilities (JSON parsing, PDF generation)
-│   ├── main.py            # Entry point: orchestrates the agent pipeline
+│   ├── gradio_app.py      # Gradio web interface
+│   ├── main.py            # CLI entry point: orchestrates the agent pipeline
 │   └── __init__.py
+├── docker/                # Docker configuration for deployment
 ├── .env                   # API keys (create this file)
-├── requirements.txt       # Python dependencies
+├── requirements.txt       # Full project dependencies (Python 3.11+)
+├── requirements-gradio.txt # UI only dependencies (Python 3.10+)
 └── README.md              # This file
 ```
 
@@ -173,29 +217,40 @@ VibeInvestor/
 - **Solution**: Ensure `.env` file exists in the project root and contains `GOOGLE_API_KEY=<your-key>`
 
 **Issue**: Python version incompatibility
-- **Solution**: Use Python 3.12 explicitly: `python3.12 -m venv .venv-py312`
+- **Solution**: 
+  - For UI only: Use Python 3.10+ with `requirements-gradio.txt`
+  - For full project: Use Python 3.12: `python3.12 -m venv .venv-py312`
 
 **Issue**: Package import errors
-- **Solution**: Ensure virtual environment is activated and dependencies are installed:
+- **Solution**: 
   ```bash
   source .venv-py312/bin/activate
   pip install -r requirements.txt
   ```
 
-**Issue**: `IndexError: list index out of range` in memory.py
-- **Solution**: This occurs when the Finder returns empty results. Check that:
-  1. API keys are valid
-  2. Web search is returning results
-  3. LLM is formatting output as valid JSON
+**Issue**: Port 7860 already in use (Gradio)
+- **Solution**: Specify a different port: `python3 src/gradio_app.py --server_port 7861`
+
+**Issue**: No findings discovered
+- **Solution**: Check that your API keys are valid and your internet connection is working
 
 ### Development Notes
 
 - The system uses **Gemini 2.0 Flash** as the default LLM
 - Vector storage uses **FAISS** with **Google Generative AI Embeddings**
 - Web search is powered by **SearchAPI.io**
+- UI framework: **Gradio 5.0+**
 - Memory is persisted locally in `faiss_investment_db/` directory
 
 ---
+
+---
+
+### More Information
+
+For detailed documentation, see the `docs/` directory:
+- **[docs/GRADIO_GUIDE.md](docs/GRADIO_GUIDE.md)** — Complete user guide for the web interface
+- **[docs/IMPLEMENTATION_SUMMARY.md](docs/IMPLEMENTATION_SUMMARY.md)** — Technical details and architecture
 
 ### Contributions
 
