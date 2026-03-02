@@ -25,6 +25,7 @@ from gradio_utils import (
     format_iteration_trace,
     get_memory_summary,
     format_memory_for_display,
+    format_currency,
 )
 from main import robust_extract_findings, evaluate_run
 
@@ -106,6 +107,7 @@ async def run_pipeline_with_streaming(
         yield {
             "status": f"✓ Found {len(findings)} opportunities",
             "findings_table": findings_df,
+            "findings": findings,
             "logs": f"[Finder] Discovered {len(findings)} findings. Sample companies: {', '.join([f.get('company_name', 'N/A') for f in findings[:3]])}"
         }
         
@@ -267,6 +269,25 @@ def create_gradio_interface():
     Creates the complete Gradio UI with 3-tab interface
     """
     
+    custom_css = """
+    #financial-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 9999;
+        padding: 6vh 8vw;
+        overflow: auto;
+    }
+    #financial-modal > div {
+        background: var(--block-background-fill);
+        border: 1px solid var(--border-color-primary);
+        border-radius: 12px;
+        padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    """
+    
     with gr.Blocks(title="VibeInvestor") as app:
         
         gr.Markdown("# 🚀 VibeInvestor - Multi-Agent Investment Research")
@@ -274,10 +295,95 @@ def create_gradio_interface():
         
         # Shared state across tabs
         state_findings = gr.State([])
+        state_selected_row = gr.State(-1)
         state_metrics = gr.State({})
         state_opportunity = gr.State("")
         state_groundedness = gr.State(0.0)
         state_memory = gr.State({})
+
+        def format_financial_details(company: Dict[str, Any]) -> str:
+            company_name = company.get("company_name", "Unknown Company")
+            ticker = company.get("ticker", "N/A")
+            financials = company.get("financials", {})
+
+            header = f"### {company_name} ({ticker})\n\n"
+
+            if isinstance(financials, str):
+                return header + f"**Financials:** {financials}"
+
+            if not isinstance(financials, dict) or not financials:
+                return header + "**Financials:** Not disclosed"
+
+            lines = [header, "#### Financial Details"]
+            
+            # Helper to check if a value looks like a financial number
+            def format_value(key: str, value: Any) -> str:
+                # List of keys that typically contain currency values
+                currency_keys = {
+                    'cash', 'flow', 'assets', 'liabilities', 'debt', 'equity',
+                    'revenue', 'income', 'ebitda', 'earnings', 'capital',
+                    'payable', 'receivable', 'inventory', 'investment'
+                }
+                
+                # Check if key contains any currency-related term
+                key_lower = key.lower()
+                is_currency = any(term in key_lower for term in currency_keys)
+                
+                # Try to format as currency if it's a number and key suggests it's money
+                if is_currency and isinstance(value, (int, float, str)):
+                    try:
+                        return format_currency(value)
+                    except:
+                        pass
+                
+                return str(value)
+
+            for section, payload in financials.items():
+                section_title = section.replace("_", " ").title()
+                lines.append(f"\n**{section_title}**")
+
+                if isinstance(payload, dict) and payload:
+                    for key, value in payload.items():
+                        if isinstance(value, dict):
+                            lines.append(f"- {key}:")
+                            for sub_key, sub_value in value.items():
+                                formatted_value = format_value(sub_key, sub_value)
+                                lines.append(f"  - {sub_key}: {formatted_value}")
+                        else:
+                            formatted_value = format_value(key, value)
+                            lines.append(f"- {key}: {formatted_value}")
+                elif isinstance(payload, list):
+                    for item in payload[:15]:
+                        lines.append(f"- {item}")
+                    if len(payload) > 15:
+                        lines.append(f"- ... and {len(payload) - 15} more entries")
+                else:
+                    lines.append(f"- {payload}")
+
+            return "\n".join(lines)
+
+        def on_findings_row_select(evt: gr.SelectData):
+            row_idx = evt.index[0] if isinstance(evt.index, (tuple, list)) else evt.index
+            return row_idx
+
+        def show_financial_details(selected_row: int, findings: List[Dict[str, Any]]):
+            if selected_row is None or selected_row < 0 or not findings:
+                return (
+                    "### No selection\n\nSelect a company row in the table and click `Financials` cell to view details.",
+                    gr.update(visible=True)
+                )
+
+            if selected_row >= len(findings):
+                return (
+                    "### Selection out of range\n\nRun analysis again and select a valid company row.",
+                    gr.update(visible=True)
+                )
+
+            details = format_financial_details(findings[selected_row])
+            return details, gr.update(visible=True)
+
+        def close_financial_dialog():
+            return gr.update(visible=False)
         
         with gr.Row():
             input_query = gr.Textbox(
@@ -324,11 +430,17 @@ def create_gradio_interface():
                 
                 findings_table = gr.Dataframe(
                     label="Discovered Opportunities",
-                    headers=["Company", "Ticker", "Summary", "Metrics"],
-                    datatype=["str", "str", "str", "str"],
-                    interactive=False,
+                    headers=["Company", "Ticker", "Summary", "Key Metrics", "Financials"],
+                    datatype=["str", "str", "str", "str", "str"],
+                    interactive=True,
                     wrap=True
                 )
+
+                gr.Markdown("Select a company row, then click the `Financials` cell to open full financial details.")
+
+                with gr.Group(visible=False, elem_id="financial-modal") as financial_details_dialog:
+                    financial_details_content = gr.Markdown("[Select a company to view details]")
+                    close_dialog_btn = gr.Button("Close")
             
             # ========== TAB 2: DECISION ANALYSIS ==========
             with gr.TabItem("⚖️ Decision Analysis", id="decision"):
@@ -407,12 +519,24 @@ def create_gradio_interface():
                     0,  # metric_groundedness
                     "",  # iteration_trace
                     "",  # memory_display
-                    ""  # iteration_display
+                    "",  # iteration_display
+                    []  # state_findings
                 )
                 return
             
             # Initialize displays
             logs = ""
+            findings_table = pd.DataFrame(columns=["Company", "Ticker", "Summary", "Key Metrics", "Financials"])
+            findings_raw = []
+            opportunity_output = ""
+            groundedness_display = ""
+            strategy_display = ""
+            metric_completion = 0
+            metric_adherence = 0
+            metric_groundedness = 0
+            iteration_trace = ""
+            memory_display = ""
+            iteration_display = ""
             
             async for update in run_pipeline_with_streaming(query, max_attempts=3):
                 
@@ -427,19 +551,26 @@ def create_gradio_interface():
                 # Get individual values for each output
                 status_display = f"{status_msg} ({iteration_msg})" if iteration_msg else status_msg
                 logs_output = logs
-                iteration_display = iteration_msg or ""
+                if iteration_msg:
+                    iteration_display = iteration_msg
                 
                 # Get findings table
-                findings_table = update.get("findings_table", pd.DataFrame())
+                if "findings_table" in update and update["findings_table"] is not None:
+                    findings_table = update["findings_table"]
+                if "findings" in update and isinstance(update["findings"], list):
+                    findings_raw = update["findings"]
                 
                 # Get opportunity
-                opportunity_output = update.get("opportunity", "")
+                if "opportunity" in update and update["opportunity"]:
+                    opportunity_output = update["opportunity"]
                 
                 # Get groundedness
-                groundedness_display = update.get("groundedness_details", "")
+                if "groundedness_details" in update and update["groundedness_details"]:
+                    groundedness_display = update["groundedness_details"]
                 
                 # Get strategy
-                strategy_display = update.get("strategy", "")
+                if "strategy" in update:
+                    strategy_display = update.get("strategy", strategy_display)
                 
                 # Get metrics
                 if "metrics" in update and "metrics_display" in update:
@@ -447,22 +578,17 @@ def create_gradio_interface():
                     metric_completion = metrics_disp.get("task_completion", 0)
                     metric_adherence = metrics_disp.get("plan_adherence", 0)
                     metric_groundedness = metrics_disp.get("groundedness", 0)
+                
+                if "final_summary" in update:
                     iteration_trace = format_iteration_trace(
-                        update.get("final_summary", {}).get("iterations", 1),
+                        update["final_summary"].get("iterations", 1),
                         []
                     )
-                else:
-                    metric_completion = 0
-                    metric_adherence = 0
-                    metric_groundedness = 0
-                    iteration_trace = ""
                 
                 # Get memory display
                 if "final_summary" in update:
                     memory_info = update["final_summary"].get("memory", {})
                     memory_display = format_memory_for_display(memory_info)
-                else:
-                    memory_display = ""
                 
                 # Yield output as tuple in correct order
                 yield (
@@ -477,7 +603,8 @@ def create_gradio_interface():
                     metric_groundedness,
                     iteration_trace,
                     memory_display,
-                    iteration_display
+                    iteration_display,
+                    findings_raw
                 )
         
         def clear_memory():
@@ -507,8 +634,23 @@ def create_gradio_interface():
                 metric_groundedness,
                 iteration_trace,
                 memory_display,
-                iteration_display
+                iteration_display,
+                state_findings
             ]
+        )
+
+        findings_table.select(
+            fn=on_findings_row_select,
+            outputs=[state_selected_row]
+        ).then(
+            fn=show_financial_details,
+            inputs=[state_selected_row, state_findings],
+            outputs=[financial_details_content, financial_details_dialog]
+        )
+
+        close_dialog_btn.click(
+            fn=close_financial_dialog,
+            outputs=[financial_details_dialog]
         )
         
         clear_memory_btn.click(
@@ -523,10 +665,31 @@ if __name__ == "__main__":
     import os
     
     app = create_gradio_interface()
+    
+    custom_css = """
+    #financial-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 9999;
+        padding: 6vh 8vw;
+        overflow: auto;
+    }
+    #financial-modal > div {
+        background: var(--block-background-fill);
+        border: 1px solid var(--border-color-primary);
+        border-radius: 12px;
+        padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    """
+    
     app.launch(
         server_name="0.0.0.0",
         server_port=7860,
         share=False,
         show_error=True,
-        theme=gr.themes.Soft()
+        theme=gr.themes.Soft(),
+        css=custom_css
     )

@@ -4,28 +4,100 @@ Handles data formatting, streaming, and memory operations
 """
 
 import pandas as pd
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Union
 from logger import logger
 from memory import retrieve_top_k
 import os
+import re
+import json
 from datetime import datetime
+
+
+def format_currency(value: Union[str, int, float]) -> str:
+    """
+    Format currency values with $ and B/M suffixes for readability
+    """
+    try:
+        # Try to convert to float
+        if isinstance(value, str):
+            # Remove any existing currency symbols and commas
+            clean_value = value.replace('$', '').replace(',', '').strip()
+            num_value = float(clean_value)
+        else:
+            num_value = float(value)
+        
+        # Format based on magnitude
+        if abs(num_value) >= 1_000_000_000:
+            # Billions
+            formatted = f"${num_value / 1_000_000_000:.2f}B"
+        elif abs(num_value) >= 1_000_000:
+            # Millions
+            formatted = f"${num_value / 1_000_000:.2f}M"
+        elif abs(num_value) >= 1_000:
+            # Thousands
+            formatted = f"${num_value / 1_000:.2f}K"
+        else:
+            # Less than 1000
+            formatted = f"${num_value:.2f}"
+        
+        return formatted
+    except (ValueError, TypeError):
+        # If conversion fails, return original value as string
+        return str(value)
 
 def format_findings_for_table(findings: List[Dict[str, Any]]) -> pd.DataFrame:
     """
     Convert findings list into a formatted DataFrame for Gradio interface
     """
     if not findings:
-        return pd.DataFrame(columns=["Company", "Ticker", "Summary", "Metrics"])
+        return pd.DataFrame(columns=["Company", "Ticker", "Summary", "Key Metrics", "Financials"])
     
     rows = []
     for f in findings:
+        # Format metrics in a readable way
+        metrics = f.get("metrics", {})
+        metrics_str = ""
+        if isinstance(metrics, dict):
+            key_metrics = []
+            if "pe_ratio" in metrics and metrics["pe_ratio"] != "Not disclosed":
+                key_metrics.append(f"P/E: {metrics['pe_ratio']}")
+            if "market_cap" in metrics and metrics["market_cap"] != "Not disclosed":
+                key_metrics.append(f"Market Cap: {metrics['market_cap']}")
+            if "revenue" in metrics and metrics["revenue"] != "Not disclosed":
+                key_metrics.append(f"Revenue: {metrics['revenue']}")
+            metrics_str = " | ".join(key_metrics) if key_metrics else "Not disclosed"
+        else:
+            metrics_str = str(metrics) if metrics else "Not disclosed"
+        
+        # Format financials in a readable way
+        financials = f.get("financials", {})
+        financials_str = ""
+        if isinstance(financials, dict) and financials:
+            fin_summary = []
+            if "cash_flow" in financials and isinstance(financials["cash_flow"], dict):
+                cf = financials["cash_flow"]
+                if "Free Cash Flow" in cf:
+                    fin_summary.append(f"FCF: {format_currency(cf['Free Cash Flow'])}")
+                elif "Operating Cash Flow" in cf:
+                    fin_summary.append(f"OCF: {format_currency(cf['Operating Cash Flow'])}")
+            if "balance_sheet" in financials and isinstance(financials["balance_sheet"], dict):
+                bs = financials["balance_sheet"]
+                if "Total Assets" in bs:
+                    fin_summary.append(f"Assets: {format_currency(bs['Total Assets'])}")
+                if "Total Debt" in bs:
+                    fin_summary.append(f"Debt: {format_currency(bs['Total Debt'])}")
+            financials_str = " | ".join(fin_summary) if fin_summary else "Available (see details)"
+        elif isinstance(financials, str):
+            financials_str = financials
+        else:
+            financials_str = "Not disclosed"
+        
         rows.append({
             "Company": f.get("company_name", "N/A"),
             "Ticker": f.get("ticker", "N/A"),
-            "Summary": f.get("summary", "")[:200] + "...",
-            "Metrics": str(f.get("metrics", {}))[:150] + "...",
-            "Full Summary": f.get("summary", ""),
-            "Full Metrics": str(f.get("metrics", {}))
+            "Summary": (f.get("summary", "")[:150] + "...") if len(f.get("summary", "")) > 150 else f.get("summary", "N/A"),
+            "Key Metrics": metrics_str,
+            "Financials": financials_str
         })
     
     return pd.DataFrame(rows)
@@ -88,7 +160,8 @@ def get_memory_summary() -> Dict[str, Any]:
         "db_exists": os.path.exists(db_path),
         "last_update": None,
         "doc_count": 0,
-        "recent_decisions": []
+        "recent_decisions": [],
+        "recent_findings": []
     }
     
     if summary["db_exists"]:
@@ -99,10 +172,16 @@ def get_memory_summary() -> Dict[str, Any]:
             # Try to retrieve top-5 past decisions
             try:
                 past_docs = retrieve_top_k("investment opportunity", k=5)
-                summary["recent_decisions"] = [
-                    d.page_content[:200] for d in past_docs
-                ] if past_docs else []
-                summary["doc_count"] = len(past_docs) if past_docs else 0
+                if past_docs:
+                    for doc in past_docs:
+                        content = doc.page_content
+                        # Try to extract structured data from content
+                        finding_info = _parse_finding_from_content(content)
+                        summary["recent_findings"].append(finding_info)
+                    summary["recent_decisions"] = [
+                        d.page_content[:200] for d in past_docs
+                    ]
+                    summary["doc_count"] = len(past_docs)
             except Exception as e:
                 logger.warning(f"Could not retrieve recent decisions: {e}")
                 summary["recent_decisions"] = []
@@ -112,26 +191,111 @@ def get_memory_summary() -> Dict[str, Any]:
     return summary
 
 
+def _parse_finding_from_content(content: str) -> Dict[str, str]:
+    """
+    Parse structured data from memory content
+    """
+    import json
+    
+    # Try to extract JSON data from content
+    try:
+        # Look for JSON patterns in content
+        json_match = re.search(r'\{[^{}]*"company_name"[^{}]*\}', content)
+        if json_match:
+            data = json.loads(json_match.group(0))
+            return {
+                "company": data.get("company_name", "Unknown"),
+                "ticker": data.get("ticker", "N/A"),
+                "metrics": _format_metrics_simple(data.get("metrics", {})),
+                "financials": _format_financials_simple(data.get("financials", {}))
+            }
+    except:
+        pass
+    
+    # Fallback: return text snippet
+    return {"text": content[:200]}
+
+
+def _format_metrics_simple(metrics: Any) -> str:
+    """
+    Format metrics dictionary into readable string
+    """
+    if not isinstance(metrics, dict):
+        return "N/A"
+    
+    parts = []
+    for key, value in metrics.items():
+        if value and value != "Not disclosed":
+            parts.append(f"{key}: {value}")
+    
+    return ", ".join(parts) if parts else "Not disclosed"
+
+
+def _format_financials_simple(financials: Any) -> str:
+    """
+    Format financials dictionary into readable string
+    """
+    if isinstance(financials, str):
+        return financials
+    
+    if not isinstance(financials, dict) or not financials:
+        return "Not disclosed"
+    
+    parts = []
+    
+    # Extract key financial data
+    if "cash_flow" in financials and isinstance(financials["cash_flow"], dict):
+        cf = financials["cash_flow"]
+        if "Free Cash Flow" in cf:
+            parts.append(f"FCF: {format_currency(cf['Free Cash Flow'])}")
+        elif "Operating Cash Flow" in cf:
+            parts.append(f"OCF: {format_currency(cf['Operating Cash Flow'])}")
+    
+    if "balance_sheet" in financials and isinstance(financials["balance_sheet"], dict):
+        bs = financials["balance_sheet"]
+        if "Total Assets" in bs:
+            parts.append(f"Assets: {format_currency(bs['Total Assets'])}")
+        if "Total Debt" in bs:
+            parts.append(f"Debt: {format_currency(bs['Total Debt'])}")
+    
+    if "earnings_history" in financials and isinstance(financials["earnings_history"], dict):
+        eh = financials["earnings_history"]
+        keys = list(eh.keys())
+        if keys:
+            latest = keys[0]
+            parts.append(f"Latest EPS: {eh[latest].get('EPS', 'N/A')}")
+    
+    return " | ".join(parts) if parts else "Available"
+
+
 def format_memory_for_display(memory_summary: Dict[str, Any]) -> str:
     """
-    Format memory summary for display in UI
+    Format memory summary for display in UI with human-readable financial data
     """
-    if not memory_summary["db_exists"]:
+    if not memory_summary.get("db_exists"):
         return "**Memory Status:** No persistent memory found. Create one by running an analysis."
     
     display = f"""
 **Memory Status:** Active ✓
-**Last Updated:** {memory_summary['last_update']}
-**Total Documents:** {memory_summary['doc_count']}
+**Last Updated:** {memory_summary.get('last_update', 'Unknown')}
+**Total Documents:** {memory_summary.get('doc_count', 0)}
 
-**Recent Decisions:**
+**Recent Findings from Memory:**
     """.strip()
     
-    if memory_summary["recent_decisions"]:
-        for i, decision in enumerate(memory_summary["recent_decisions"], 1):
-            display += f"\n{i}. {decision}..."
+    recent_findings = memory_summary.get("recent_findings", [])
+    if recent_findings:
+        for i, finding in enumerate(recent_findings, 1):
+            if "company" in finding:
+                display += f"\n\n**{i}. {finding['company']}** ({finding.get('ticker', 'N/A')})\n"
+                if "metrics" in finding:
+                    display += f"   - Metrics: {finding['metrics']}\n"
+                if "financials" in finding:
+                    display += f"   - Financials: {finding['financials']}"
+            elif "text" in finding:
+                display += f"\n{i}. {finding['text']}..."
     else:
-        display += "\nNo recent decisions logged."
+        display += "\nNo recent findings in memory."
     
     return display
 
